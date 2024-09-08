@@ -1,0 +1,67 @@
+site_name: DISEÑO DE INTERFACES WEB
+site_url:
+nav:
+  - Home: index.md
+  - UD1 Diseño de interfaces:
+      - Elementos del diseño: ./UD1/elementosDiseño.md
+      - Otros Elementos: ./UD1/colorTipografíaIconos.md
+      - Componentes De Interfaz: ./UD1/Componentes de un interfaz web.md
+
+theme:
+  name: material
+  icon:
+    admonition:
+      example: octicons/terminal-16
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    # - navigation.sections
+    - navigation.top
+    - navigation.path
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - toc.integrate
+  language: es
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: indigo
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+      primary: lime
+      accent: deep purple
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
