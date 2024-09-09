@@ -29,9 +29,9 @@ RA6.Desarrolla interfaces web amigables analizando y aplicando las pautas de usa
 
 La evaluación es un proceso **continuo** y formativo basado en la calificación de competencias a través de los resultados de aprendizaje. Para obtener la calificación se tienen en cuenta las siguientes premisas:
 
-!! Warning
+!!! Warning
 
-    Por lo tanto LA CALIFICACIÓN FINAL DEL MÓDULO se obtendrá de la media ponderada de las calificaciones de cada RA. Todos los RA no tienen el mismo peso y todos ellos TIENEN QUE ESTAR APROBADOS
+    TODOS LOS RA TIENEN QUE ESTAR APROBADOS PARA SUPERAR EL MODULO.
 
 ### Procedimientos de Evaluación
 

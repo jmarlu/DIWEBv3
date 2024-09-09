@@ -6,7 +6,9 @@ nav:
       - Elementos del diseño: ./UD1/elementosDiseño.md
       - Otros Elementos: ./UD1/colorTipografíaIconos.md
       - Componentes De Interfaz: ./UD1/Componentes de un interfaz web.md
-
+      - Planificación: ./UD1/planificación.md
+      - Prototipado: ./UD1/EmpezarFigma.md
+      - Actividades: .
 theme:
   name: material
   icon:
