@@ -118,19 +118,22 @@ Ahora el trabajo que tenéis que hacer es construir y verificar lo siguiente:
 
 En esta actividad vamos a crear nuestra primer diseño en la aplicación Figma.
 
-1. Crea un team,en el botón Create new team de la barra lateral izquierda o visita este enlace: https://www.figma.com/files/create-team , e inserta a un compañero de clase y a mi con el siguiente corre-e
+1. Crea un team, en el botón Create new team de la barra lateral izquierda o visita este enlace: https://www.figma.com/files/create-team , e inserta a un compañero de clase y a mi con el siguiente corre-e
    j.martinez2@edu.gva.es.
 2. Crea el siguiente diseño que se muestra la imagen de abajo. **El archivo tiene que estar en el proyecto de nuestro grupo.**
-   <img src="img/figma/MiFigmafima.svg" alt="Picture" style="display: block; margin: 10px auto" />
+
+   ![MiFigmafima](img/figma/MiFigmafima.svg)
+
 3. Crea un link que que me tienes que hacer en la entrega de la tarea. Con este link solo podré hacer una copia del fichero en mi espacio.
 4. Exporta el diseño a un tipo de fichero svg.
 5. Muestra el CSS asociado a nuestro diseño.
 
-**_Nota:Me teneis que entregar un fichero de texto que contenga el css ,el link y el fichero SVG_**
+**_Nota:Me tenéis que entregar un fichero de texto que contenga el css ,el link y el fichero SVG_**
 
 ## Actividad 10
 
-En esta actividad, si acedemos al siguiente [link](https://www.figma.com/file/4bjwFph5AbBbITD1oZxX2B/Asigna-fuentes) nos hará una copia de fichero tipo figma. En él hay dos columnas, la primera nos muestra la web que vamos a hacer y la segunda el porqué de este tipo de tipografía.
+En esta actividad, si acedemos al siguiente [link](https://www.figma.com/file/4bjwFph5AbBbITD1oZxX2B/Asigna-fuentes) nos mostrará un fichero pero no lo podemos editar. **Para editarlo** tenéis que hacer una copia del link que se crea en el sistema de ficheros (con el botón derecho).
+En él hay dos columnas, la primera nos muestra la web que vamos a hacer y la segunda el porqué de este tipo de tipografía.
 
 **_Recuerda que cada fuente, el autor, tiene una disposición que generalmente viene declarada en su documentación. En google fonts en la sección about._**
 
@@ -143,7 +146,7 @@ Una gran inspiración de selección de fuentes puede ser carteles o otras webs q
 
 ## Actividad 12
 
-Esta actividad tiene varios propositos; crear nuestra paleta de colores con respecto a una fotografía y saber como se introduce una imagen en figma. Además, de como se utiliza las mascaras para mostrar una parte de la foto.
+Esta actividad tiene varios propósitos; crear nuestra paleta de colores con respecto a una fotografía y saber como se introduce una imagen en figma. Además, de como se utiliza las mascaras para mostrar una parte de la foto.
 
 Haz click [aquí](https://www.figma.com/file/T9Tb9vKCVL4KDT6n28tkDG/Actividad12Color?node-id=0%3A1) para acceder al fichero del ejercicio.
 
@@ -152,7 +155,7 @@ El primer ejercicio será insertar una imagen que cubra el 50% en el 2 frame. Co
 1. Descargar una imagen en el siguiente [link](https://unsplash.com/es). En esta dirección podemos descargar imágenes que se pueden utilizar "libremente" (De esto ya hablaremos en siguientes temas).
 2. Inserta un **cuadrado** que ocupe la mitad del segundo frame.
 3. Inserta un objeto, **una imagen**, en el frame. Lo más seguro es que sea más grande que frame. Date cuenta que se inserta como layer(capa). Esta es la forma de trabajar que tienen la mayoría de los programas de dibujo. Desde el menú, en la parte de la izquierda, de las capas las podemos poner en orden diferente arrastrándola. Comprueba lo que pasa. Nuestro objetivo es redimensionar la imagen de tal forma que ocupe la parte del cuadrado por encima del cuadrado. Si lo que queremos es mantener las proporciones, deberemos mantener el **shift** apretado.
-4. Otra forma de insertar la imagen, pero esta vez como background del cuadrado antes de insertar la imagen deberemos seleccionar el cuadrado y después insertar la imagen. Pruébala y deshazlo y dejalo como en el paso anterior.
+4. Otra forma de insertar la imagen, pero esta vez como background del cuadrado antes de insertar la imagen deberemos seleccionar el cuadrado y después insertar la imagen. Pruébala , deshazlo y dejalo como en el paso anterior.
 5. Ahora vamos a utilizar el concepto de máscara para mostrar una porción de la imagen. De la siguiente manera:
 
    1. Elija el rectángulo que desee usar como máscara y colóquelo detrás de la imagen en el menú de capas
@@ -172,9 +175,9 @@ Mejora los colores y compara los diseños que hagas, copiando y pegando los fram
 
 ## Actividad 13
 
-Ahora vamos a prácticar la manera de colocar y alinear los elementos dentro de un frame.
+Ahora vamos a practicar la manera de colocar y alinear los elementos dentro de un frame.
 
-<img src="img/fgma/layout.png" alt="Picture" style="display: block; margin: 10px auto" />
+![layout](img/fgma/layout.png)
 
 1. Crea un deskop frame.
 2. Selecciona Layout Grid. En 12 columnas.
@@ -189,7 +192,7 @@ Ahora vamos a prácticar la manera de colocar y alinear los elementos dentro de 
 
 ## Actividad 14
 
-A partir del fichero del siguiente [link](https://www.figma.com/file/P7tAqMHgWlHgCVOikH37J5/Actividad14Jerarquia?node-id=55%3A26), crea una jeraquía visual. Es decir qué es lo queremos que el usuario vea primero, segundo, tercero y cuarto. Además, cambia tipografia, color. Utiliza el grid de doce columnas para ayudarte. Observa bien los objetos y colores para saber si combinan bien.
+A partir del fichero del siguiente [link](https://www.figma.com/file/P7tAqMHgWlHgCVOikH37J5/Actividad14Jerarquia?node-id=55%3A26), crea una jeraquía visual. Es decir qué es lo queremos que el usuario vea primero, segundo, tercero y cuarto. Además, cambia tipografía, color. Utiliza el grid de doce columnas para ayudarte. Observa bien los objetos y colores para saber si combinan bien.
 
 ## Actividad 15
 
@@ -207,23 +210,23 @@ En este [link](https://www.figma.com/file/BXN9drusYrLzy96lfkopcr/Actividad16reco
 
 ## Actividad 17
 
-Analiza las dos imagenes de la misma web. En base a los siguientes parámetros:
+Analiza las dos imágenes de la misma web. En base a los siguientes parámetros:
 
-- Contraste de elementos. (color, tipografias)
+- Contraste de elementos. (color, tipografías)
 - Similitud (agrupaciones).
 - Composición.
 - Imagen
 - Direccionalidad.
 
-<img src="img/fgma/unbox.png" alt="Picture" style="display: block; margin: 10px auto" />
+![unbox](img/fgma/unbox.png)
 
 ## Actividad 18
 
-Crea un fichero en figma dentro del grupo que tienes conmigo. Este fichero tiene que tener un frame por cada una de las imagenes que te muestro a continuación.
+Crea un fichero en Figma dentro del grupo que tienes conmigo. Este fichero tiene que tener un frame por cada una de las imágenes que te muestro a continuación.
 
-<img src="img/fgma/superposicion4Ejer.png" alt="Picture" style="display: block; margin: 10px auto" />
+![super4](img/fgma/slayoutuperposicion4Ejer.png)
 
-<img src="img/fgma/superposicion5Ejer.png" alt="Picture" style="display: block; margin: 10px auto" />
+![super5](img/fgma/slayoutuperposicion5Ejer.png)
 
 Una vez que tengas los dos frames. Modificalos mediante la técnica de superposición,para darle más importancia a las imágenes.
 
@@ -260,18 +263,14 @@ A partir modifica todo el diseño. Color, texto,fotos, etc.
 
 ## Actividad 21
 
-**Este es un proyecto grupal.**
-
-La elección de grupo en semipresencial será como máximo de tres personas y lo tendréis que comunicarmelo.
-
 Elige un tema sobre el que realizar el proyecto de un sitio web. A lo largo de las unidades se dará forma al proyecto mediante diferentes ejercicios.
 
 1. Planifica la web. Coge a dos usuarios objetivos y realiza los pasos de la Actividad 8
-2. Crea como lo que se conoce como moodBar. En un fichero de figma dispone de todas las webs, poster et... desde donde vas a inspirate para la web.
-3. Crea la guia de estilos de tu sitio web.
+2. Crea como lo que se conoce como moodBar. En un fichero de Figma dispone de todas las webs, poster et... desde donde vas a inspirate para la web.
+3. Crea la guía de estilos de tu sitio web.
    1. Estilos y tamaño de las fotografías.
    2. Logotipo .
-   3. Tipografia (no sólo la fuente principal y secundaria, también como son las cabeceras)
+   3. Tipografía (no sólo la fuente principal y secundaria, también como son las cabeceras)
    4. Paleta de colores.
    5. Iconos.
-4. Desarrolla la idea de tu proyecto mediante un boceto y después crear un prototipo en figma. Sólo de tu página principal
+4. Desarrolla la idea de tu proyecto mediante un boceto y después crear un prototipo en Figma. Sólo de tu página principal
