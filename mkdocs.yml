@@ -8,7 +8,13 @@ nav:
       - Componentes De Interfaz: ./UD1/Componentes de un interfaz web.md
       - Planificación: ./UD1/planificación.md
       - Prototipado: ./UD1/EmpezarFigma.md
-      - Actividades: .
+      - Actividades: ./UD1/Actividades.md
+  - Herramienta GIT:
+      - Introducción: ./GIT/introduccion.md
+      - Manejo Básico: ./GIT/manejoBasico.md
+      - Introducción Github: ./GIT/Introducción a GitHub.md
+      - Actividades: ./GIT/Actividades.md
+
 theme:
   name: material
   icon:
