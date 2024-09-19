@@ -200,8 +200,8 @@ En este [link](https://www.figma.com/file/azENmIOmbmISGQ2Iu8lxPr/Actividad15Imag
 
 1. Descarga una foto que sea adecuada y llevarla al fondo.
 2. Selecciona esta capa y añade un relleno (fill) de color negro y con transparencia (prueba rangos) que podamos ver el fondo claro.
-3. Desatura la imagen a blanco y negor
-4. Cambia el relleno que has instroducido en el paso tres. Prueba degradados, colores etc.
+3. Desatura la imagen a blanco y negro
+4. Cambia el relleno que has introducido en el paso tres. Prueba degradados, colores etc.
 5. Cambia colores de botones, texto etc.. Todo ello con el fin que haga contraste. **Recuerda todos los colores no valen.**
 
 ## Actividad 16
@@ -224,9 +224,9 @@ Analiza las dos imágenes de la misma web. En base a los siguientes parámetros:
 
 Crea un fichero en Figma dentro del grupo que tienes conmigo. Este fichero tiene que tener un frame por cada una de las imágenes que te muestro a continuación.
 
-![super4](img/fgma/slayoutuperposicion4Ejer.png)
+![super4](img/fgma/superposicion4Ejer.png)
 
-![super5](img/fgma/slayoutuperposicion5Ejer.png)
+![super5](img/fgma/superposicion5Ejer.png)
 
 Una vez que tengas los dos frames. Modificalos mediante la técnica de superposición,para darle más importancia a las imágenes.
 

@@ -71,3 +71,21 @@ Cuando se pida realizar un /commit/ recuerda que previamente hay que añadir los
    1. Obtén los cambios que hay en el repositorio remoto **sin fusionarlos en la rama local**. Adjunta captura de pantalla del resultado del comando utilizado.
    2. Actualiza la rama `master` local con el contenido de la rama `master` del repositorio remoto. Adjunta captura de pantalla del resultado del comando utilizado.
    3. Comprueba que aparecen los 5 nombres de directores esperados.
+
+## Actividades 3
+
+1. Creación de cuenta en GitHub
+   1. Crea una cuenta en GitHub
+   2. Añade tu dirección de correo de educación
+   3. Solicita un descuento para uso educativo (ver enlace en apartado de Referencias)
+2. Trabajo con repositorios, issues, forks y pull requests.
+   1. Haz un fork del repositorio localizado en la siguiente url: . A partir de este momento todas las tareas que se indican se deben realizar en tu repositorio (el que has clonado mediante el fork).
+      1. Realiza un primer commit para poner tu nombre y apellidos en el fichero README.md. Necesitaras hacer un clonado sobre el repositorio que has creado con el fork.
+      2. Crea 3 issues con los siguientes títulos. Si no ves la pestaña de issues, actívala desde los ajustes (settings) del repositorio.
+         1. Añadir 3 libros
+         2. Añadir 3 películas
+         3. Añadir 3 discos
+      3. Modifica los ficheros correspondientes y realiza 3 commits para realizar cada una de las tareas que se indican en los issues. El mensaje del commit debe hacer que se cierren los issues correspondientes de manera automática.
+      4. Haz una captura de pantalla de los comandos que has utilizado para hacer los commits y subir los cambios a GitHub.
+      5. Incluye las capturas de pantalla en el repositorio dentro de la carpeta capturas. Añádelas también al repositorio de manera que queden guardadas en tu repositorio en GitHub.
+      6. Realiza una pull request indicando en el mensaje que has completado la tarea.
