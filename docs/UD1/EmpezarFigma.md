@@ -70,6 +70,7 @@ Hay una serie de características y elementos con los que podemos jugar para con
 ## Overlay
 
 Si nos fijamos en imagen de abajo. Nos muestra una web con una foto fantástica y un diseño típico. Pero tiene un gran error. NO se puede leer el texto, ya que no hay suficiente contraste entre el background y cada uno de los objetos.
+
 ![overlay](img/fgma/overlay.png)
 
 Hay varias soluciones, una de ella es desturar la imagen, hacerla en blanco y negro y después rellanarla con otro color que haga más constraste como podemos ver en la siguiente imagen.
@@ -78,7 +79,7 @@ Hay varias soluciones, una de ella es desturar la imagen, hacerla en blanco y ne
 
 Otras solución es poner cajas transparentes detrás del contenido y añadir negro.
 
-![overlayZonas] (img/fgma/overlayZonas.png)
+![alt text](img/fgma/overlayZonas.png)
 
 ## Recortes
 
