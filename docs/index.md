@@ -66,3 +66,18 @@ En cada evaluación **siempre habrá una prueba específica** que evaluará todo
 !!! Warning
 
     En primera instancia se recupera el RA en el examen de convocatoria final Ordinaria. En segunda instancia si todavía no se ha superado el RA en la Ordinaria se debe aprobar en examen final de la convocatoria Extraordinaria.
+
+## Licencia
+
+**Licencia**
+![alt text](image.png)
+Licencia de Creative Commons
+
+Esta página forma parte del curso Diseño de interfaces Web de se distribuye bajo una licencia Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional.
+
+## Bibliografía web
+
+Este web se ha construido a partir de material legalmente extraído de las siguientes páginas y por ellos reconozco su aportación:
+
+- https://www.mclibre.org/consultar/htmlcss/index.html
+- https://github.com/pedroprieto/curso-github

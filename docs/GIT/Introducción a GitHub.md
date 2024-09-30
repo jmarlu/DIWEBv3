@@ -2,7 +2,7 @@
 
 ## Referencias
 
-- [Ayuda de GitHub] (https://help.github.com/)
+- [Ayuda de GitHub](https://help.github.com/)
 - [Sintaxis de MarkDown](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 - [Autenticación en GitHub mediante tokens](https://docs.github.com/es/github/authenticating-to-github/creating-a-personal-access-token)
 - [Solicitud de descuentos para uso educativo](https://education.github.com/discount_requests/new)

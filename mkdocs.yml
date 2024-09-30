@@ -14,7 +14,13 @@ nav:
       - Manejo Básico: ./GIT/manejoBasico.md
       - Introducción Github: ./GIT/Introducción a GitHub.md
       - Actividades: ./GIT/Actividades.md
-
+  - UD2 HTML y herramientas de desarrollo:
+      - Html: ./UD2/html5.md
+      - Conceptos básicos: ./UD2/Conceptos básicos.md
+      - layout: ./UD2/layout.md
+      - Actividades:
+          - Manejo de VisualCode: ./VSCODE/ManejoVisualcode.md
+          - Actividad 1: ./UD2/Actividades/Actividad 1
 theme:
   name: material
   icon:
