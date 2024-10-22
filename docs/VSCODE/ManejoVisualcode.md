@@ -258,3 +258,7 @@ vscode permite extender sus capacidades mediante la instalación extensiones. Ex
 1. Bookmarks
 2. live Server.
 3. Color Highlight
+
+!!! note Forma de entrega
+
+      Realiza todos los ejercicios.**UN FICHERO POR CADA EJERCICIO**. Si tienes que responder a alguna pregunta o redactar algo deberás crear un fichero md (Markdown). Revisa la documentación de como generar ficheros y su sintaxis básica de markdown. https://tutorialmarkdown.com/sintaxis. **SI EN EL EJERCICIO TE DICE QUE GENERES UNA PÁGINA HTML NO HACE FALTA QUE GENERES UN FICHERO MD**.

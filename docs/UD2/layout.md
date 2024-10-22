@@ -10,7 +10,7 @@ En este tema vamos a tratar sobre la estructura de una web. Cómo utilizando los
 
 Veamos un diseño simplista para comprender el problema de la maquetación con cajas flotantes.
 Este es el esquema de lo que queremos hacer:
-<img src="img/layout/diseñoSimplista.png" alt="Picture" style="display: block; height:800px; margin: 10px auto" />
+![diseñoSimplista](img/layout/diseñoSimplista.png)
 
 Queremos que la distribución tenga un **ancho fijo**y que esté **centrada**. También queremos que las cajas tengan un color de fondo y que las cajas `<main>` y `<aside>` estén separadas por una línea vertical.
 
@@ -592,7 +592,7 @@ Ventajas de este diseño con respecto a los otros:
 
 Cuando trabajamos con flexbox necesitamos pensar en términos de dos ejes — el eje principal y el eje cruzado. El eje principal está definido por la propiedad `flex-direction`, y el eje cruzado es perpendicular a este.
 
-<img src="img/layout/ejes.png" alt="Picture" style="display: block; height:700px; margin: 10px auto" />
+![ejes](img/layout/ejes.png)
 
 El eje cruzado va perpendicular al eje principal, y por lo tanto si `flex-direction` (del eje principal) es row o row-reverse el eje cruzado irá por las columnas. Si el eje principal es `column o column-reverse` entonces el eje cruzado corre a lo largo de las filas.
 
@@ -600,7 +600,7 @@ El eje cruzado va perpendicular al eje principal, y por lo tanto si `flex-direct
 
 Si flex-direction es row y estoy trabajando en un idioma que la escritura es de izquierda a derecha, entonces el margen inicial del eje principal quedará a la izquierda, y el margen final a la derecha.
 
-<img src="img/layout/lineas.png" alt="Picture" style="display: block; height:700px; margin: 10px auto" />
+![lineas](img/layout/lineas.png)
 
 Pensar en inicial y final en vez de izquierda y derecha es útil cuando veamos otros métodos de layout tales como el CSS Grid Layout que sigue los mismos patrones.
 
@@ -617,7 +617,7 @@ Para crear un contenedor flex, establecemos la propiedad del área del contenedo
 
 El resultado es que todos los ítems se alinearán en una solo fila, usando el tamaño del contenedor como su tamaño en el eje principal. Si hay más ítems de los que caben en el contenedor, **estos no pasarán más abajo si no que sobrepasarán el margen** porque el valor de la propiedad flex-wrap es nowrap. Si hay ítems más altos que otros, todos los ítems serán ajustados en el eje cruzado para alcanzar al mayor.
 
-<img src="img/layout/contenedorElementos.png" alt="Picture" style="display: block; height:700px; margin: 10px auto" />
+![contenedorElementos](img/layout/contenedorElementos.png)
 
 Ahora vamos a ver algunos ejemplos de su utilización a partir del siguiente código html:
 
@@ -885,7 +885,7 @@ Podemos hacer dos cosas:
 1. poco a poco compiar el código en visual code y quitar las dos barras.
 2. Si estáis utilizando codePen, en las sección de configuración del css (ruedecita). Poner, preprocesador scss, como muestra la siguiente imagen.
 
-<img src="img/layout/codepen.png" alt="Picture" style="display: block; height:800px; margin: 10px auto" />
+![codepen](img/layout/codepen.png)
 
 ### Conceptos
 
@@ -898,9 +898,9 @@ Para utilizar Grid CSS necesitaremos tener en cuenta una serie de conceptos que 
 - Gutters : Espacio entre las columnas.
 - Línea (grid line): Separador horizontal o vertical de las celdas de la cuadrícula.
 
-<img src="img/layout/terminosGrid.png" alt="Picture" style="display: block; height:800px; margin: 10px auto" />
+![terminosGrid](img/layout/terminosGrid.png)
 
-<img src="img/layout/terminologiaGrid2.png" alt="Picture" style="display: block; height:800px; margin: 10px auto" />
+![terminologiaGrid2](img/layout/terminologiaGrid2.png)
 
 Vamos a crear los ejemplos sobre el siguiente html.
 
