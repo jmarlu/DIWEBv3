@@ -18,9 +18,13 @@ nav:
       - Html: ./UD2/html5.md
       - Conceptos básicos: ./UD2/Conceptos básicos.md
       - layout: ./UD2/layout.md
+      - Seo: ./UD2/seoVerificación.md
       - Actividades:
           - Manejo de VisualCode: ./VSCODE/ManejoVisualcode.md
-          - Actividad 1: ./UD2/Actividades/Actividad 1
+          - Actividad 1: ./UD2/Actividades/Actividad1/EstructuraFloatTables.md
+          - Actividad 2: ./UD2/Actividades/Actividad2/Flex.md
+          - Actividad 3: ./UD2/Actividades/Actividad3/Actividad 3.md
+
 theme:
   name: material
   icon:

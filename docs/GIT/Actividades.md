@@ -89,3 +89,11 @@ Cuando se pida realizar un /commit/ recuerda que previamente hay que añadir los
       4. Haz una captura de pantalla de los comandos que has utilizado para hacer los commits y subir los cambios a GitHub.
       5. Incluye las capturas de pantalla en el repositorio dentro de la carpeta capturas. Añádelas también al repositorio de manera que queden guardadas en tu repositorio en GitHub.
       6. Realiza una pull request indicando en el mensaje que has completado la tarea.
+
+!!! note "Entrega de la Actividad 1 y 2"
+
+      Guarda el fichero con las capturas en formato PDF. La entrega del fichero se realizará a través de la plataforma Aules.
+
+!!! note "Entrega de la Actividad 3"
+
+      No hay que subir ningún archivo en la tarea de la plataforma Aules.

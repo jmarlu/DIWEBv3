@@ -66,7 +66,7 @@ La etiqueta `<div>` :
 Otros ejemplos de elementos de bloque:`<h1> - <h6> ,<p> <form>`
 
 Para crear la siguiente página:
-<img src="img/conceptosBasicos/bloqueLinea.png" alt="Picture" style="display: block; margin: 10px auto" />
+![bloqueLinea](img/conceptosBasicos/bloqueLinea)
 
 Introduciríamos el siguiente código html
 
@@ -117,9 +117,10 @@ El W3C nos señala que todos los elementos HTML aparecen en forma de "caja". Est
 
 Así es una caja:
 
-<img src="img/conceptosBasicos/caja.png" alt="Picture" style="display: block; margin: 10px auto" />
+![caja](img/conceptosBasicos/caja)
 
 Para saber cuáles serán las dimensiones reales de las cajas en pantalla, hay que combinarlas todas: contenido + rellenos + bordes + márgenes.
+
 Por ejemplo, si tenemos un contenido de 250 píxeles de ancho (width), un relleno en los cuatro lados de 10 píxeles (padding), un borde idéntico de 5 píxeles (border) y un margen de 20 píxeles en los cuatro lados de la caja, **el ancho en pantalla será: 20 + 5 + 10+ 250 + 20 + 5 + 20 = 320** píxeles ocupados en pantalla.
 
 ### Los márgenes de los elementos
@@ -167,6 +168,7 @@ Tenemos dos elementos de tipo block (vista block), el `<h1> y el <h2>` que apare
 Podemos sacar del flujo normal para colocarlo en un plano superior, encima del flujo normal. Se trata del posicionamiento absoluto, que coloca donde queramos cualquier elemento. Los elementos del flujo normal permanecen debajo de los elementos en posición absoluto.
 
 ![absoluto](img/conceptosBasicos/absoluto.gif)
+
 La caja 2 está posicionada de forma absoluta, lo que provoca que el resto de elementos de la página modifiquen su posición. En concreto, la caja 3 deja su lugar original y pasa a ocupar el hueco dejado por la caja 2.
 
 Determinar la referencia utilizada para interpretar los valores de **top, right, bottom y left** de una caja posicionada de forma absoluta es un proceso complejo que se compone de los siguientes pasos:
@@ -225,7 +227,7 @@ div { border: 2px solid #ccc; padding: 1em; margin: 1em 0 1em 4em; width: 300px;
 }
 
 <div>
-  <img src="imagenes/imagen.png" alt="Imagen genérica" />
+  ![](imagenes/imagen) alt="Imagen genérica" />
   <p>
     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
     ullamcorper velit eu ipsum. Ut pellentesque, est in volutpat cursus, risus
@@ -559,7 +561,7 @@ p.capital:first-letter {
 
 Las imágenes son elementos en línea, es decir, que se insertan como si fueran caracteres,formando parte del párrafo o del elemento de bloque en el que se insertan. La altura de la línea ven la que está insertado el elemento aumenta lo necesario para poder alojar la imagen, como muestra el siguiente ejemplo, en el que la hoja de estilo no contiene ninguna propiedad relacionada con la imagen.
 
-![float](img/conceptosBasicos/floatImagen1.png")
+![float](img/conceptosBasicos/floatImagen1))
 
 Si se quiere que una imagen aparezca a la izquierda (o a la derecha) de un texto, es decir,que el texto fluya a lo largo de la imagen, hay que utilizar la propiedad float. Esta propiedad sólo admite dos valores, left y right, que sitúan la imagen a la izquierda o a la derecha, como muestran los ejemplos siguientes.
 
@@ -568,11 +570,11 @@ img {
 float: left;
 }
 
-<img   src="img/conceptosBasicos/floatImagen2.png"  alt="Picture"  style="display: block; margin: 10px auto"/>
+<img   src="img/conceptosBasicos/floatImagen2)  alt="Picture"  style="display: block; margin: 10px auto"/>
 img {
 float: right;
 }```
-<img   src="img/conceptosBasicos/floatImagen3.png"  alt="Picture"  style="display: block; margin: 10px auto"/>
+<img   src="img/conceptosBasicos/floatImagen3)  alt="Picture"  style="display: block; margin: 10px auto"/>
 Si queremos tener una imagen a la izquierda y otra a la derecha, debemos definir clases y asignarlas a la imagen correspondiente
 ```css
 img.izquierda {
@@ -660,7 +662,7 @@ img {
 }
 ```
 
-![clear3](img/conceptosBasicos/clear3.png" alt="Picture)
+![clear3](img/conceptosBasicos/clear3) alt="Picture)
 
 Si se quiere que la división incluya la imagen, se puede conseguir de varias maneras:
 
