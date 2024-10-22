@@ -1,0 +1,32 @@
+.promo {
+  border: 1px solid black;
+  display: inline-flex;
+  max-width: 280px;
+  min-height: 350px;
+  padding: 20px;
+  flex-direction: column;
+  /*vertical-align: top;*/
+}
+.promo-info {
+  border: 1px solid black;
+}
+.promo-title {
+  margin: 0;
+}
+
+.promo-description {
+  margin-top: 8px;
+}
+.promo--center {
+  justify-content: center;
+}
+.promo--end {
+  justify-content: flex-end;
+}
+/*
+ Display inline-flex convierte los elementos en flex pero también en inline. en el ejemplo
+tenemos tres elementos en bloque que los hemos convertido en elementos en linea. 
+un elemento en linea ocupa su lugar. es decir su tamaño. Es por eso, que se ponen uno al lado del otro.
+A continuación se disponen en columna y se centra el contenido dentro de cada bloque, los otros siguen al elemento en linea. 
+Es por eso que se desplazan . También podemos utiliza vertical align para alinearlos dado que son elementos en linea. ç
+*/
