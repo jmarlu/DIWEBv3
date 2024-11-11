@@ -9,8 +9,6 @@ Cambia títulos y nombres. Además, si quieres puedes cambiar el html.
 
 ![Flex](img/actividadFlex.png)
 
-<div style="page-break-after: always"></div>
-
 ## Mi proceso
 
 ### Construido con

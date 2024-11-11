@@ -24,6 +24,8 @@ nav:
           - Actividad 1: ./UD2/Actividades/Actividad1/EstructuraFloatTables.md
           - Actividad 2: ./UD2/Actividades/Actividad2/Flex.md
           - Actividad 3: ./UD2/Actividades/Actividad3/Actividad 3.md
+          - Actividad 4: ./UD2/Actividades/Actividad4/Actividad 4.md
+          - Actividad 5: ./UD2/Actividades/Actividad5/Actividad 5.md
 
 theme:
   name: material

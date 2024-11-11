@@ -2,7 +2,7 @@
 
 En este tema la mayoría de las explicaciones se añaden multitud de ejemplos que tenéis que ir probando ,para analizar el resultado, o bien realizar pequeños ejercicios para comprobar si lo habéis entendido. Para ello, os recomiendo que utilicéis la aplicación CODEPEN.
 
-# Estructura de una Web
+## Estructura de una Web
 
 En este tema vamos a tratar sobre la estructura de una web. Cómo utilizando los elementos o conceptos básicos de los anteriores temas y otros nuevos, vamos a poder situar cada una de los elementos de nuestra web donde nosotros queramos.
 
