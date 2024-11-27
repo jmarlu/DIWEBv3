@@ -8,8 +8,6 @@ Crea la siguiente página web mediante flex.No obstante, puedes utilizar todo lo
 
 ![](img/actividadFlex.png)
 
-<div style="page-break-after: always"></div>
-
 ## Mi proceso
 
 ### Construido con
