@@ -18,7 +18,7 @@ nav:
       - Actividades: ./GIT/Actividades.md
   - UD2 HTML y herramientas de desarrollo:
       - Html: ./UD2/html5.md
-      - Conceptos básicos: ./UD2/Conceptos básicos.md
+      - Conceptos básicos: ./UD2/conceptosBásicos.md
       - layout: ./UD2/layout.md
       - Seo: ./UD2/seoVerificación.md
       - Actividades:
@@ -29,7 +29,7 @@ nav:
           - Actividad 4: ./UD2/Actividades/Actividad4/Actividad 4.md
           - Actividad 5: ./UD2/Actividades/Actividad5/Actividad 5.md
   - UD3 CSS:
-      - Conceptos básicos: ./UD3/conceptosBásicos.md
+      - Conceptos básicos: ./UD3/conceptos básicos.md
       - Conceptos Avanzados: ./UD3/conceptosAvanzados.md
       - Actividades:
           - Actividad 1: ./UD3/Actividades/Actividad 1/Actividad 1.md
