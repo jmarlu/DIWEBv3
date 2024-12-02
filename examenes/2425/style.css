@@ -1,0 +1,147 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Estructura general usando Grid */
+.container {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 3fr minmax(200px, 1fr);
+  grid-template-rows: auto 1fr auto; /* Añadido: Fila para el footer */
+  gap: 20px;
+  width: 100%;
+}
+
+/* Barra Lateral Izquierda */
+.sidebar {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.subscriptions ul {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+/* Contenido Principal */
+.main-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tabs button {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Sección de Posts */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.post-card:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.post-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.post-description {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Panel Lateral Derecho */
+.right-panel {
+  background-color: #fafafa;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  grid-column: 1 / -1; /* Ocupa todo el ancho */
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
