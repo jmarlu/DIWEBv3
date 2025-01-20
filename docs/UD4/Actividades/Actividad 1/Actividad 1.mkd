@@ -1,0 +1,9 @@
+# Metodología
+
+## Ejercicio 1
+
+Recodifica la página que te doy en los recursos para que tenga la metodología BEM. Si es necesario crea clases nuevas. Además añade un elemento nuevo. Este elemento será el logo que estará en la parte izquierda superior de header.
+
+## Ejercicio 2
+
+Instala la extensión Live Sass Compiler e investiga como funciona. Crea el fichero aplicacion.scss y compilalo.

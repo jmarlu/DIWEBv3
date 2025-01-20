@@ -2,6 +2,8 @@
 
 ## Video Explicación
 
+Se encuentra en Aules en el apartado de videos de la Unidad
+
 ## Ejercicio 1
 
 Crea un menú muy sencillo, de tal forma que cuando pase el ratón pase por encima de los
