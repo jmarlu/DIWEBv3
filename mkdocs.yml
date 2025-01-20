@@ -2,9 +2,9 @@ site_name: DISEÑO DE INTERFACES WEB
 site_url:
 nav:
   - Home: index.md
-  - Examenes:
-      - Examen 1EVA: ./examenes/2425/enunciado.md
-  - UD1 Diseño de interfaces:
+  # - Examenes:
+  #     - Examen 1EVA: ./examenes/2425/enunciado.md
+   - UD1 Diseño de interfaces:
       - Elementos del diseño: ./UD1/elementosDiseño.md
       - Otros Elementos: ./UD1/colorTipografíaIconos.md
       - Componentes De Interfaz: ./UD1/Componentes de un interfaz web.md
