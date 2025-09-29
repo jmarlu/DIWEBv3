@@ -566,55 +566,40 @@ Al completar este tutorial habrás aprendido:
 - ✅ Reutilización de estilos.
 - ✅ Consistencia visual.
 
----
-
-## 🚀 Próximos Pasos
-
-Una vez completado este tutorial, puedes:
-
-1. **Crear variaciones:** Diseña versiones móvil y tablet.
-2. **Añadir interactividad:** Usa el modo "Prototype" para hacer la página navegable.
-3. **Crear componentes:** Convierte elementos repetitivos en componentes reutilizables.
-4. **Experimentar con colores:** Crea variaciones de tema (modo oscuro, diferentes paletas).
-5. **Añadir animaciones:** Explora las transiciones y micro-interacciones.
-
-### Recursos adicionales recomendados:
-- Figma Academy (tutoriales oficiales).
-- Figma Community (plantillas e inspiración).
-- YouTube: canales de diseño UI/UX.
-- Libros: "Don't Make Me Think" de Steve Krug.
 
 ---
 
 ## ❓ Solución de Problemas Comunes
 
+
 **"No puedo alinear elementos correctamente"**
-- Usa las guías inteligentes (aparecen automáticamente).
-- Activa la cuadrícula: View > Layout Grids.
-- Usa las herramientas de alineación en el panel derecho.
+   - Usa las guías inteligentes (aparecen automáticamente).
+   - Activa la cuadrícula: View > Layout Grids.
+   - Usa las herramientas de alineación en el panel derecho.
 
 **"Los colores no se ven como esperaba"**
-- Verifica que estés usando el perfil de color correcto.
-- Asegúrate de no tener filtros o efectos aplicados.
-- Comprueba la configuración de pantalla.
+
+   - Verifica que estés usando el perfil de color correcto.
+   - Asegúrate de no tener filtros o efectos aplicados.
+   - Comprueba la configuración de pantalla.
 
 **"El texto se ve diferente al diseño de referencia"**
-- Verifica que tienes la fuente Inter instalada.
-- Revisa los tamaños de fuente y interlineado.
-- Asegúrate de usar los pesos correctos (Regular, Medium, Bold).
+
+   - Verifica que tienes la fuente Inter instalada.
+   - Revisa los tamaños de fuente y interlineado.
+   - Asegúrate de usar los pesos correctos (Regular, Medium, Bold).
 
 **"No puedo encontrar una herramienta"**
-- Usa la barra de búsqueda (Ctrl/Cmd + /).
-- Revisa los atajos de teclado más comunes:
-  - R: Rectángulo
-  - T: Texto  
-  - F: Frame
-  - V: Mover/Seleccionar
+
+   - Usa la barra de búsqueda (Ctrl/Cmd + /).
+   - Revisa los atajos de teclado más comunes:
+   - R: Rectángulo
+   - T: Texto  
+   - F: Frame
+   - V: Mover/Seleccionar
 
 ---
 
-¡Felicidades! Has completado tu primer diseño completo en Figma. Este proyecto te ha dado una base sólida para continuar aprendiendo diseño digital y uso de herramientas profesionales.
 
-**Tiempo total invertido:** 3-4 horas.
-**Nivel alcanzado:** Intermedio básico.
+
 **Próximo reto:** Crear la versión móvil del mismo diseño.
