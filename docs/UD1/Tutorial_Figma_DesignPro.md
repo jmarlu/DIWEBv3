@@ -7,16 +7,13 @@ Guía paso a paso para recrear el diseño de la landing page "DesignPro" en Figm
 
 **¿Qué vamos a crear?**
 Una landing page con las siguientes secciones:
-- Header con navegación
-- Hero section (sección principal)
-- Sección de características
-- Testimonios
-- Proceso paso a paso
-- Call-to-action final
-- Footer
-
-**Tiempo estimado:** 3-4 horas  
-**Herramienta:** Figma (web o app de escritorio)
+   - Header con navegación
+   - Hero section (sección principal)
+   - Sección de características
+   - Testimonios
+   - Proceso paso a paso
+   - Call-to-action final
+   - Footer
 
 ---
 
@@ -124,26 +121,26 @@ Una landing page con las siguientes secciones:
 
 ### Paso 6: Logo de DesignPro
 1. **Crear el ícono del logo:**
-   - Dibuja un cuadrado de 32x32px.
-   - Aplica el color "Primary".
-   - Redondea las esquinas a 8px.
+      - Dibuja un cuadrado de 32x32px.
+      - Aplica el color "Primary".
+      - Redondea las esquinas a 8px.
 
 2. **Añadir la letra "D":**
-   - Usa la herramienta Text.
-   - Escribe "D".
-   - Fuente: Inter, 18px, Bold.
-   - Color: blanco.
-   - Centra la "D" en el cuadrado.
+      - Usa la herramienta Text.
+      - Escribe "D".
+      - Fuente: Inter, 18px, Bold.
+      - Color: blanco.
+      - Centra la "D" en el cuadrado.
 
 3. **Añadir texto "DesignPro":**
-   - Texto: "DesignPro".
-   - Aplica el estilo "Heading 3".
-   - Posiciónalo junto al ícono con 8px de separación.
+      - Texto: "DesignPro".
+      - Aplica el estilo "Heading 3".
+      - Posiciónalo junto al ícono con 8px de separación.
 
 4. **Agrupar el logo:**
-   - Selecciona el ícono y el texto.
-   - Ctrl/Cmd + G para agrupar.
-   - Nombra el grupo "Logo".
+      - Selecciona el ícono y el texto.
+      - Ctrl/Cmd + G para agrupar.
+      - Nombra el grupo "Logo".
 
 ### Paso 7: Navegación
 
