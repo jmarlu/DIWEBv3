@@ -10,6 +10,7 @@ nav:
     - Componentes De Interfaz: ./UD1/Componentes de un interfaz web.md
     - Planificación: ./UD1/planificación.md
     - Prototipado: ./UD1/EmpezarFigma.md
+    - Tutorial de figma paso a paso: ./UD1/Tutorial_Figma_DesignPro.md
     - Actividades: ./UD1/Actividades.md
   - Herramienta GIT:
       - Introducción: ./GIT/introduccion.md
@@ -42,6 +43,8 @@ nav:
           - Actividad 1: ./UD4/Actividades/Actividad 1/Actividad 1.mkd
           - Actividad 2: ./UD4/Actividades/Actividad 2/Actividad 2.mkd
           - Actividad 3: ./UD4/Actividades/Actividad 3/Actividad 3.mkd
+  - UD5 Frameworks CSS:
+      - Tailwind: ./UD5/tailwind.mkd
 theme:
   name: material
   icon:
@@ -100,3 +103,5 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+plugins:
+  - glightbox
