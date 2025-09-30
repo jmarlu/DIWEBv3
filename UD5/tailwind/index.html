@@ -1,0 +1,1993 @@
+<!DOCTYPE html><html lang="es" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../UD4/Actividades/Actividad%203/Actividad%203/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Tailwind - DISEÑO DE INTERFACES WEB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%202.75C0%201.784.784%201%201.75%201h12.5c.966%200%201.75.784%201.75%201.75v10.5A1.75%201.75%200%200%201%2014.25%2015H1.75A1.75%201.75%200%200%201%200%2013.25Zm1.75-.25a.25.25%200%200%200-.25.25v10.5c0%20.138.112.25.25.25h12.5a.25.25%200%200%200%20.25-.25V2.75a.25.25%200%200%200-.25-.25ZM7.25%208a.75.75%200%200%201-.22.53l-2.25%202.25a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L5.44%208%203.72%206.28a.749.749%200%200%201%20.326-1.275.75.75%200%200%201%20.734.215l2.25%202.25c.141.14.22.331.22.53m1.5%201.5h3a.75.75%200%200%201%200%201.5h-3a.75.75%200%200%201%200-1.5%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tailwind" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DISEÑO DE INTERFACES WEB" class="md-header__button md-logo" aria-label="DISEÑO DE INTERFACES WEB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DISEÑO DE INTERFACES WEB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tailwind
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="deep-purple" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DISEÑO DE INTERFACES WEB" class="md-nav__button md-logo" aria-label="DISEÑO DE INTERFACES WEB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    DISEÑO DE INTERFACES WEB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD1 Diseño de interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            UD1 Diseño de interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/elementosDise%C3%B1o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Elementos del diseño
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/colorTipograf%C3%ADaIconos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Otros Elementos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Componentes%20de%20un%20interfaz%20web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componentes De Interfaz
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/planificaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planificación
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/EmpezarFigma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prototipado
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Tutorial_Figma_DesignPro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tutorial de figma paso a paso
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Componentes_Figma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Componentes en Figma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Actividades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividades
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD2 HTML y herramientas de desarrollo
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            UD2 HTML y herramientas de desarrollo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/html5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Html
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/conceptosB%C3%A1sicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/seoVerificaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Seo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5">
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Actividades
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Actividades
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VSCODE/ManejoVisualcode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Manejo de VisualCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad1/EstructuraFloatTables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad2/Flex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad3/Actividad%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad4/Actividad%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad5/Actividad%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad 5
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD3 CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            UD3 CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3/conceptos%20b%C3%A1sicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos básicos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3/conceptosAvanzados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conceptos Avanzados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3">
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Actividades
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Actividades
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3/Actividades/Actividad%201/Actividad%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3/Actividades/Actividad%202/Actividad2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3/Actividades/Actividad%203/Actividad%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD4 CSS Avanzado
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            UD4 CSS Avanzado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4/metodologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Metodología
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4/sass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SASS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3">
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Actividades
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            Actividades
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4/Actividades/Actividad%201/Actividad%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4/Actividades/Actividad%202/Actividad%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4/Actividades/Actividad%203/Actividad%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    UD5 Frameworks CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            UD5 Frameworks CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Tailwind
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tailwind
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalar-talwind" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalar TalWind
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalar TalWind">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configurar-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurar script
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primeros-pasos-con-tailwinds" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primeros Pasos con Tailwinds
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabajando-con-tailwind" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trabajando con Tailwind
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabajando con Tailwind">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modificando-la-cabecera" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificando la Cabecera.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-un-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear un color.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incrustar-fuentes-desde-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incrustar fuentes desde archivos.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear componentes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-animaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear animaciones.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resposive-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resposive design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creación de Main
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tailwind">TAILWIND</h1>
+<h2 id="que-es">¿Qué es?</h2>
+<p>Tailwind CSS es un framework CSS que permite un desarrollo ágil, basado en clases de utilidad que se pueden aplicar con facilidad en el código HTML y unos flujos de desarrollo que permiten optimizar mucho el peso del código CSS.</p>
+<p>Es decir, es un framework que tiene clases para, por ejemplo, el fondo de un elemento, el color del texto o simplemente el margen por la parte de arriba. Pero <strong>no aporta muchos componentes en las que hay muchos estilos preconcebidos</strong>, a diferencia de otros frameworks como Bootstrap. De hecho ofrece muy pocos componentes . En cambio lo que propone es entregar una enorme cantidad de clases de utilidad, atajos a propiedades css, que combinadas en distintas variantes ofrecen prácticamente un número ilimitado de variantes de diseño, que permite una personalización del aspecto realmente única para cada proyecto.</p>
+<p>Además Tailwind es una herramienta que se apoya en <strong>PostCSS</strong> para todo lo que es la generación del código CSS. Gracias a PostCSS se alcanza un flujo de desarrollo muy avanzado, <strong>personalizable</strong>, <strong>ágil</strong> y sobre todo, extremadamente <strong>optimizado</strong></p>
+<p>Sin embargo, hay también desventajas en mi opinión:</p>
+<ul>
+<li>Debes tener un conocimiento alto de css para utilizarlo, ya que en realidad utilizar atajos a propiedades css.</li>
+<li>No trae componentes rápidos de utilizar.</li>
+<li>Utilización de gran conjunto de clases que al final parece que creas estilos en linea. Por lo que puede parecer que los estilos y el html se mezclan.</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><strong>PostCSS</strong> es una herramienta moderna para la gestión del código CSS que permite aumentar la productividad a la vez que libera al desarrollador de trabajos adicionales así como conocimientos técnicos del estado actual del lenguaje y el soporte en los navegadores.</p>
+</blockquote>
+</blockquote>
+<h2 id="instalar-talwind">Instalar TalWind</h2>
+<p>En su <a href="https://tailwindcss.com/">página oficial</a> está todo el contenido y tutoriales. Voy a basarme en ella para explicaros como iniciarse en este framework.</p>
+<p>La instalación se va a realizar mediante <code>npm</code>. Pero previamente tienes que tener instalada nodejs. !!!Instala la versión lts!!!.</p>
+<p>Lo primero es crear una carpeta o directorio donde vamos a crear nuestro proyecto. Abrimos una consola en ese directorio e iniciamos el proyecto con el comando <code>npm init</code>. Nos va hacer unas cuantas preguntas pero no es necesario que respondamos. Esto nos va a crear en nuestro directorio un fichero <code>package.json</code>. Donde podremos configurar <strong>nuestro proyecto e incluir scripts de automatización.</strong></p>
+<p>Ya que, TailWind depende de PostCSS. Este lo vamos a instalar como un plugin de PostCSS. Deberemos instalar los siguientes paquetes de la siguiente forma.</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>tailwindcss<span class="w"> </span>postcss<span class="w"> </span>autoprefixer<span class="w"> </span>--save-dev
+//<span class="w"> </span>-D<span class="w"> </span>para<span class="w"> </span>que<span class="w"> </span>nuestro<span class="w"> </span>proyecto<span class="w"> </span>dependa<span class="w"> </span>de<span class="w"> </span>estos<span class="w"> </span>módulos<span class="w"> </span>en<span class="w"> </span>entorno<span class="w"> </span>de<span class="w"> </span>desarrollo
+//<span class="w"> </span>--save-dev<span class="w"> </span>para<span class="w"> </span>que<span class="w"> </span>solo<span class="w"> </span>los<span class="w"> </span>incluya<span class="w"> </span>en<span class="w"> </span>el<span class="w"> </span>directorio<span class="w"> </span>en<span class="w"> </span>el<span class="w"> </span>que<span class="w"> </span>se<span class="w"> </span>estemos<span class="w"> </span>trabajando<span class="w"> </span>y<span class="w"> </span>no<span class="w"> </span>de<span class="w"> </span>forma<span class="w"> </span>global.
+</code></pre></div>
+<p>Como podemos ver en la siguiente imagen podemos ver las dependencias de nuestro proyecto en la sección de desarrollo. También podemos las versiones de estas.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/packge.png" data-desc-position="bottom"><img alt="package1" src="../img/packge.png"></a></p>
+<p>Ahora podemos introducir el siguiente comando <code>npx tailwindcss --help</code> para ver la versión y la ayuda. Deberemos ejecutarlo con <code>npx</code> comprobará si <code>&lt;comando&gt; o &lt;paquete&gt;</code> existe en <code>$PATH,</code> o en los binarios del proyecto local, y si es así lo ejecutará.</p>
+<p>Una de los pasos más importante de en la instalación es introducir las clases en nuestro proyecto. Para ello, vamos a crear una carpeta <code>src</code> dentro de la carpeta principal donde guardamos los estilos sin compilar. Y otra carpeta <code>css</code> donde se incluirán todos nuestros estilos compilados.</p>
+<p>Dentro de <code>src</code> vamos a crear un fichero que se llama <code>styles.css</code> (el nombre da igual). en el que importamos tailwind. Una modificación este archivo implica una nueva compilación para que se modifique.</p>
+<p>Para compilar este archivo</p>
+<div class="highlight"><pre><span></span><code>npx<span class="w"> </span>tailwindcss<span class="w"> </span>-i<span class="w"> </span>./src/styles.css<span class="w"> </span>-o<span class="w"> </span>./css/styles.css
+
+//<span class="w"> </span>Una<span class="w"> </span>opción<span class="w"> </span>importante<span class="w"> </span>es<span class="w"> </span>--watch<span class="w"> </span>.<span class="w"> </span>Entra<span class="w"> </span>en<span class="w"> </span>modo<span class="w"> </span>watching<span class="w"> </span>y<span class="w"> </span>la<span class="w"> </span>modificación<span class="w"> </span>de<span class="w"> </span>ese<span class="w"> </span>archivo<span class="w"> </span>hace<span class="w"> </span>que<span class="w"> </span>se<span class="w"> </span>compile<span class="w"> </span>de<span class="w"> </span>nuevo<span class="w"> </span>de<span class="w"> </span>forma<span class="w"> </span>automática.
+</code></pre></div>
+<p>Si observamos la carpeta <code>"./css/styles.css"</code> Vemos que ha creado ese archivo con un montón de clases. Unas 500 clases que pertenecen a <code>@tailwind base;</code> y no se han incluido las utilidades ni componentes. Esto sucede porque solo las clases que incluyas en el fichero html o js se incluirán en el fichero css compilado. Para ello, deberemos indicarle cual es contenido que tiene que escanear. Por lo que deberemos generar el fichero de configuración de TailWind (<code>tailwind.config.js</code>) con el siguiente comando <code>npx tailwindcss init</code>. En la sección content del archivo de configuración nos indica que archivos tiene que escanear y cuál es la dirección.</p>
+<blockquote>
+<blockquote>
+<p><strong>!!OJO!! Configura tu dirección</strong></p>
+</blockquote>
+</blockquote>
+<h3 id="configurar-script">Configurar script</h3>
+<p>Dentro del fichero de configuración <code>package.json</code> disponemos de una sección <code>scripts</code>. Dentro de ella podemos establecer un conjunto de comandos que nos evitan teclear de nuevo, por ejemplo el comando anterior. De tal forma que crearemos un comando build que nos realizará la compilación, como muestra la siguiente imagen.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/packge2.png" data-desc-position="bottom"><img alt="Alt text" src="../img/packge2.png"></a></p>
+<p>Como vemos, <strong>no</strong> hemos puesto el comando <code>npx</code> y hemos incluido la opción <code>--watch</code>. Para ejecutar el nuevo script/comando deberemos abrir una consola en el directorio (mediante vscode) y ejecutar <code>npm run build</code></p>
+<h2 id="primeros-pasos-con-tailwinds">Primeros Pasos con Tailwinds</h2>
+<p>Tenemos instalado tailwind y ahora vamos a utilizarlo en una web ejemplo que vamos a crear. Crea un <code>index.html</code> y enlazalo con el fichero <code>./css/styles.css</code>.
+Si disponemos del siguiente código html.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola Mundo<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Manzana<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Pera<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Limón<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>El resultado lo podemos ver en la siguiente imagen. Por lo que podemos observar Tailwind tiene sus propios estilos reseteados. Para saber que propiedades le incluye, las podemos observar en el inspector del navegador.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/index.png" data-desc-position="bottom"><img alt="reset" src="../img/index.png"></a></p>
+<p>A continuación vamos a utilizar las clases que nos proporciona TailWind. Por ejemplo, podemos poner <code>text-2xl</code> esta clase la he buscado en la documentación del framework en la web. Como podemos ver en la siguiente imagen.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/tailwindFont.png" data-desc-position="bottom"><img alt="tailWindFont" src="../img/tailwindFont.png"></a></p>
+<p>Además de la anterior clase, podemos probar a introducir al <code>H1</code> algunas de las clases como:</p>
+<ul>
+<li><code>bg-black</code>: Fondo negro.</li>
+<li><code>text-white</code>: Color de texto blanco</li>
+<li><code>m-5</code>: que corresponde con <code>margin: 1.25rem; /* 20px */</code>.</li>
+<li><code>p-5</code>: que corresponde con <code>p-5   padding: 1.25rem; /* 20px */</code></li>
+<li><code>border-8</code>: Que corresponde con <code>border-width: 8px;</code></li>
+<li><code>text-center</code>: Centramos horizontalmente el texto.</li>
+</ul>
+<p>Pero también podemos dar colores a ese borde. Utilizando la siguiente clase <code>border-yellow-900</code>. En el que se le indica en el nombre de la clase el color y la intensidad. Si vamos a la sección de colores de la documentación, disponemos de la paleta de colores que dispone y su intensidad expresada en número.</p>
+<p>Además podemos controlar su opacidad mediante <code>border-indigo-500/50</code>. El nombre de la clase le indica que es el 50% de opacidad. También podemos indicar que lados queremos bordes y así con un montón de utilidades. Todos estos ejemplos están sacados de la documentación. Revisala para aplicar la clase que te convenga.</p>
+<p>En la siguiente imagen podemos ver el resultado de la inclusión de las clases anteriormente comentadas.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/clases.png" data-desc-position="bottom"><img alt="clases" src="../img/clases.png"></a></p>
+<h2 id="trabajando-con-tailwind">Trabajando con Tailwind</h2>
+<p>Ahora vamos a trabajar con la web ejemplo del <strong>tema de responsive</strong>. Esta web la modificaremos y utilizaremos Tailwind para su creación.</p>
+<p>Lo primero que vamos a incluir es una imagen de fondo que disponemos en la carpeta <code>img</code>. Para añadir una imagen a un elemento <strong>no podemos usar una clase</strong> , ya que no existe una clase para este fin, por lo que necesitamos añadir reglas CSS personalizadas, lo más sencillo es simplemente añadir el CSS personalizado a tu hoja de estilos:</p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">base</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">components</span><span class="p">;</span>
+<span class="p">@</span><span class="k">tailwind</span><span class="w"> </span><span class="nt">utilities</span><span class="p">;</span>
+
+<span class="p">.</span><span class="nc">my-custom-style</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">"../img/pattern.png"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c">/* Esta clase la ponemos en el body. */</span>
+</code></pre></div>
+<blockquote>
+<blockquote>
+<p>Considerar que cada vez que se haga una modificación en este archivo o en el html se compilará de nuevo.</p>
+</blockquote>
+</blockquote>
+<p>También puedes utilizar la directiva <code>@layer</code> para añadir estilos a la <code>base, de components y de utilities</code> .</p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">layer</span><span class="w"> </span><span class="nt">base</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="s2">"../img/pattern.png"</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>De esta forma hemos añadido nuestros estilos, pero podemos añadir tus propias imágenes de fondo editando la sección t<code>heme.backgroundImage</code> del archivo <code>tailwind.config.js</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">extend</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">backgroundImage</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"body-pattern"</span><span class="o">:</span><span class="w"> </span><span class="s2">"url('../img/pattern.png')"</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Ahora hemos modificado o más bien hemos añadido una clase a clase <code>background(bg)</code>. Por lo que tenemos que poner la clase <code>bg-body-pattern</code>.</p>
+<h3 id="modificando-la-cabecera">Modificando la Cabecera.</h3>
+<p>Ahora vamos a modificar la cabecera que tenemos y añadir un menu en lugar de la dirección que tenemos para ver como funcionan algunas de las clases que dispone este framework. Lo primero que tenemos que hacer es crear el html. Que es el siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">body</span> <span class="na">class</span><span class="o">=</span><span class="s">"bg-body-pattern"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">header</span> <span class="na">class</span><span class="o">=</span><span class="s">"bg-black text-white bebas"</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"container w-11/12 mx-auto flex flex-row"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"flex-1"</span> <span class="na">id</span><span class="o">=</span><span class="s">"logo"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span>
+          <span class="na">class</span><span class="o">=</span><span class="s">"w-72 pt-0.5 pb-0.5 text-center tracking-wider transition duration-100 rounded-sm"</span>
+        <span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"symbol"</span><span class="p">&gt;</span>S<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>INFORMÁTICA<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">"flex-1"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>INICIO<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>CONTACTO<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>PERFIL<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Ahora vamos a explicar algunos de las clases que se han establecido en el anterior ejemplo, pero como siempre deberéis acudir a la documentación del propio framework.</p>
+<ul>
+<li><code>container</code>: Un componente para fijar la anchura de un elemento. No está centrado por lo que deberemos poner la clase <code>mx-auto</code>. Pero, por ejemplo para que ocupe el 91% utilizaremos la clase <code>w-11/12</code> (división de 11 entre 12)</li>
+<li><code>flex</code>: Dispone los elementos a flex tomando como dirección la fila con la clase <code>flex-row</code>. Además la clase <code>flex-1</code> permite que un elemento flexible crezca y se encoja según sea necesario, ignorando su tamaño inicial.</li>
+<li><code>tracking-wider</code>:Utilidad para controlar el espaciado entre letras.</li>
+<li><code>transition</code> es una utilidad para controlar la propiedad <code>transition</code>. Además con esta clase <code>duration-100</code> controlamos la duración de la transición durante 100ms.</li>
+<li><code>rounded-sm</code>: Utilidad para aplicar redondeo a los bordes.</li>
+</ul>
+<h3 id="crear-un-color">Crear un color.</h3>
+<p>Ahora quiero crear un color nuevo que no se encuentra determinado en nuestro framework y aplicarselo al background del logo. Tendremos hacerlo como antes con el background del body. Nos vamos a la configuración y extendemos el tema.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./*.{html,js}"</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">extend</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">backgroundImage</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"body-pattern"</span><span class="o">:</span><span class="w"> </span><span class="s2">"url('../img/pattern.png')"</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"azul-claro"</span><span class="o">:</span><span class="w"> </span><span class="s2">"#84b6f4"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"azul-oscuro"</span><span class="o">:</span><span class="w"> </span><span class="s2">"#005187"</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Ahora, como antes, la manera de aplicar la clase es mediante <code>bg-azul-claro</code>. Pero, también podemos aplicar el color al texto, por ejemplo text-azul-claro. En definitiva a cualquier clase que podamos tener color.</p>
+<h3 id="incrustar-fuentes-desde-archivos">Incrustar fuentes desde archivos.</h3>
+<p>Podemos ver que en el código html, que hemos utilizado, la clase symbol que no se encuentra dentro de las utilidades. Lo que hemos hecho es incrustar ficheros de fuentes para utilizarlo. Para lo cual, podemos realizarlo modificando el fichero ./src/styles con la directiva <code>@layer</code>.</p>
+<ol>
+<li>Crear un directorio fonts en la carpeta css donde tenemos todos nuestros ficheros de la fuentes correspondientes.</li>
+<li>Crear las clases correspondientes con <code>@layer base{}</code></li>
+<li>Ya podemos utilizar las clases. Por ejemplo , <code>symbol</code> para la S que es la tuerca o bebas para el <code>header</code>. Busca WebSymbolsRegular si quieres cambiarlo.</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">layer</span><span class="w"> </span><span class="nt">base</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c">/*FUENTES*/</span>
+<span class="w">  </span><span class="p">@</span><span class="k">font-face</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="s2">"TrebuchetMS"</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">src</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s2">"fonts/TrebuchetMS.ttf"</span><span class="o">);</span>
+<span class="w">    </span><span class="nt">font-weight</span><span class="o">:</span><span class="w"> </span><span class="nt">normal</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">font-style</span><span class="o">:</span><span class="w"> </span><span class="nt">normal</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="p">@</span><span class="k">font-face</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="s2">"BebasNeue"</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">src</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s2">"fonts/BebasNeue.otf"</span><span class="o">);</span>
+<span class="w">    </span><span class="nt">font-weight</span><span class="o">:</span><span class="w"> </span><span class="nt">normal</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">font-style</span><span class="o">:</span><span class="w"> </span><span class="nt">normal</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="p">@</span><span class="k">font-face</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="s2">"WebSymbolsRegular"</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">src</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s2">"fonts/websymbols-regular-webfont.eot"</span><span class="o">);</span>
+<span class="w">    </span><span class="nt">src</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s2">"fonts/websymbols-regular-webfont.eot?#iefix"</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s2">"embedded-opentype"</span><span class="o">),</span>
+<span class="w">      </span><span class="nt">url</span><span class="o">(</span><span class="s2">"fonts/websymbols-regular-webfont.woff"</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s2">"woff"</span><span class="o">),</span>
+<span class="w">      </span><span class="nt">url</span><span class="o">(</span><span class="s2">"fonts/websymbols-regular-webfont.ttf"</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s2">"truetype"</span><span class="o">),</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s2">"fonts/websymbols-regular-webfont.svg#WebSymbolsRegular"</span><span class="o">)</span>
+<span class="w">        </span><span class="nt">format</span><span class="o">(</span><span class="s2">"svg"</span><span class="o">);</span>
+<span class="w">    </span><span class="nt">font-weight</span><span class="o">:</span><span class="w"> </span><span class="nt">normal</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">font-style</span><span class="o">:</span><span class="w"> </span><span class="nt">normal</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="p">.</span><span class="nc">symbol</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"WebSymbolsRegular"</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">bebas</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"BebasNeue"</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">trebuchet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"TrebuchetMS"</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ahora vamos a aprender como utilizar las clases hover. Nuestro objetivo es que una vez que pasemos el ratón por encima cambie de color el texto y el fondo blanco. Para ello, deberemos utilizar la clase <code>hover:text-black hover:bg-white</code>.</p>
+<p>También disponemos de utilidades como float, las vamos a utilizar en el logo de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"symbol block float-left text-3xl mt-1 ml-11"</span><span class="p">&gt;</span>S<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">"block float-right text-4xl mt-1.5 mr-14"</span><span class="p">&gt;</span>INFORMÁTICA<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Ten en cuenta que si utilizamos el float salen del flujo normal y si no ponemos la clase <code>overflow-hidden</code> en el contenedor saldrán del contenedor. Otra forma de arreglarlo es mediante la creación de un elemento clearfix.</p>
+<h3 id="crear-componentes">Crear componentes</h3>
+<p>Ahora vamos a aprender a crear componentes. En nuestro fichero ./src/styles.scss vamos a a añadir clases a components. mediante el siguiente código.</p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">layer</span><span class="w"> </span><span class="nt">components</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">menu-item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">@apply</span><span class="w"> </span><span class="err">mr-5</span><span class="w"> </span><span class="err">ml-5</span><span class="w"> </span><span class="err">tracking-wider</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="p">.</span><span class="nc">menu-item-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">@apply</span><span class="w"> </span><span class="err">block</span><span class="w"> </span><span class="err">transition</span><span class="w"> </span><span class="err">duration-200</span><span class="w"> </span><span class="n">hover</span><span class="p">:</span><span class="kc">text</span><span class="o">-</span><span class="n">azul-oscuro</span><span class="w"> </span><span class="k">transform</span><span class="w"> </span><span class="n">hover</span><span class="o">:</span><span class="k">scale</span><span class="mi">-125</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Hemos creado dos clases que se van a reutilizar mucho y con la regla <code>@apply</code> le aplicamos las utilidades que necesitemos.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">"flex-1"</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span>
+    <span class="na">class</span><span class="o">=</span><span class="s">"flex flex-row h-20 items-center justify-end text-2xl text-center mr-6"</span>
+  <span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"menu-item"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"menu-item-a"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>INICIO<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"menu-item"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"menu-item-a"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>CONTACTO<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">"menu-item"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"menu-item-a"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>PERFIL<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Además podemos observar que hemos utilizado algunas utilidades nuevas de flex como <code>items-center</code> que alinea verticalmente.</p>
+<h3 id="crear-animaciones">Crear animaciones.</h3>
+<p>Si vamos a la documentación tenemos animaciones básicas. Vamos a utilizar <code>animate-spin</code> para hacer que la tuerca de vueltas y modificaremos su comportamiento.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">" animate-spin symbol block float-left text-3xl mt-1 ml-11"</span><span class="p">&gt;</span>S<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Como podemos observa la rueda va muy rápido. Podemos pensar que con la clase duration podemos modificar el comportamiento pero en la documentación tenemos que extender el tema para modificar una animación que ya está creada , crear una nueva o incluir nuevos keyframes. Vamos a modificar la animación spin.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">content</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./*.{html,js}"</span><span class="p">],</span>
+<span class="w">  </span><span class="nx">theme</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">extend</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">backgroundImage</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"body-pattern"</span><span class="o">:</span><span class="w"> </span><span class="s2">"url('../img/pattern.png')"</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">colors</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"azul-claro"</span><span class="o">:</span><span class="w"> </span><span class="s2">"#84b6f4"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"azul-oscuro"</span><span class="o">:</span><span class="w"> </span><span class="s2">"#005187"</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">animation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">"spin-slow"</span><span class="o">:</span><span class="w"> </span><span class="s2">"spin 3s linear infinite"</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">miWiggle</span><span class="o">:</span><span class="w"> </span><span class="s2">"wiggle 2s linear infinite"</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="nx">keyframes</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">wiggle</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="s2">"0%, 100%"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="s2">"rotate(-3deg)"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">          </span><span class="s2">"50%"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">transform</span><span class="o">:</span><span class="w"> </span><span class="s2">"rotate(3deg)"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="p">};</span>
+</code></pre></div>
+<p>Ahora lo que vamos hacer es que cuando hagamos un <code>hover</code> sobre sobre cualquier parte del logo (padre), la animación de la tuerca se pare. En tailwind, tenemos introducir la clase <code>group</code> al padre y y utilizar modificadores <code>group-*</code> como group-hover para dar estilo al elemento. Si vemos la documentación con solo poner <code>group-hover:animate-none</code> sobre la tuerca debería pararse.</p>
+<div class="highlight"><pre><span></span><code> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"group overflow-hidden w-72 pt-0.5 pb-0.5 text-center tracking-wider transition duration-100 rounded-sm bg-azul-claro hover:text-black hover: hover:bg-white"</span>
+          <span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">span</span>
+              <span class="na">class</span><span class="o">=</span><span class="s">"symbol animate-spin-slow group-hover:animate-none block float-left text-3xl mt-1 ml-11"</span>
+              <span class="p">&gt;</span>S<span class="p">&lt;/</span><span class="nt">span</span>
+            <span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"invisible group-hover:visible"</span><span class="p">&gt;</span>I'm here!<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">h3</span>
+              <span class="na">class</span><span class="o">=</span><span class="s">"block group-hover:text-lg group-hover:animate-miWiggle float-right text-4xl mt-1.5 mr-14"</span>
+            <span class="p">&gt;</span>
+              INFORMÁTICA
+            <span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Como hemos visto podemos modificar las animations que ya están predefinidas. Pero también podemos realizar nuestras animaciones. En este caso vamos hacer una animación sobre el Informática en la que hemos generado un keyframe diferente. Observa el archivo de configuración.</p>
+<h3 id="resposive-design">Resposive design</h3>
+<p>Ahora vamos a adaptar esa cabecera a los diferentes breakpoints que tiene establecido y veremos como trabajar con responsive. Que podemos ver <a href="https://tailwindcss.com/docs/responsive-design">aquí</a>. Como podemos ver en ejemplo hemos puesto un borde para cada uno de los breakpoints.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">header</span>
+  <span class="na">class</span><span class="o">=</span><span class="s">"text-white bebas bg-black border-8 border-red-600 sm:border-yellow-400 md:border-green-600 lg:border-blue-600 xl:border-indigo-900 2xl:border-b-gray-700"</span>
+<span class="p">&gt;</span>
+  ```
+<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Además podemos personalizar nuestros breakpoints en el archivo de configuración. Como podemos ver el archivo de configuración. Podemos utilizar la función <code>min y max</code> . <strong>Por defecto, si no ponemos ni <code>min</code> ni <code>max</code> es <code>min</code>.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nx">screens</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">xs</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">max</span><span class="o">:</span><span class="w"> </span><span class="s2">"768px"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="c1">// =&gt; @media (max-width: 768px) { ... }</span>
+<span class="w">         </span><span class="nx">xs</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s1">'min'</span><span class="o">:</span><span class="w"> </span><span class="s1">'640px'</span><span class="p">,</span><span class="w"> </span><span class="s1">'max'</span><span class="o">:</span><span class="w"> </span><span class="s1">'767px'</span><span class="p">},</span>
+<span class="w">      </span><span class="c1">// =&gt; @media (min-width: 640px and max-width: 767px) { ... }</span>
+<span class="w">      </span><span class="p">},</span>
+</code></pre></div>
+<p>Vamos a diseñar nuestro menú de tal forma que el <code>nav</code> en cuando llegue a <code>xs</code> se disponga debajo. Para lo cual, como hemos visto tenemos que establecer las clases correspondientes con el breakpoint asociado.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span>
+  <span class="na">class</span><span class="o">=</span><span class="s">"container xs:flex-col w-11/12 mx-auto flex flex-row items-center"</span>
+<span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Eso lo hemos conseguido con la clase <code>xs:flex-col</code>, que como sabemos, cambia la dirección a columnas. También vamos a procurar que los elementos del nav ocupen todos el mismo espacio, para ello tenemos que añadir <code>xs:flex-1</code> pero como lo tenemos como una componente lo debemos incluir en el apply.</p>
+<div class="highlight"><pre><span></span><code><span class="err">@</span><span class="nx">layer</span><span class="w"> </span><span class="nx">components</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="p">.</span><span class="nx">menu</span><span class="o">-</span><span class="nx">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">@</span><span class="nx">apply</span><span class="w"> </span><span class="nx">mr</span><span class="o">-</span><span class="mf">5</span>
+<span class="w">      </span><span class="nx">ml</span><span class="o">-</span><span class="mf">5</span>
+<span class="w">      </span><span class="nx">tracking</span><span class="o">-</span><span class="nx">wider</span>
+<span class="w">      </span><span class="nx">xs</span><span class="o">:</span><span class="nx">flex</span><span class="o">-</span><span class="mf">1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+<h3 id="creacion-de-main">Creación de Main</h3>
+<p>Ahora vamos a crear el main con los artículos y el aside. El HTML lo vamos a cambiar con el objetivo de utilizar más utilidades.
+Ya que, toda la teoría esta comentada con los ejemplos anteriores.</p>
+<p>Comenzaremos con el siguiente código html después del <code>header</code> en donde hemos estado practicando.</p>
+<div class="highlight"><pre><span></span><code>   <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">"container w-11/12 mx-auto mt-5 flex flex-row"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">aside</span> <span class="na">id</span><span class="o">=</span><span class="s">"lateral"</span> <span class="na">class</span><span class="o">=</span><span class="s">"order-2 basis-1/5"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">"aside-header"</span><span class="p">&gt;</span>Buscar<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span>
+          <span class="na">id</span><span class="o">=</span><span class="s">"search"</span>
+          <span class="na">class</span><span class="o">=</span><span class="s">"w-11/12 h-7 m-2.5 mx-auto bg-white border border-gray-200 rounded shadow-inner"</span>
+        <span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">""</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span>
+              <span class="na">class</span><span class="o">=</span><span class="s">"w-10/12 h-6 border-none pl-1.5 rounded-md bg-transparent text-gray-500 transition duration-300 outline-none focus:outline-none"</span>
+              <span class="na">type</span><span class="o">=</span><span class="s">"text"</span>
+              <span class="na">name</span><span class="o">=</span><span class="s">""</span>
+              <span class="na">id</span><span class="o">=</span><span class="s">""</span>
+            <span class="p">/&gt;&lt;</span><span class="nt">input</span>
+              <span class="na">type</span><span class="o">=</span><span class="s">"button"</span>
+              <span class="na">value</span><span class="o">=</span><span class="s">"L"</span>
+              <span class="na">class</span><span class="o">=</span><span class="s">"symbol h-6 cursor-pointer text-base bg-transparent border-none text-gray-500 pl-2"</span>
+            <span class="p">/&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">"aside-header"</span><span class="p">&gt;</span>LOGIN<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"login"</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">""</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"login-icon"</span> <span class="na">for</span><span class="o">=</span><span class="s">""</span><span class="p">&gt;</span>U<span class="p">&lt;/</span><span class="nt">label</span>
+            <span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"login-input"</span> <span class="na">type</span><span class="o">=</span><span class="s">"email"</span> <span class="na">name</span><span class="o">=</span><span class="s">""</span> <span class="na">id</span><span class="o">=</span><span class="s">""</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">"login-icon mt-7"</span> <span class="na">for</span><span class="o">=</span><span class="s">"password"</span><span class="p">&gt;</span>w<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"login-input"</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">name</span><span class="o">=</span><span class="s">"password"</span> <span class="na">id</span><span class="o">=</span><span class="s">""</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"login-button"</span> <span class="na">type</span><span class="o">=</span><span class="s">"submit"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Entrar"</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">"login-button ml-1"</span> <span class="na">type</span><span class="o">=</span><span class="s">"reset"</span> <span class="na">value</span><span class="o">=</span><span class="s">"Reiniciar"</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"login-link"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span> Registrate aquí<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">"login-link"</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span> ¿Has olvidado la Constraseña?<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+      <span class="cm">&lt;!-- FIN DE LA BARRA lateral --&gt;</span>
+
+      <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">"basis-4/5 mr-10"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">"articles-header"</span><span class="p">&gt;</span>Últimos artículos<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-item"</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-data"</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"m-2.5"</span><span class="p">&gt;</span>Fecha:10<span class="p">&lt;/</span><span class="nt">span</span>
+            <span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"m-2.5"</span><span class="p">&gt;</span>Categorías<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-title"</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>Título del artículo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-figure"</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">img</span>
+              <span class="na">class</span><span class="o">=</span><span class="s">""</span>
+              <span class="na">src</span><span class="o">=</span><span class="s">"./img/senthil-kumar-moorthy-bn5Upp6c5L4-unsplash (1).jpg "</span>
+              <span class="na">alt</span><span class="o">=</span><span class="s">"Tigre"</span>
+            <span class="p">/&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-description"</span><span class="p">&gt;</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+            obcaecati accusamus facilis libero eveniet nemo architecto
+            recusandae excepturi optio explicabo dolore voluptate quasi numquam
+            dolorem repudiandae expedita similique saepe deserunt?
+          <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-item"</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-data"</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"m-2.5"</span><span class="p">&gt;</span>Fecha:10<span class="p">&lt;/</span><span class="nt">span</span>
+            <span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"m-2.5"</span><span class="p">&gt;</span>Categorías<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-title"</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>Título del artículo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">figure</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-figure"</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">img</span>
+              <span class="na">class</span><span class="o">=</span><span class="s">""</span>
+              <span class="na">src</span><span class="o">=</span><span class="s">"./img/birger-strahl-bmjp_dwpoU8-unsplash.jpg"</span>
+              <span class="na">alt</span><span class="o">=</span><span class="s">"Tigre"</span>
+            <span class="p">/&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-description"</span><span class="p">&gt;</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+            obcaecati accusamus facilis libero eveniet nemo architecto
+            recusandae excepturi optio explicabo dolore voluptate quasi numquam
+            dolorem repudiandae expedita similique saepe deserunt?
+          <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">article</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-item"</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-data"</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"m-2.5"</span><span class="p">&gt;</span>Fecha:10<span class="p">&lt;/</span><span class="nt">span</span>
+            <span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">"m-2.5"</span><span class="p">&gt;</span>Categorías<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h4</span> <span class="na">class</span><span class="o">=</span><span class="s">"article-title"</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"#"</span><span class="p">&gt;</span>Título del artículo<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est,
+            obcaecati accusamus facilis libero eveniet nemo architecto
+            recusandae excepturi optio explicabo dolore voluptate quasi numquam
+            dolorem repudiandae expedita similique saepe deserunt?
+          <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span>
+      <span class="na">id</span><span class="o">=</span><span class="s">"footer"</span><span class="err">"</span>
+    <span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"container &gt;</span>
+<span class="s">        &lt;div id="</span><span class="na">info</span><span class="err">"</span> <span class="na">class</span><span class="o">=</span><span class="s">"footer-box"</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">h5</span> <span class="na">class</span><span class="o">=</span><span class="s">"footer-header"</span><span class="p">&gt;</span>Desarrollado con<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">"mb-6"</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">img</span>
+              <span class="na">class</span><span class="o">=</span><span class="s">"block mx-auto"</span>
+              <span class="na">src</span><span class="o">=</span><span class="s">"img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png"</span>
+            <span class="p">/&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Lo pimero que vamos hacer es que nuestro main (contededor) tenga las siguientes clases. con el objetivo de tener un contenedor con 91.6666667% del tamaño y centrado. Además pondremos que son elementos flex para posicionar los elementos hijos (aside y section).</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">"container w-11/12 flex flex-row mx-auto"</span><span class="p">&gt;&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Además vemos que el aside tiene que estar en el otro lado por lo que le asignamos la siguiente clase (<code>order-2</code>).Ahora lo que queremos es establecer un ancho en el aside del 25% por lo que añadimos el siguiente tamaño con la clase <code>basis-1/5</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">aside</span> <span class="na">id</span><span class="o">=</span><span class="s">"lateral"</span> <span class="na">class</span><span class="o">=</span><span class="s">"order-2 basis-1/5 mt-5"</span><span class="p">&gt;&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Para identificar a la section con los articulos le he puesto un borde como veis y le indicado con <code>basis-4/5</code> que sea un 75%.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">"border-4 border-blue-600 basis-4/5 mr-10"</span><span class="p">&gt;&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Como podéis ver he utilizado la propiedad <code>flex-basis</code> de flex. También podríamos haber utilizado el <code>width</code> con porcentajes con con rems pero último supone que la página no sea fluida.</p>
+<p>Vamos a tocar,ahora, el título de los artículos. Creamos una clase en components que sea <code>articles-header</code> con sombra. De la siguiente forma.
+En el archivo de configuración podemos establecer la sombra y en el archivo styles.scss podemos crear la componente y aplicar el estilo que hemos creado.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">"articles-header"</span><span class="p">&gt;</span>Últimos artículos<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// Fichero de configuración</span>
+
+<span class="nx">boxShadow</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">header3D</span><span class="o">:</span>
+<span class="w">          </span><span class="s2">"0px 1px #393d3f,1px 2px 0px #393d3f,2px 3px 0px #393d3f,3px 4px 0px #393d3f"</span><span class="p">,</span>
+<span class="w">      </span><span class="p">},</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c">/* styles.css */</span>
+<span class="p">.</span><span class="nc">articles-header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">"BebasNeue"</span><span class="p">;</span>
+<span class="w">  </span><span class="err">@apply</span><span class="w"> </span><span class="err">w-full</span><span class="w"> </span><span class="err">h-16</span><span class="w"> </span><span class="err">text-center</span><span class="w"> </span><span class="err">text-5xl</span><span class="w"> </span><span class="err">tracking-widest</span><span class="w"> </span><span class="err">pt-4</span><span class="w"> </span><span class="err">bg-slate-50</span><span class="w"> </span><span class="err">shadow-header3D</span><span class="w"> </span><span class="err">font-medium</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Para continuar con el tutorial y para hacer la actividad os voy a dejar la sombra que se le aplicado al login.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">boxShadow</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">box</span><span class="o">:</span><span class="w"> </span><span class="s2">"0px 0px 1px rgba(0,0,0,0.3),0px 3px 7px rgba(0,0,0,0.3),0px 1px white inset,0px -3px 1px rgba(0,0,0,0.3) inset"</span><span class="p">,</span>
+<span class="w">      </span><span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie">
+        
+          
+          <a href="../../UD4/Actividades/Actividad%203/Actividad%203/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Actividad 3">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Actividad 3
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
