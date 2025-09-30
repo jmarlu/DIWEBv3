@@ -11,12 +11,13 @@ nav:
     - Planificación: ./UD1/planificación.md
     - Prototipado: ./UD1/EmpezarFigma.md
     - Tutorial de figma paso a paso: ./UD1/Tutorial_Figma_DesignPro.md
+    - Componentes en Figma: ./UD1/Componentes_Figma.md
     - Actividades: ./UD1/Actividades.md
-  - Herramienta GIT:
-      - Introducción: ./GIT/introduccion.md
-      - Manejo Básico: ./GIT/manejoBasico.md
-      - Introducción Github: ./GIT/Introducción a GitHub.md
-      - Actividades: ./GIT/Actividades.md
+  # - Herramienta GIT:
+  #     - Introducción: ./GIT/introduccion.md
+  #     - Manejo Básico: ./GIT/manejoBasico.md
+  #     - Introducción Github: ./GIT/Introducción a GitHub.md
+  #     - Actividades: ./GIT/Actividades.md
   - UD2 HTML y herramientas de desarrollo:
       - Html: ./UD2/html5.md
       - Conceptos básicos: ./UD2/conceptosBásicos.md
