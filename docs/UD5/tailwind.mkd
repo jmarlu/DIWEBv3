@@ -17,7 +17,7 @@ Sin embargo, hay también desventajas en mi opinión:
 
 > > **PostCSS** es una herramienta moderna para la gestión del código CSS que permite aumentar la productividad a la vez que libera al desarrollador de trabajos adicionales así como conocimientos técnicos del estado actual del lenguaje y el soporte en los navegadores.
 
-## Instalar TalWind
+## Instalar Tailwind
 
 En su [página oficial](https://tailwindcss.com/) está todo el contenido y tutoriales. Voy a basarme en ella para explicaros como iniciarse en este framework.
 
@@ -347,7 +347,7 @@ module.exports = {
 Ahora lo que vamos hacer es que cuando hagamos un `hover` sobre sobre cualquier parte del logo (padre), la animación de la tuerca se pare. En tailwind, tenemos introducir la clase `group` al padre y y utilizar modificadores `group-*` como group-hover para dar estilo al elemento. Si vemos la documentación con solo poner `group-hover:animate-none` sobre la tuerca debería pararse.
 
 ```html
- <div class="group overflow-hidden w-72 pt-0.5 pb-0.5 text-center tracking-wider transition duration-100 rounded-sm bg-azul-claro hover:text-black hover: hover:bg-white"
+ <div class="group overflow-hidden w-72 pt-0.5 pb-0.5 text-center tracking-wider transition duration-100 rounded-sm bg-azul-claro hover:text-black hover:bg-white"
           >
             <span
               class="symbol animate-spin-slow group-hover:animate-none block float-left text-3xl mt-1 ml-11"
@@ -370,13 +370,11 @@ Como hemos visto podemos modificar las animations que ya están predefinidas. Pe
 
 Ahora vamos a adaptar esa cabecera a los diferentes breakpoints que tiene establecido y veremos como trabajar con responsive. Que podemos ver [aquí](https://tailwindcss.com/docs/responsive-design). Como podemos ver en ejemplo hemos puesto un borde para cada uno de los breakpoints.
 
-````html
+```html
 <header
   class="text-white bebas bg-black border-8 border-red-600 sm:border-yellow-400 md:border-green-600 lg:border-blue-600 xl:border-indigo-900 2xl:border-b-gray-700"
->
-  ```
-</header>
-````
+></header>
+```
 
 Además podemos personalizar nuestros breakpoints en el archivo de configuración. Como podemos ver el archivo de configuración. Podemos utilizar la función `min y max` . **Por defecto, si no ponemos ni `min` ni `max` es `min`.**
 
@@ -514,10 +512,8 @@ Comenzaremos con el siguiente código html después del `header` en donde hemos 
         </article>
       </section>
     </main>
-    <footer
-      id="footer""
-    >
-      <div id="container >
+    <footer id="footer">
+      <div id="container">
         <div id="info" class="footer-box">
           <h5 class="footer-header">Desarrollado con</h5>
           <p class="mb-6">
@@ -531,7 +527,7 @@ Comenzaremos con el siguiente código html después del `header` en donde hemos 
     </footer>
 ```
 
-Lo pimero que vamos hacer es que nuestro main (contededor) tenga las siguientes clases. con el objetivo de tener un contenedor con 91.6666667% del tamaño y centrado. Además pondremos que son elementos flex para posicionar los elementos hijos (aside y section).
+Lo primero que vamos hacer es que nuestro main (contenedor) tenga las siguientes clases, con el objetivo de tener un contenedor con 91.6666667% del tamaño y centrado. Además, pondremos que son elementos flex para posicionar los elementos hijos (aside y section).
 
 ```html
 <main class="container w-11/12 flex flex-row mx-auto"></main>

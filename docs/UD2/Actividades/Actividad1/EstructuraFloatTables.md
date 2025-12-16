@@ -10,11 +10,11 @@ La primera versión será mediante **el diseño float y la segunda con el diseñ
 
 Utiliza etiquetas que tengan sentido pertenecientes a la version **html5**.
 
-**Par la zona de navegación**, podemos poner un elemento `<ul>`. Cada vínculo `<a>` está situado en elementos `<li>`.
+**Para la zona de navegación**, podemos poner un elemento `<ul>`. Cada vínculo `<a>` está situado en elementos `<li>`.
 Su código **html** es el siguiente:
 
 ```html
-<nav">
+<nav>
   <ul id="menu">
     <li><a href="#">Inicio</a></li>
     <li><a href="#">Proyectos</a></li>

@@ -17,13 +17,16 @@ Los navegadores proveen estilos por defecto que, pero para cambiar estos con los
 - **Estilos en línea:** Una de las técnicas más simples para incorporar estilos CSS a un documento HTML es la de asignar los estilos dentro de las etiquetas por medio del atributo style . Pero no es recomendable para aplicar estilos a todo el documento.
 
 ```html
-<p style="”font-size:" 20px”>Mi texto</p>
+<p style="font-size: 20px;">Mi texto</p>
 ```
 
 - **Estilos embebidos:** Una mejor alternativa es insertar los estilos en la cabecera del documento y luego usar referencias para afectar los elementosHTML correspondientes.
 
 ```html
-p { font-size: 20px }
+<style>
+  p {
+    font-size: 20px;
+  }
 </style>
 ```
 
@@ -34,7 +37,7 @@ Este método sería bueno si sólo tuviéramos un documento en nuestra página, 
   También nos permite modificar o adaptar nuestros documentos a cada circunstancia o dispositivo.
 
 ```html
-<link rel="”stylesheet”" href="”misestilos.css”" />
+<link rel="stylesheet" href="misestilos.css" />
 ```
 
 Con la línea anterior le decimos al navegador que cargue el archivo misestilos.css, que contendrá todos los estilos necesarios para presentar el documento en pantalla.

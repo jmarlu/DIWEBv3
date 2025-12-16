@@ -33,9 +33,7 @@ Veamos, a continuación, el esqueleto de un documento HTML5
     <meta name="author" content="Julio Martinez" />
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
-  `
   <body>
-    `
   </body>
 </html>
 ```

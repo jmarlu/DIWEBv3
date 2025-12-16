@@ -1,0 +1,28 @@
+#gorro {
+  transform-origin: top;
+  animation: swing 2s 2 ease-in-out, trasladarY 2s 4s ease,
+    trasladarX 2s 4s ease;
+}
+@keyframes swing {
+  0%,
+  100% {
+    transform: rotate(-30deg) scale(0.95);
+  }
+  20% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes trasladarY {
+  50% {
+    transform: translateY(-100px);
+  }
+}
+@keyframes trasladarX {
+  50% {
+    transform: translateX(100px);
+  }
+}

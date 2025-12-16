@@ -14,11 +14,11 @@ Ejemplo sobre la portada del sitio Web del Ministerio de Educación y Ciencia. E
 Son aquellos que identifican plenamente al sitio Web. El usuario, a la vista de estos elementos, debe saber a quién pertenece el sitio Web.
 ![identificación](img/elementos/identificacion.jpg)
 
-En el ejemplo son: 1. Título: Portada - Ministerio de Educación y Ciencia 2. La imagen parcial de la bandera de la Unión Europea 3. La imagen parcial de la bandera de España 4. El escudo de España 5. Nombre del organismo titular del sitio We
+En el ejemplo son: 1. Título: Portada - Ministerio de Educación y Ciencia 2. La imagen parcial de la bandera de la Unión Europea 3. La imagen parcial de la bandera de España 4. El escudo de España 5. Nombre del organismo titular del sitio Web
 
 ### Elementos de Navegación
 
-Son aquellos que están presentes en cada una de las pantallas de un sitio Web
+Son aquellos que están presentes en cada una de las pantallas de un sitio Web.
 Permiten al usuario moverse por las diferentes secciones del sitio y retornar de nuevo a la portada.
 ![logo](img/elementos/logo.png)
 intuitivos para que el usuario sepa qué es lo que hay que hacer para acceder a un contenido en concreto:
@@ -95,7 +95,7 @@ Cuando un sitio Web es muy grande y complejo, como el sitio del Ministerio de Ed
 
 ![mapa](img/elementos/mapa.png)
 
-a vez pulsado el enlace del Mapa del sitio verás la imagen mostrada. Las elipses sombreadas muestran la ubicación de los enlaces al Mapa del sitio tanto en la página de portada como en la propia página del mapa. También se ha sombreado el título Mapa Web que es lo que identifica el lugar en el que se encuentra el usuario.
+Una vez pulsado el enlace del Mapa del sitio verás la imagen mostrada. Las elipses sombreadas muestran la ubicación de los enlaces al Mapa del sitio tanto en la página de portada como en la propia página del mapa. También se ha sombreado el título Mapa Web que es lo que identifica el lugar en el que se encuentra el usuario.
 
 El mapa del sitio proporciona a los visitantes un lugar donde buscar de forma sencilla los contenidos que le interesan si es que no los ha encontrado ya en la página principal.
 

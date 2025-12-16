@@ -6,9 +6,17 @@
 
 Su sintaxis es elemento1 ~ elemento2 y selecciona el elemento2 que es hermano de elemento1 y se encuentra detrás en el código HTML. Vamos a ver con un ejemplo al diferencia que hay con el adyacente.
 
+```css
+h1 + h2 {
+  /* selector adyacente */
+}
+
+h1 ~ h2 {
+  /* selector general de hermanos */
+}
+```
+
 ```html
-h1 + h2 { ... } /* selector adyacente */ h1 ~ h2 { ... } /* selector general de
-hermanos */
 <h1>...</h1>
 <h2>...</h2>
 <p>...</p>
@@ -147,17 +155,17 @@ He aquí un ejemplo, muy sencillo, con la aplicación de formato (`<strong> y <e
 
 ```css
 strong:nth-of-type(2) {
-background-color: gold;
+  background-color: gold;
 }
+```
 
-<p>Donec ullamcorper <strong>nulla</strong> non metus
-auctor <em>fringilla</em>. Fusce dapibus, tellus ac
-cursus commodo, <strong>tortor</strong> mauris
-condimentum nibh,
-ut fermentum massa justo sit amet risus. Cum sociis
-natoque <strong>penatibus</strong> y magnis dis
-parturient montes.</p>
-
+```html
+<p>
+  Donec ullamcorper <strong>nulla</strong> non metus auctor <em>fringilla</em>.
+  Fusce dapibus, tellus ac cursus commodo, <strong>tortor</strong> mauris
+  condimentum nibh, ut fermentum massa justo sit amet risus. Cum sociis natoque
+  <strong>penatibus</strong> y magnis dis parturient montes.
+</p>
 ```
 
 El elemento `<p>` tiene como primer elemento hijo un `<strong>`, como segundo un `<em>`, como tercero y cuarto otro `<strong>`. Deseamos apuntar al segundo `<strong>`, y no al segundo elemento hijo.
@@ -172,17 +180,21 @@ Tomemos el ejemplo de un texto (`<p>`) en el que resaltamos algunos términos co
 
 ```css
 strong:only-child {
-background-color: gold;
+  background-color: gold;
 }
+```
 
-<p>Donec sed odio dui. Aenean <strong>lacinia
-bibendum</strong> nulla sed consectetur.Donec id elit non
-mi porta gravida at eget metus. Nullam id dolor id nibh
-ultricies vehicula ut id elit.</p>
-<p>Nullam id dolor id <strong>nibh</strong> ultricies
-vehicula ut id elit. Cum sociis natoque penatibus et
-magnis dis parturient montes, <strong>nascetur</strong>
-ridiculus mus.</p>
+```html
+<p>
+  Donec sed odio dui. Aenean <strong>lacinia bibendum</strong> nulla sed
+  consectetur.Donec id elit non mi porta gravida at eget metus. Nullam id dolor
+  id nibh ultricies vehicula ut id elit.
+</p>
+<p>
+  Nullam id dolor id <strong>nibh</strong> ultricies vehicula ut id elit. Cum
+  sociis natoque penatibus et magnis dis parturient montes,
+  <strong>nascetur</strong> ridiculus mus.
+</p>
 ```
 
 #### La pseudoclase de los elementos sin hermanos de un tipo
@@ -1130,6 +1142,59 @@ Los selectores from y to son muy similares a colocar 0% y 100%. Vamos a añadir 
 ```
 
 > Si tienes fotogramas que van a utilizar los mismos estilos que uno anterior, siempre puedes separarlos con comas, por ejemplo: 0%, 75% { ... }, que utilizarían dichos estilos al inicio de la animación y al 75% de la misma
+
+#### Otros ejemplos
+
+- Rebote encadenado: tres bolas comparten el mismo `@keyframes bounce`, pero con `animation-delay` distintos para escalonar el salto:
+
+```css
+.bola { animation: bounce 1.5s ease-in-out infinite; }
+.bola:nth-child(2) { animation-delay: 0.15s; }
+.bola:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-110px) scale(1.05); }
+}
+```
+
+- Efecto máquina de escribir: se anima el ancho (`width`) con `steps()` para simular que las letras aparecen a golpe de tecla y un cursor intermitente con otra animación:
+
+```css
+@keyframes escribir{
+    0%{ width: 0; }
+    40%,60%{ width: 36ch; }
+    100%{ width: 0; }
+}
+@keyframes cursor{
+    0%,40%{ border-color: transparent; }
+    50%,100%{ border-color: #6cf0ff; }
+}
+.typewriter {
+  max-width: 36ch;
+  white-space: nowrap;
+  border-right: 3px solid #6cf0ff;
+  animation: escribir 6s steps(36) infinite, cursor 0.8s step-end infinite;
+}
+```
+
+- Tarjeta giratoria 3D: el contenedor usa `transform-style: preserve-3d` y la cara trasera se rota 180º; al hacer hover se anima el giro en Y:
+
+```css
+.flip-card-inner { transform-style: preserve-3d; transition: transform 0.8s ease; }
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-face.back { transform: rotateY(180deg); backface-visibility: hidden; }
+```
+
+- Progreso infinito y botón con latido: la barra desplaza un gradiente con `translateX` para simular carga y el botón late con escalado:
+
+```css
+.progress-fill { animation: loading 2.5s ease-in-out infinite; }
+@keyframes loading { 0% { transform: translateX(-60%); } 50% { transform: translateX(0%); } 100% { transform: translateX(60%); } }
+.pulse-btn { animation: latido 1.6s ease-in-out infinite; }
+```
+
+Puedes verlos funcionando en `docs/UD3/cssEjemplos/index.html` (y la copia en `docs/UD3/cssEjemplos/cssEjemplos/index.html`) junto con el resto de demos de la unidad.
 
 ### Transformaciones
 

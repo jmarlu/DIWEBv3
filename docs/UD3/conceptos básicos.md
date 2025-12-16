@@ -24,25 +24,22 @@ La concepción de las CSS3 en módulos independientes supone para los navegadore
 todavía más el trabajo de los navegadores.
 
 He aquí estos prefijos (designación según proveedor):
-• -moz-: para el motor de renderizado Gecko que utiliza Mozilla Firefox.
-• -webkit-: para el motor de renderizado WebKit que utilizan Apple Safari y
-Google Chrome, con sus bifurcaciones.
-• -o-: para el motor de renderizado de Opera.
-• -ms-: para el motor de renderizado de Microsoft Internet Explorer.
-• -khtml-: para el motor de renderizado KHTML que usan varios navegadores
-bajo Linux.
+- -moz-: para el motor de renderizado Gecko que utiliza Mozilla Firefox.
+- -webkit-: para el motor de renderizado WebKit que utilizan Apple Safari y Google Chrome, con sus bifurcaciones.
+- -o-: para el motor de renderizado de Opera.
+- -ms-: para el motor de renderizado de Microsoft Internet Explorer.
+- -khtml-: para el motor de renderizado KHTML que usan varios navegadores bajo Linux.
 
 He aquí la sintaxis que se debe utilizar para que la reconozcan todos los navegadores:
 
 ```css
 header {
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
--23-
--o-border-radius: 10px;
--ms-border-radius: 10px;
--khtml-border-radius: 10px;
-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
 }
 ```
 
@@ -102,7 +99,6 @@ El selector múltiple de CSS, incluye varios selectores separados por coma (,), 
 
 ```css
 h1,
-,
 h2,
 h3 {
   color: #f00;
