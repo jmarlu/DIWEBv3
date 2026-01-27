@@ -1,3 +1,7 @@
+---
+search:
+  exclude: true
+---
 # Examen de primera evaluacion
 
 ## Ejercicio 1 (6 puntos)
