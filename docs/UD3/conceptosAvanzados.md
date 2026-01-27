@@ -316,6 +316,34 @@ Existe otra forma de importar condicionalmente código CSS, y es utilizando `sup
 
 En este caso, si estamos en un navegador antiguo que no soporta grid, descargará y procesará el fichero flex-fallback.css donde colocaremos los estilos alternativos (utilizando flex, por ejemplo). En el caso de que lo soporte, hará lo que tenemos en la regla @supports, que aunque se indica en este ejemplo, no tiene relación directa con el `@import` y no es obligatorio utilizarlo en conjunto.
 
+#### La regla @media
+
+La regla `@media` permite aplicar estilos de forma condicional, por ejemplo segun el ancho de la pantalla. Es la base del responsive design en CSS.
+
+Sintaxis basica:
+
+```css
+@media (max-width: 768px) {
+  /* reglas para pantallas pequenas */
+}
+```
+
+Ejemplo sencillo: cambiamos un layout de dos columnas a una sola.
+
+```css
+.layout {
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+}
+```
+
+Si necesitas mas contexto practico, en la unidad de layout (UD2) tienes un ejemplo completo con flex y media queries.
+
 ### Modelo de caja
 
 #### Bordes con imágenes

@@ -542,7 +542,7 @@ div#crawl {
 .flip-card{
     width: 240px;
     height: 160px;
-    perspective: 1000px;
+    perspective: 10px;
 }
 .flip-card-inner{
     position: relative;

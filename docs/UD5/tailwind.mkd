@@ -28,9 +28,8 @@ Lo primero es crear una carpeta o directorio donde vamos a crear nuestro proyect
 Ya que, TailWind depende de PostCSS. Este lo vamos a instalar como un plugin de PostCSS. Deberemos instalar los siguientes paquetes de la siguiente forma.
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer --save-dev
-// -D para que nuestro proyecto dependa de estos módulos en entorno de desarrollo
-// --save-dev para que solo los incluya en el directorio en el que se estemos trabajando y no de forma global.
+npm install -D tailwindcss postcss autoprefixer
+// -D (alias de --save-dev) para dependencias de desarrollo.
 
 ```
 
@@ -109,7 +108,7 @@ En la siguiente imagen podemos ver el resultado de la inclusión de las clases a
 
 Ahora vamos a trabajar con la web ejemplo del **tema de responsive**. Esta web la modificaremos y utilizaremos Tailwind para su creación.
 
-Lo primero que vamos a incluir es una imagen de fondo que disponemos en la carpeta `img`. Para añadir una imagen a un elemento **no podemos usar una clase** , ya que no existe una clase para este fin, por lo que necesitamos añadir reglas CSS personalizadas, lo más sencillo es simplemente añadir el CSS personalizado a tu hoja de estilos:
+Lo primero que vamos a incluir es una imagen de fondo que disponemos en la carpeta `img`. Para añadir una imagen a un elemento podemos usar CSS personalizado o utilidades con valores arbitrarios (`bg-[url('../img/pattern.png')]`). Lo mas sencillo en este ejemplo es anadir el CSS personalizado a tu hoja de estilos:
 
 ```css
 @tailwind base;
@@ -192,7 +191,7 @@ Ahora quiero crear un color nuevo que no se encuentra determinado en nuestro fra
 
 ```js
 module.exports = {
-  content: ["./*.{html,js}"],
+  content: ["./**/*.{html,js}"],
   theme: {
     extend: {
       backgroundImage: {
@@ -271,7 +270,7 @@ Ten en cuenta que si utilizamos el float salen del flujo normal y si no ponemos 
 
 ### Crear componentes
 
-Ahora vamos a aprender a crear componentes. En nuestro fichero ./src/styles.scss vamos a a añadir clases a components. mediante el siguiente código.
+Ahora vamos a aprender a crear componentes. En nuestro fichero ./src/styles.css vamos a a anadir clases a components. mediante el siguiente codigo.
 
 ```css
 @layer components {
@@ -318,7 +317,7 @@ Como podemos observa la rueda va muy rápido. Podemos pensar que con la clase du
 
 ```js
 module.exports = {
-  content: ["./*.{html,js}"],
+  content: ["./**/*.{html,js}"],
   theme: {
     extend: {
       backgroundImage: {
@@ -370,21 +369,23 @@ Como hemos visto podemos modificar las animations que ya están predefinidas. Pe
 
 Ahora vamos a adaptar esa cabecera a los diferentes breakpoints que tiene establecido y veremos como trabajar con responsive. Que podemos ver [aquí](https://tailwindcss.com/docs/responsive-design). Como podemos ver en ejemplo hemos puesto un borde para cada uno de los breakpoints.
 
+Nota: estos breakpoints son el equivalente a las media queries en CSS. La explicacion base esta en la unidad de layout (UD2) y en reglas CSS (UD3).
+
 ```html
 <header
-  class="text-white bebas bg-black border-8 border-red-600 sm:border-yellow-400 md:border-green-600 lg:border-blue-600 xl:border-indigo-900 2xl:border-b-gray-700"
+  class="text-white bebas bg-black border-8 border-red-600 sm:border-yellow-400 md:border-green-600 lg:border-blue-600 xl:border-indigo-900 2xl:border-b 2xl:border-gray-700"
 ></header>
 ```
 
-Además podemos personalizar nuestros breakpoints en el archivo de configuración. Como podemos ver el archivo de configuración. Podemos utilizar la función `min y max` . **Por defecto, si no ponemos ni `min` ni `max` es `min`.**
+Ademas podemos personalizar nuestros breakpoints en el archivo de configuracion. Podemos utilizar `min` y `max`. **Por defecto, si no ponemos ni `min` ni `max` es `min`.**
 
 ```js
 screens: {
-        xs: { max: "768px" },
-        // => @media (max-width: 768px) { ... }
-         xs: {'min': '640px', 'max': '767px'},
-      // => @media (min-width: 640px and max-width: 767px) { ... }
-      },
+  xs: { max: "768px" },
+  // => @media (max-width: 768px) { ... }
+  sm: { min: "640px", max: "767px" },
+  // => @media (min-width: 640px and max-width: 767px) { ... }
+},
 ```
 
 Vamos a diseñar nuestro menú de tal forma que el `nav` en cuando llegue a `xs` se disponga debajo. Para lo cual, como hemos visto tenemos que establecer las clases correspondientes con el breakpoint asociado.
@@ -548,7 +549,7 @@ Para identificar a la section con los articulos le he puesto un borde como veis 
 Como podéis ver he utilizado la propiedad `flex-basis` de flex. También podríamos haber utilizado el `width` con porcentajes con con rems pero último supone que la página no sea fluida.
 
 Vamos a tocar,ahora, el título de los artículos. Creamos una clase en components que sea `articles-header` con sombra. De la siguiente forma.
-En el archivo de configuración podemos establecer la sombra y en el archivo styles.scss podemos crear la componente y aplicar el estilo que hemos creado.
+En el archivo de configuracion podemos establecer la sombra y en el archivo styles.css podemos crear la componente y aplicar el estilo que hemos creado.
 
 ```html
 <h2 class="articles-header">Últimos artículos</h2>

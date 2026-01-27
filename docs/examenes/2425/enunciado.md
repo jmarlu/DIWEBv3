@@ -1,12 +1,31 @@
-# Examen de primera evaluación
+# Examen de primera evaluacion
 
-![alt text](<img/image 3.svg>)
+## Ejercicio 1 (6 puntos)
 
-A partir de la anterior imagen.Crea una página web **responsiva** que simule la interfaz proporcionada en la imagen. El diseño debe implementarse utilizando **CSS Grid** para la estructura principal y cualquier técnica estudiada para la disposición interna de elementos en los contenedores secundarios.
+Crea una pagina web **responsiva** con una seccion `section-gallery` que contenga una **galeria** de tarjetas con imagen, titulo y descripcion. La composicion debe recordar a una galeria tipo mosaico (varias columnas que se adaptan al ancho disponible).
 
 **Especificaciones:**
 
-- Utilice **Grid** para organizar las tres secciones principales: barra lateral izquierda, contenido principal y barra lateral derecha
-- Dentro del contenido principal, cada tarjeta debe tener una imagen, un título y una descripción.
-- La barra lateral izquierda y derecha debe tener un tamaño mínimo pero ser flexible cuando sea más grande que ese tamaño.
-- Las tarjetas deben reordenarse cuando el ancho disponible disminuya, asegurando un diseño responsivo y estético.
+- Obligatorio usar **Grid** con `auto-fit` y `minmax()` para la galeria.
+- Cada tarjeta debe tener un **ancho minimo** de `16rem` para que el contenido se vea bien.
+- Las imagenes deben cubrir el espacio (usa `object-fit: cover`).
+- La galeria debe estar centrada y ocupar como maximo el `90%` del ancho.
+- Debe reordenarse correctamente al reducir el ancho de pantalla.
+
+## Ejercicio 2 (4 puntos)
+
+Dentro del mismo proyecto crea una **carta** (card) con la clase `profile-card`. Debe incluir una imagen redondeada, un titulo, un subtitulo y un boton. La imagen debe tener una **animacion** suave al pasar el raton.
+
+**Especificaciones:**
+
+- Obligatorio usar **Flex** para alinear el contenido interno de la carta.
+- La imagen debe ser circular (`border-radius: 50%`) y mantener su proporcion.
+- La animacion puede ser `scale`/`rotate` y debe activarse en `:hover`.
+- La carta debe tener un **ancho minimo** de `18rem` y ajustarse en pantallas pequenas.
+- La carta debe centrarse en la pagina y mantener una lectura correcta en movil.
+
+**Notas:**
+
+> > No se permite SASS. Usa solo HTML y CSS.
+> > Calcula `1rem` como `10px`.
+> > Los colores pueden variar, no tienen que ser iguales a los de ejemplos anteriores.

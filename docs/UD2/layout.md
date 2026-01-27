@@ -875,6 +875,51 @@ Este espacio restante se distribuye equitativamente entre las dos líneas:
 La primera línea ahora tiene 175 px de alto
 La segunda línea ahora tiene 125 píxeles de alto.
 
+## Media Queries (Responsive)
+
+Hasta ahora hemos visto como construir layouts con flex y grid. El paso natural para que esos layouts se adapten a distintas pantallas es usar media queries. Una media query nos permite aplicar reglas CSS solo cuando se cumple una condicion, normalmente un ancho de pantalla.
+
+Sintaxis basica:
+
+```css
+@media (max-width: 768px) {
+  /* reglas que solo se aplican en pantallas <= 768px */
+}
+```
+
+Ejemplo practico con flex: pasamos de dos columnas a una sola en movil.
+
+```html
+<main class="layout">
+  <aside class="sidebar">Lateral</aside>
+  <section class="content">Contenido</section>
+</main>
+```
+
+```css
+.layout {
+  display: flex;
+  gap: 16px;
+}
+.sidebar {
+  flex: 0 0 260px;
+}
+.content {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex: 1;
+  }
+}
+```
+
+Con este ejemplo es facil explicar el flujo de trabajo: primero construimos el layout "desktop", y luego definimos como se comporta en movil.
+
 ## CSS Grid layout
 
 Hemos visto el diseño con Flex para una dimensión. Pero si necesitamos un diseño más complicado utilizaremos un diseño en dos dimensiones. El eje X e Y. Este tipo de tecnologia no desbanca la utilización de flex, al contrario son totalmente compatibles.

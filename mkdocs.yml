@@ -51,6 +51,7 @@ theme:
   icon:
     admonition:
       example: octicons/terminal-16
+    search: material/magnify
   font:
     text: Roboto
     code: Roboto Mono
@@ -105,4 +106,6 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 plugins:
+  - search:
+      lang: es
   - glightbox
