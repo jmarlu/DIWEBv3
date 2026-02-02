@@ -1,72 +1,88 @@
 
-# TAILWIND
+# TAILWIND (Teoría actualizada a v4)
 
 ## ¿Qué es?
 
 Tailwind CSS es un framework CSS que permite un desarrollo ágil, basado en clases de utilidad que se pueden aplicar con facilidad en el código HTML y unos flujos de desarrollo que permiten optimizar mucho el peso del código CSS.
 
-Es decir, es un framework que tiene clases para, por ejemplo, el fondo de un elemento, el color del texto o simplemente el margen por la parte de arriba. Pero **no aporta muchos componentes en las que hay muchos estilos preconcebidos**, a diferencia de otros frameworks como Bootstrap. De hecho ofrece muy pocos componentes . En cambio lo que propone es entregar una enorme cantidad de clases de utilidad, atajos a propiedades css, que combinadas en distintas variantes ofrecen prácticamente un número ilimitado de variantes de diseño, que permite una personalización del aspecto realmente única para cada proyecto.
+Es decir, es un framework que tiene clases para, por ejemplo, el fondo de un elemento, el color del texto o el margen. Pero **no aporta muchos componentes con estilos preconcebidos**, a diferencia de otros frameworks como Bootstrap. De hecho, ofrece muy pocos componentes. En cambio, propone una gran cantidad de clases de utilidad (atajos a propiedades CSS) que, combinadas en distintas variantes, permiten una personalización del diseño muy amplia.
 
-Además Tailwind es una herramienta que se apoya en **PostCSS** para todo lo que es la generación del código CSS. Gracias a PostCSS se alcanza un flujo de desarrollo muy avanzado, **personalizable**, **ágil** y sobre todo, extremadamente **optimizado**
+Internamente Tailwind usa un motor moderno de compilación CSS (sin que tengas que configurar PostCSS para un proyecto básico), lo que mantiene un flujo de trabajo **ágil**, **personalizable** y **optimizado**.
 
 Sin embargo, hay también desventajas en mi opinión:
 
-- Debes tener un conocimiento alto de css para utilizarlo, ya que en realidad utilizar atajos a propiedades css.
+- Debes tener un conocimiento alto de CSS para usarlo, ya que en realidad son atajos a propiedades CSS.
 - No trae componentes rápidos de utilizar.
-- Utilización de gran conjunto de clases que al final parece que creas estilos en linea. Por lo que puede parecer que los estilos y el html se mezclan.
+- Utilización de un gran conjunto de clases que puede parecer estilo en línea. Por eso puede parecer que estilos y HTML se mezclan.
 
-> > **PostCSS** es una herramienta moderna para la gestión del código CSS que permite aumentar la productividad a la vez que libera al desarrollador de trabajos adicionales así como conocimientos técnicos del estado actual del lenguaje y el soporte en los navegadores.
+> En proyectos sencillos con Tailwind v4 puedes trabajar solo con `tailwindcss` + `@tailwindcss/cli`.
 
 ## Instalar Tailwind
 
-En su [página oficial](https://tailwindcss.com/) está todo el contenido y tutoriales. Voy a basarme en ella para explicaros como iniciarse en este framework.
+En su [página oficial](https://tailwindcss.com/) está todo el contenido y tutoriales. Voy a basarme en ella para explicaros cómo iniciarse en este framework.
 
-La instalación se va a realizar mediante `npm`. Pero previamente tienes que tener instalada nodejs. !!!Instala la versión lts!!!.
+La instalación se va a realizar mediante `npm`. Pero previamente tienes que tener instalado Node.js (recomendado: versión LTS).
 
-Lo primero es crear una carpeta o directorio donde vamos a crear nuestro proyecto. Abrimos una consola en ese directorio e iniciamos el proyecto con el comando `npm init`. Nos va hacer unas cuantas preguntas pero no es necesario que respondamos. Esto nos va a crear en nuestro directorio un fichero `package.json`. Donde podremos configurar **nuestro proyecto e incluir scripts de automatización.**
+Lo primero es crear una carpeta o directorio donde vamos a crear nuestro proyecto. Abrimos una consola en ese directorio e iniciamos el proyecto con el comando `npm init`. Nos va a hacer unas cuantas preguntas pero no es necesario que respondamos. Esto nos va a crear en nuestro directorio un fichero `package.json`. Donde podremos configurar **nuestro proyecto e incluir scripts de automatización.**
 
-Ya que, TailWind depende de PostCSS. Este lo vamos a instalar como un plugin de PostCSS. Deberemos instalar los siguientes paquetes de la siguiente forma.
+Con Tailwind CSS v4, para un flujo simple en local solo necesitas el framework y su CLI oficial.
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer
+npm install -D tailwindcss@latest @tailwindcss/cli@latest
 // -D (alias de --save-dev) para dependencias de desarrollo.
 
 ```
 
-Como podemos ver en la siguiente imagen podemos ver las dependencias de nuestro proyecto en la sección de desarrollo. También podemos las versiones de estas.
+Como puedes ver en la siguiente imagen, aparecen las dependencias de desarrollo del proyecto y sus versiones.
 
 ![package1](img/packge.png)
 
-Ahora podemos introducir el siguiente comando `npx tailwindcss --help` para ver la versión y la ayuda. Deberemos ejecutarlo con `npx` comprobará si `<comando> o <paquete>` existe en `$PATH,` o en los binarios del proyecto local, y si es así lo ejecutará.
+Ahora podemos introducir el siguiente comando `npx @tailwindcss/cli --help` para ver la versión y la ayuda. Deberemos ejecutarlo con `npx` comprobará si `<comando> o <paquete>` existe en `$PATH`, o en los binarios del proyecto local, y si es así lo ejecutará.
 
-Una de los pasos más importante de en la instalación es introducir las clases en nuestro proyecto. Para ello, vamos a crear una carpeta `src` dentro de la carpeta principal donde guardamos los estilos sin compilar. Y otra carpeta `css` donde se incluirán todos nuestros estilos compilados.
+Uno de los pasos más importantes en la instalación es introducir las clases en nuestro proyecto. Para ello, vamos a crear una carpeta `src` dentro de la carpeta principal donde guardamos los estilos sin compilar. Y otra carpeta `css` donde se incluirán todos nuestros estilos compilados.
 
-Dentro de `src` vamos a crear un fichero que se llama `styles.css` (el nombre da igual). en el que importamos tailwind. Una modificación este archivo implica una nueva compilación para que se modifique.
+Dentro de `src` vamos a crear un fichero que se llama `styles.css` (el nombre da igual), donde importamos Tailwind.
+
+```css
+@import "tailwindcss";
+
+/* Opcional: fuerza rutas adicionales si Tailwind no detecta clases */
+/* @source "./**/*.{html,js}"; */
+```
 
 Para compilar este archivo
 
 ```bash
-npx tailwindcss -i ./src/styles.css -o ./css/styles.css
+npx @tailwindcss/cli -i ./src/styles.css -o ./css/styles.css
 
-// Una opción importante es --watch . Entra en modo watching y la modificación de ese archivo hace que se compile de nuevo de forma automática.
+// Una opción importante es --watch. Entra en modo watch y cada modificación recompila automáticamente.
 ```
 
-Si observamos la carpeta `"./css/styles.css"` Vemos que ha creado ese archivo con un montón de clases. Unas 500 clases que pertenecen a `@tailwind base;` y no se han incluido las utilidades ni componentes. Esto sucede porque solo las clases que incluyas en el fichero html o js se incluirán en el fichero css compilado. Para ello, deberemos indicarle cual es contenido que tiene que escanear. Por lo que deberemos generar el fichero de configuración de TailWind (`tailwind.config.js`) con el siguiente comando `npx tailwindcss init`. En la sección content del archivo de configuración nos indica que archivos tiene que escanear y cuál es la dirección.
+Si observamos la carpeta `"./css/styles.css"` veremos que Tailwind genera únicamente las utilidades que detecta en tu proyecto. En v4 no es obligatorio crear `tailwind.config.js`; el escaneo se hace automáticamente y, si hace falta, puedes forzar rutas desde tu CSS con `@source`.
 
-> > **!!OJO!! Configura tu dirección**
+> > **!!OJO!! Configura bien las rutas**
 
-### Configurar script
+### Configurar scripts
 
-Dentro del fichero de configuración `package.json` disponemos de una sección `scripts`. Dentro de ella podemos establecer un conjunto de comandos que nos evitan teclear de nuevo, por ejemplo el comando anterior. De tal forma que crearemos un comando build que nos realizará la compilación, como muestra la siguiente imagen.
+Dentro del fichero `package.json` disponemos de la sección `scripts`. Ahí definimos comandos para desarrollo y producción.
+
+```json
+{
+  "scripts": {
+    "dev": "tailwindcss -i ./src/styles.css -o ./css/styles.css --watch",
+    "build": "tailwindcss -i ./src/styles.css -o ./css/styles.css --minify"
+  }
+}
+```
 
 ![Alt text](img/packge2.png)
 
-Como vemos, **no** hemos puesto el comando `npx` y hemos incluido la opción `--watch`. Para ejecutar el nuevo script/comando deberemos abrir una consola en el directorio (mediante vscode) y ejecutar `npm run build`
+Para desarrollo usa `npm run dev` y para compilar optimizado usa `npm run build`.
 
-## Primeros Pasos con Tailwinds
+## Primeros Pasos con Tailwind
 
-Tenemos instalado tailwind y ahora vamos a utilizarlo en una web ejemplo que vamos a crear. Crea un `index.html` y enlazalo con el fichero `./css/styles.css`.
-Si disponemos del siguiente código html.
+Tenemos Tailwind instalado y ahora vamos a usarlo en una web de ejemplo. Crea un `index.html` y enlázalo con el fichero `./css/styles.css`.
+Si disponemos del siguiente código HTML.
 
 ```html
 <body>
@@ -79,15 +95,15 @@ Si disponemos del siguiente código html.
 </body>
 ```
 
-El resultado lo podemos ver en la siguiente imagen. Por lo que podemos observar Tailwind tiene sus propios estilos reseteados. Para saber que propiedades le incluye, las podemos observar en el inspector del navegador.
+El resultado lo podemos ver en la siguiente imagen. Podemos observar que Tailwind aplica sus propios estilos base (Preflight). Para ver qué propiedades incluye, revísalas en el inspector del navegador.
 
 ![reset](img/index.png)
 
-A continuación vamos a utilizar las clases que nos proporciona TailWind. Por ejemplo, podemos poner `text-2xl` esta clase la he buscado en la documentación del framework en la web. Como podemos ver en la siguiente imagen.
+A continuación vamos a utilizar las clases que nos proporciona Tailwind. Por ejemplo, podemos poner `text-2xl`; esta clase la he buscado en la documentación oficial.
 
 ![tailWindFont](img/tailwindFont.png)
 
-Además de la anterior clase, podemos probar a introducir al `H1` algunas de las clases como:
+Además de la clase anterior, podemos probar en el `h1` algunas clases como:
 
 - `bg-black`: Fondo negro.
 - `text-white`: Color de texto blanco
@@ -96,9 +112,9 @@ Además de la anterior clase, podemos probar a introducir al `H1` algunas de las
 - `border-8`: Que corresponde con `border-width: 8px;`
 - `text-center`: Centramos horizontalmente el texto.
 
-Pero también podemos dar colores a ese borde. Utilizando la siguiente clase `border-yellow-900`. En el que se le indica en el nombre de la clase el color y la intensidad. Si vamos a la sección de colores de la documentación, disponemos de la paleta de colores que dispone y su intensidad expresada en número.
+También podemos dar color a ese borde utilizando `border-yellow-900`, donde el nombre indica color e intensidad. Si vas a la sección de colores de la documentación, verás toda la paleta con sus escalas numéricas.
 
-Además podemos controlar su opacidad mediante `border-indigo-500/50`. El nombre de la clase le indica que es el 50% de opacidad. También podemos indicar que lados queremos bordes y así con un montón de utilidades. Todos estos ejemplos están sacados de la documentación. Revisala para aplicar la clase que te convenga.
+Además podemos controlar la opacidad mediante `border-indigo-500/50` (50% de opacidad). También podemos indicar en qué lados queremos borde, y así con muchas utilidades más. Todos estos ejemplos están sacados de la documentación. Revísala para aplicar la clase que te convenga.
 
 En la siguiente imagen podemos ver el resultado de la inclusión de las clases anteriormente comentadas.
 
@@ -108,12 +124,10 @@ En la siguiente imagen podemos ver el resultado de la inclusión de las clases a
 
 Ahora vamos a trabajar con la web ejemplo del **tema de responsive**. Esta web la modificaremos y utilizaremos Tailwind para su creación.
 
-Lo primero que vamos a incluir es una imagen de fondo que disponemos en la carpeta `img`. Para añadir una imagen a un elemento podemos usar CSS personalizado o utilidades con valores arbitrarios (`bg-[url('../img/pattern.png')]`). Lo mas sencillo en este ejemplo es anadir el CSS personalizado a tu hoja de estilos:
+Lo primero que vamos a incluir es una imagen de fondo que disponemos en la carpeta `img`. Para añadir una imagen a un elemento podemos usar CSS personalizado o utilidades con valores arbitrarios (`bg-[url('../img/pattern.png')]`). Lo más sencillo en este ejemplo es añadir CSS personalizado a tu hoja de estilos:
 
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 .my-custom-style {
   background-image: url("../img/pattern.png");
@@ -121,9 +135,9 @@ Lo primero que vamos a incluir es una imagen de fondo que disponemos en la carpe
 /* Esta clase la ponemos en el body. */
 ```
 
-> > Considerar que cada vez que se haga una modificación en este archivo o en el html se compilará de nuevo.
+> > Considera que cada vez que se haga una modificación en este archivo o en el HTML se compilará de nuevo.
 
-También puedes utilizar la directiva `@layer` para añadir estilos a la `base, de components y de utilities` .
+También puedes usar `@layer` para añadir estilos en `base`, `components` o `utilities`.
 
 ```css
 @layer base {
@@ -133,25 +147,19 @@ También puedes utilizar la directiva `@layer` para añadir estilos a la `base, 
 }
 ```
 
-De esta forma hemos añadido nuestros estilos, pero podemos añadir tus propias imágenes de fondo editando la sección t`heme.backgroundImage` del archivo `tailwind.config.js`:
+De esta forma hemos añadido nuestros estilos, pero también puedes registrar imágenes de fondo como tokens de tema en el propio CSS:
 
-```js
-module.exports = {
-  theme: {
-    extend: {
-      backgroundImage: {
-        "body-pattern": "url('../img/pattern.png')",
-      },
-    },
-  },
-};
+```css
+@theme {
+  --background-image-body-pattern: url("../img/pattern.png");
+}
 ```
 
-Ahora hemos modificado o más bien hemos añadido una clase a clase `background(bg)`. Por lo que tenemos que poner la clase `bg-body-pattern`.
+Ahora hemos añadido un token de imagen de fondo, por lo que podemos usar la clase `bg-body-pattern`.
 
 ### Modificando la Cabecera.
 
-Ahora vamos a modificar la cabecera que tenemos y añadir un menu en lugar de la dirección que tenemos para ver como funcionan algunas de las clases que dispone este framework. Lo primero que tenemos que hacer es crear el html. Que es el siguiente:
+Ahora vamos a modificar la cabecera y añadir un menú para ver cómo funcionan algunas clases del framework. Lo primero que tenemos que hacer es crear el HTML:
 
 ```html
 <body class="bg-body-pattern">
@@ -177,7 +185,7 @@ Ahora vamos a modificar la cabecera que tenemos y añadir un menu en lugar de la
 </body>
 ```
 
-Ahora vamos a explicar algunos de las clases que se han establecido en el anterior ejemplo, pero como siempre deberéis acudir a la documentación del propio framework.
+Ahora vamos a explicar algunas de las clases del ejemplo anterior; como siempre, conviene revisar también la documentación oficial.
 
 - `container`: Un componente para fijar la anchura de un elemento. No está centrado por lo que deberemos poner la clase `mx-auto`. Pero, por ejemplo para que ocupe el 91% utilizaremos la clase `w-11/12` (división de 11 entre 12)
 - `flex`: Dispone los elementos a flex tomando como dirección la fila con la clase `flex-row`. Además la clase `flex-1` permite que un elemento flexible crezca y se encoja según sea necesario, ignorando su tamaño inicial.
@@ -187,35 +195,25 @@ Ahora vamos a explicar algunos de las clases que se han establecido en el anteri
 
 ### Crear un color.
 
-Ahora quiero crear un color nuevo que no se encuentra determinado en nuestro framework y aplicarselo al background del logo. Tendremos hacerlo como antes con el background del body. Nos vamos a la configuración y extendemos el tema.
+Ahora quiero crear un color nuevo que no está definido en el framework y aplicárselo al fondo del logo. Lo haremos con tokens dentro de `@theme`.
 
-```js
-module.exports = {
-  content: ["./**/*.{html,js}"],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "body-pattern": "url('../img/pattern.png')",
-      },
-      colors: {
-        "azul-claro": "#84b6f4",
-        "azul-oscuro": "#005187",
-      },
-    },
-  },
-  plugins: [],
-};
+```css
+@theme {
+  --background-image-body-pattern: url("../img/pattern.png");
+  --color-azul-claro: #84b6f4;
+  --color-azul-oscuro: #005187;
+}
 ```
 
-Ahora, como antes, la manera de aplicar la clase es mediante `bg-azul-claro`. Pero, también podemos aplicar el color al texto, por ejemplo text-azul-claro. En definitiva a cualquier clase que podamos tener color.
+Ahora, como antes, la manera de aplicar la clase es mediante `bg-azul-claro`. También podemos aplicar ese color al texto (`text-azul-claro`) o a cualquier utilidad de color.
 
 ### Incrustar fuentes desde archivos.
 
-Podemos ver que en el código html, que hemos utilizado, la clase symbol que no se encuentra dentro de las utilidades. Lo que hemos hecho es incrustar ficheros de fuentes para utilizarlo. Para lo cual, podemos realizarlo modificando el fichero ./src/styles con la directiva `@layer`.
+Podemos ver que en el código HTML que hemos usado, la clase `symbol` no se encuentra dentro de las utilidades. Para usarla, incrustamos fuentes modificando `./src/styles.css` con la directiva `@layer`.
 
-1. Crear un directorio fonts en la carpeta css donde tenemos todos nuestros ficheros de la fuentes correspondientes.
+1. Crear un directorio `fonts` dentro de `css` con los archivos de fuentes.
 2. Crear las clases correspondientes con `@layer base{}`
-3. Ya podemos utilizar las clases. Por ejemplo , `symbol` para la S que es la tuerca o bebas para el `header`. Busca WebSymbolsRegular si quieres cambiarlo.
+3. Ya podemos utilizar las clases. Por ejemplo, `symbol` para la S (la tuerca) o `bebas` para el `header`. Busca `WebSymbolsRegular` si quieres cambiarlo.
 
 ```css
 @layer base {
@@ -257,7 +255,7 @@ Podemos ver que en el código html, que hemos utilizado, la clase symbol que no 
 }
 ```
 
-Ahora vamos a aprender como utilizar las clases hover. Nuestro objetivo es que una vez que pasemos el ratón por encima cambie de color el texto y el fondo blanco. Para ello, deberemos utilizar la clase `hover:text-black hover:bg-white`.
+Ahora vamos a aprender cómo utilizar las clases `hover`. Nuestro objetivo es que una vez que pasemos el ratón por encima cambie de color el texto y el fondo blanco. Para ello, deberemos utilizar la clase `hover:text-black hover:bg-white`.
 
 También disponemos de utilidades como float, las vamos a utilizar en el logo de la siguiente manera:
 
@@ -266,11 +264,11 @@ También disponemos de utilidades como float, las vamos a utilizar en el logo de
 <h3 class="block float-right text-4xl mt-1.5 mr-14">INFORMÁTICA</h3>
 ```
 
-Ten en cuenta que si utilizamos el float salen del flujo normal y si no ponemos la clase `overflow-hidden` en el contenedor saldrán del contenedor. Otra forma de arreglarlo es mediante la creación de un elemento clearfix.
+Ten en cuenta que, si utilizamos `float`, los elementos salen del flujo normal y pueden desbordar. Una forma rápida de controlarlo es usar `overflow-hidden` en el contenedor.
 
 ### Crear componentes
 
-Ahora vamos a aprender a crear componentes. En nuestro fichero ./src/styles.css vamos a a anadir clases a components. mediante el siguiente codigo.
+Ahora vamos a crear componentes. En `./src/styles.css` vamos a añadir clases en `@layer components` mediante el siguiente código.
 
 ```css
 @layer components {
@@ -307,43 +305,27 @@ Además podemos observar que hemos utilizado algunas utilidades nuevas de flex c
 
 ### Crear animaciones.
 
-Si vamos a la documentación tenemos animaciones básicas. Vamos a utilizar `animate-spin` para hacer que la tuerca de vueltas y modificaremos su comportamiento.
+Si vamos a la documentación, tenemos animaciones básicas. Vamos a utilizar `animate-spin` para hacer que la tuerca dé vueltas y modificaremos su comportamiento.
 
 ```html
 <span class=" animate-spin symbol block float-left text-3xl mt-1 ml-11">S</span>
 ```
 
-Como podemos observa la rueda va muy rápido. Podemos pensar que con la clase duration podemos modificar el comportamiento pero en la documentación tenemos que extender el tema para modificar una animación que ya está creada , crear una nueva o incluir nuevos keyframes. Vamos a modificar la animación spin.
+Como podemos observar, la rueda va muy rápido. Podemos pensar que con `duration-*` podemos modificar el comportamiento, pero para animaciones personalizadas en v4 definimos tokens y keyframes dentro de `@theme`.
 
-```js
-module.exports = {
-  content: ["./**/*.{html,js}"],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "body-pattern": "url('../img/pattern.png')",
-      },
-      colors: {
-        "azul-claro": "#84b6f4",
-        "azul-oscuro": "#005187",
-      },
-      animation: {
-        "spin-slow": "spin 3s linear infinite",
-        miWiggle: "wiggle 2s linear infinite",
-      },
-      keyframes: {
-        wiggle: {
-          "0%, 100%": { transform: "rotate(-3deg)" },
-          "50%": { transform: "rotate(3deg)" },
-        },
-      },
-    },
-  },
-  plugins: [],
-};
+```css
+@theme {
+  --animate-spin-slow: spin 3s linear infinite;
+  --animate-mi-wiggle: wiggle 2s linear infinite;
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+}
 ```
 
-Ahora lo que vamos hacer es que cuando hagamos un `hover` sobre sobre cualquier parte del logo (padre), la animación de la tuerca se pare. En tailwind, tenemos introducir la clase `group` al padre y y utilizar modificadores `group-*` como group-hover para dar estilo al elemento. Si vemos la documentación con solo poner `group-hover:animate-none` sobre la tuerca debería pararse.
+Ahora lo que vamos a hacer es que, cuando hagamos `hover` sobre cualquier parte del logo (padre), la animación de la tuerca se pare. En Tailwind, tenemos que introducir la clase `group` en el padre y utilizar modificadores `group-*` como `group-hover` para dar estilo al elemento. Si vemos la documentación con solo poner `group-hover:animate-none` sobre la tuerca debería pararse.
 
 ```html
  <div class="group overflow-hidden w-72 pt-0.5 pb-0.5 text-center tracking-wider transition duration-100 rounded-sm bg-azul-claro hover:text-black hover:bg-white"
@@ -355,7 +337,7 @@ Ahora lo que vamos hacer es que cuando hagamos un `hover` sobre sobre cualquier 
             <div class="invisible group-hover:visible">I'm here!</div>
 
             <h3
-              class="block group-hover:text-lg group-hover:animate-miWiggle float-right text-4xl mt-1.5 mr-14"
+              class="block group-hover:text-lg group-hover:animate-mi-wiggle float-right text-4xl mt-1.5 mr-14"
             >
               INFORMÁTICA
             </h3>
@@ -363,13 +345,13 @@ Ahora lo que vamos hacer es que cuando hagamos un `hover` sobre sobre cualquier 
         </div>
 ```
 
-Como hemos visto podemos modificar las animations que ya están predefinidas. Pero también podemos realizar nuestras animaciones. En este caso vamos hacer una animación sobre el Informática en la que hemos generado un keyframe diferente. Observa el archivo de configuración.
+Como hemos visto, podemos modificar las animaciones predefinidas y también crear las nuestras. En este caso hacemos una animación sobre el texto "INFORMÁTICA" con un keyframe definido en `@theme`.
 
-### Resposive design
+### Responsive design
 
-Ahora vamos a adaptar esa cabecera a los diferentes breakpoints que tiene establecido y veremos como trabajar con responsive. Que podemos ver [aquí](https://tailwindcss.com/docs/responsive-design). Como podemos ver en ejemplo hemos puesto un borde para cada uno de los breakpoints.
+Ahora vamos a adaptar esa cabecera a los diferentes breakpoints y veremos cómo trabajar con responsive. Puedes revisarlo [aquí](https://tailwindcss.com/docs/responsive-design). En el ejemplo hemos puesto un borde para cada breakpoint.
 
-Nota: estos breakpoints son el equivalente a las media queries en CSS. La explicacion base esta en la unidad de layout (UD2) y en reglas CSS (UD3).
+Nota: estos breakpoints son el equivalente a las media queries en CSS. La explicación base está en la unidad de layout (UD2) y en reglas CSS (UD3).
 
 ```html
 <header
@@ -377,26 +359,23 @@ Nota: estos breakpoints son el equivalente a las media queries en CSS. La explic
 ></header>
 ```
 
-Ademas podemos personalizar nuestros breakpoints en el archivo de configuracion. Podemos utilizar `min` y `max`. **Por defecto, si no ponemos ni `min` ni `max` es `min`.**
+Además podemos personalizar breakpoints desde CSS con `@theme`.
 
-```js
-screens: {
-  xs: { max: "768px" },
-  // => @media (max-width: 768px) { ... }
-  sm: { min: "640px", max: "767px" },
-  // => @media (min-width: 640px and max-width: 767px) { ... }
-},
+```css
+@theme {
+  --breakpoint-xs: 30rem; /* 480px */
+}
 ```
 
-Vamos a diseñar nuestro menú de tal forma que el `nav` en cuando llegue a `xs` se disponga debajo. Para lo cual, como hemos visto tenemos que establecer las clases correspondientes con el breakpoint asociado.
+Vamos a diseñar nuestro menú para que el `nav` en pantallas pequeñas se disponga debajo. Para ello usaremos `max-md:`.
 
 ```html
 <div
-  class="container xs:flex-col w-11/12 mx-auto flex flex-row items-center"
+  class="container max-md:flex-col w-11/12 mx-auto flex flex-row items-center"
 ></div>
 ```
 
-Eso lo hemos conseguido con la clase `xs:flex-col`, que como sabemos, cambia la dirección a columnas. También vamos a procurar que los elementos del nav ocupen todos el mismo espacio, para ello tenemos que añadir `xs:flex-1` pero como lo tenemos como una componente lo debemos incluir en el apply.
+Eso lo hemos conseguido con la clase `max-md:flex-col`, que cambia la dirección a columnas para pantallas de hasta `md`. También vamos a procurar que los elementos del nav ocupen todos el mismo espacio, para ello tenemos que añadir `max-md:flex-1` pero como lo tenemos como una componente lo debemos incluir en el apply.
 
 ```js
 @layer components {
@@ -404,16 +383,16 @@ Eso lo hemos conseguido con la clase `xs:flex-col`, que como sabemos, cambia la 
     @apply mr-5
       ml-5
       tracking-wider
-      xs:flex-1;
+      max-md:flex-1;
   }
 ```
 
 ### Creación de Main
 
-Ahora vamos a crear el main con los artículos y el aside. El HTML lo vamos a cambiar con el objetivo de utilizar más utilidades.
+Ahora vamos a crear el `main` con los artículos y el aside. El HTML lo vamos a cambiar con el objetivo de utilizar más utilidades.
 Ya que, toda la teoría esta comentada con los ejemplos anteriores.
 
-Comenzaremos con el siguiente código html después del `header` en donde hemos estado practicando.
+Comenzaremos con el siguiente código HTML después del `header` en donde hemos estado practicando.
 
 ```html
    <main class="container w-11/12 mx-auto mt-5 flex flex-row">
@@ -528,40 +507,37 @@ Comenzaremos con el siguiente código html después del `header` en donde hemos 
     </footer>
 ```
 
-Lo primero que vamos hacer es que nuestro main (contenedor) tenga las siguientes clases, con el objetivo de tener un contenedor con 91.6666667% del tamaño y centrado. Además, pondremos que son elementos flex para posicionar los elementos hijos (aside y section).
+Lo primero es que nuestro `main` (contenedor) tenga estas clases para dejarlo centrado y con un ancho de ~91.67%. Además, usamos Flex para posicionar los hijos (`aside` y `section`).
 
 ```html
 <main class="container w-11/12 flex flex-row mx-auto"></main>
 ```
 
-Además vemos que el aside tiene que estar en el otro lado por lo que le asignamos la siguiente clase (`order-2`).Ahora lo que queremos es establecer un ancho en el aside del 25% por lo que añadimos el siguiente tamaño con la clase `basis-1/5`.
+Además vemos que el `aside` tiene que estar en el otro lado, por lo que le asignamos la clase `order-2`. Ahora queremos establecer un ancho del 25% en el `aside`, así que añadimos `basis-1/5`.
 
 ```html
 <aside id="lateral" class="order-2 basis-1/5 mt-5"></aside>
 ```
 
-Para identificar a la section con los articulos le he puesto un borde como veis y le indicado con `basis-4/5` que sea un 75%.
+Para identificar la `section` con los artículos le he puesto un borde y le he indicado con `basis-4/5` que ocupe el 75%.
 
 ```html
 <section class="border-4 border-blue-600 basis-4/5 mr-10"></section>
 ```
 
-Como podéis ver he utilizado la propiedad `flex-basis` de flex. También podríamos haber utilizado el `width` con porcentajes con con rems pero último supone que la página no sea fluida.
+Como podéis ver he utilizado la propiedad `flex-basis` de flex. También podríamos haber utilizado el `width` con porcentajes o con `rem`, pero esto último supone que la página no sea fluida.
 
-Vamos a tocar,ahora, el título de los artículos. Creamos una clase en components que sea `articles-header` con sombra. De la siguiente forma.
-En el archivo de configuracion podemos establecer la sombra y en el archivo styles.css podemos crear la componente y aplicar el estilo que hemos creado.
+Ahora vamos a tocar el título de los artículos. Creamos una clase en componentes llamada `articles-header` con sombra.
+En `styles.css` podemos declarar la sombra con `@theme` y luego aplicarla en la clase del componente.
 
 ```html
 <h2 class="articles-header">Últimos artículos</h2>
 ```
 
-```js
-// Fichero de configuración
-
-boxShadow: {
-        header3D:
-          "0px 1px #393d3f,1px 2px 0px #393d3f,2px 3px 0px #393d3f,3px 4px 0px #393d3f",
-      },
+```css
+@theme {
+  --shadow-header3D: 0px 1px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+}
 ```
 
 ```css

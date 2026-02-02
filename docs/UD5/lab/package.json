@@ -1,0 +1,14 @@
+{
+  "name": "tailwind-lab",
+  "version": "1.0.0",
+  "description": "Laboratorio para proyectar ejemplos de Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/styles.css -o ./css/styles.css --watch",
+    "build": "tailwindcss -i ./src/styles.css -o ./css/styles.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

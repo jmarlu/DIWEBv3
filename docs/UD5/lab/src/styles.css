@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-azul-claro: #84b6f4;
+  --color-azul-oscuro: #005187;
+  --shadow-header3D: 0px 1px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+  --shadow-box: 0px 0px 1px rgba(0,0,0,0.3), 0px 3px 7px rgba(0,0,0,0.3), 0px 1px white inset, 0px -3px 1px rgba(0,0,0,0.3) inset;
+  --animate-spin-slow: spin 3s linear infinite;
+  --animate-wiggle: wiggle 2s linear infinite;
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+}
+
+@utility bg-body-pattern {
+  background-image: url("../img/pattern.png");
+}
+
+@layer base {
+  @font-face {
+    font-family: "BebasNeue";
+    src: url("../fonts/BebasNeue.otf");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* Clases rápidas para el laboratorio */
+  .bebas {
+    font-family: "BebasNeue", sans-serif;
+  }
+}
+
+/* Aquí puedes ir añadiendo utilidades durante la clase */
+@utility btn-lab {
+  @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-all;
+}
