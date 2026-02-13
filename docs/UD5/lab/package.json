@@ -4,11 +4,11 @@
   "description": "Laboratorio para proyectar ejemplos de Tailwind CSS",
   "main": "index.js",
   "scripts": {
-    "dev": "tailwindcss -i ./src/styles.css -o ./css/styles.css --watch",
-    "build": "tailwindcss -i ./src/styles.css -o ./css/styles.css --minify"
+    "dev": "tailwindcss -i ./src/styles.css -o ./css/output.css --watch",
+    "build": "tailwindcss -i ./src/styles.css -o ./css/outputBuild.css --minify"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.0",
-    "tailwindcss": "^4.1.0"
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
   }
 }

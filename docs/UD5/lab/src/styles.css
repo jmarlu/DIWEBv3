@@ -1,17 +1,37 @@
 @import "tailwindcss";
 
+/* Si Tailwind no detecta tus fuentes, fuerza rutas */
+@source "./**/*.html";
+@source "./src/**/*.{js,ts,jsx,tsx}";
+
 @theme {
   --color-azul-claro: #84b6f4;
   --color-azul-oscuro: #005187;
+
+  --color-brand: #1e40af;
+
+  --color-primary-50:  #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #172554;
+
   --shadow-header3D: 0px 1px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
   --shadow-box: 0px 0px 1px rgba(0,0,0,0.3), 0px 3px 7px rgba(0,0,0,0.3), 0px 1px white inset, 0px -3px 1px rgba(0,0,0,0.3) inset;
+
   --animate-spin-slow: spin 3s linear infinite;
   --animate-wiggle: wiggle 2s linear infinite;
+}
 
-  @keyframes wiggle {
-    0%, 100% { transform: rotate(-3deg); }
-    50% { transform: rotate(3deg); }
-  }
+/* Keyframes fuera */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
 }
 
 @utility bg-body-pattern {
@@ -21,18 +41,24 @@
 @layer base {
   @font-face {
     font-family: "BebasNeue";
-    src: url("../fonts/BebasNeue.otf");
-    font-weight: normal;
+    src: url("../fonts/BebasNeue.woff2") format("woff2");
+    font-weight: 400;
     font-style: normal;
+    font-display: swap;
   }
 
-  /* Clases rápidas para el laboratorio */
-  .bebas {
-    font-family: "BebasNeue", sans-serif;
+  @font-face {
+    font-family: "WebSymbolsRegular";
+    src: url("../fonts/websymbols-regular-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
   }
+
+  .bebas { font-family: "BebasNeue", "Arial Narrow", sans-serif; }
+  .symbol { font-family: "WebSymbolsRegular"; }
 }
 
-/* Aquí puedes ir añadiendo utilidades durante la clase */
 @utility btn-lab {
   @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-all;
 }
