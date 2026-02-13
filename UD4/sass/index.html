@@ -1,0 +1,3384 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../metodologia/">
+      
+      
+        <link rel="next" href="../Actividades/Actividad%201/Actividad%201/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>SASS - DISEÑO DE INTERFACES WEB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%202.75C0%201.784.784%201%201.75%201h12.5c.966%200%201.75.784%201.75%201.75v10.5A1.75%201.75%200%200%201%2014.25%2015H1.75A1.75%201.75%200%200%201%200%2013.25Zm1.75-.25a.25.25%200%200%200-.25.25v10.5c0%20.138.112.25.25.25h12.5a.25.25%200%200%200%20.25-.25V2.75a.25.25%200%200%200-.25-.25ZM7.25%208a.75.75%200%200%201-.22.53l-2.25%202.25a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L5.44%208%203.72%206.28a.749.749%200%200%201%20.326-1.275.75.75%200%200%201%20.734.215l2.25%202.25c.141.14.22.331.22.53m1.5%201.5h3a.75.75%200%200%201%200%201.5h-3a.75.75%200%200%201%200-1.5%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sass" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DISEÑO DE INTERFACES WEB" class="md-header__button md-logo" aria-label="DISEÑO DE INTERFACES WEB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DISEÑO DE INTERFACES WEB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SASS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DISEÑO DE INTERFACES WEB" class="md-nav__button md-logo" aria-label="DISEÑO DE INTERFACES WEB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DISEÑO DE INTERFACES WEB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1 Diseño de interfaces
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD1 Diseño de interfaces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/elementosDise%C3%B1o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elementos del diseño
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/colorTipograf%C3%ADaIconos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Otros Elementos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Componentes%20de%20un%20interfaz%20web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes De Interfaz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/planificaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planificación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/EmpezarFigma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prototipado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Tutorial_Figma_DesignPro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial de figma paso a paso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Componentes_Figma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes en Figma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Actividades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2 HTML y herramientas de desarrollo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD2 HTML y herramientas de desarrollo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/html5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Html
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/conceptosB%C3%A1sicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptos básicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/seoVerificaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Actividades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VSCODE/ManejoVisualcode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manejo de VisualCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad1/EstructuraFloatTables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad2/Flex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad3/Actividad%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad4/Actividad%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad5/Actividad%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD3 CSS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD3 CSS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3/conceptos%20b%C3%A1sicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptos básicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3/conceptosAvanzados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptos Avanzados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Actividades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3/Actividades/Actividad%201/Actividad%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3/Actividades/Actividad%202/Actividad2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD3/Actividades/Actividad%203/Actividad%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD4 CSS Avanzado
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD4 CSS Avanzado
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metodologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metodología
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SASS
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SASS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introducción
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sintaxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sintaxis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalar-sass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalar Sass
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comentarios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-regla-import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La regla @import
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hojas-de-estilos-parciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hojas de estilos parciales
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anidando-selectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anidando selectores
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-selector-padre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El selector padre &amp;
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de variables
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#booleans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Booleans
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Números.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cadenas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cadenas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listas.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Null
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambito-scope-de-las-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ámbito (scope) de las variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpolacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpolación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mixin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mixin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mixin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anadiendo-argumentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Añadiendo argumentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpolacion-y-mixin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpolación y mixin
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ampliaciones-extend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ampliaciones ( Extend ).
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directivas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Directivas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Directivas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estructuras-de-condicion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estructuras de condición.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaccionar-con-una-lista" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interaccionar con una lista
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operaciones-matematicas-y-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operaciones Matemáticas y color.
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operaciones Matemáticas y color.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilizacion-de-los-colores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Utilización de los colores.
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Actividades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Actividades/Actividad%201/Actividad%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Actividades/Actividad%202/Actividad%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Actividades/Actividad%203/Actividad%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD5 Frameworks CSS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD5 Frameworks CSS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5/tailwind/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tailwind
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../metodologia/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    UD4 CSS Avanzado
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="sass">SASS</h1>
+<h2 id="introduccion">Introducción</h2>
+<p>Sass es una extensión de CSS que añade potencia. Se permite el uso de variables, reglas anidadas, mixins, las importaciones en línea, y más, todo con una sintaxis totalmente compatible con CSS. Sass ayuda a mantener grandes hojas de estilo bien organizados, y obtener pequeñas hojas de estilo en marcha rápidamente. Sass permite organizar mejor las hojas de estilos grandes y permite ser mucho más productivo con las hojas de estilos pequeñas, sobre todo gracias a la librería Compass.</p>
+<h2 id="sintaxis">Sintaxis</h2>
+<p>Sass permite el uso de dos sintaxis diferentes para crear sus archivos:</p>
+<ul>
+<li>La primera, conocida como SCSS (del inglés, Sassy CSS) es en la que nos vamos a centrar ahora y es una extensión de la sintaxis de CSS3. Esto significa que cualquier hoja de estilos CSS3 válida también es un archivo SCSS válido.
+  Los archivos creados con esta sintaxis utilizan la extensión <code>.scss</code>.</li>
+<li>La segunda sintaxis, conocida como <strong>"sintaxis indentada"</strong> o simplemente "sintaxis sass" permite escribir los estilos CSS de manera más concisa. En este caso, el anidamiento de selectores se indica con tabulaciones en vez de con llaves y las propiedades se separan con saltos de línea en vez de con puntos y coma. Los archivos creados con esta segunda sintaxis utilizan la extensión .sass.
+  <strong>Archivo scss</strong></li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nv">$main</span><span class="o">:</span><span class="w"> </span><span class="mh">#444</span><span class="p">;</span>
+<span class="nc">.btn</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">main</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">block</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">lighten</span><span class="o">(</span><span class="err">$</span><span class="nt">main</span><span class="o">,</span><span class="w"> </span><span class="nt">30</span><span class="err">%</span><span class="o">);</span>
+<span class="w">  </span><span class="k">&amp;</span><span class="nd">:hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">lighten</span><span class="o">(</span><span class="err">$</span><span class="nt">main</span><span class="o">,</span><span class="w"> </span><span class="nt">40</span><span class="err">%</span><span class="o">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Archivo css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#444444</span><span class="p">;</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#919191</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#aaaaaa</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="instalar-sass">Instalar Sass</h2>
+<p>Para la instalación de Sass en cualquier sistema podemos visitar el siguiente <a href="https://sass-lang.com/install">link</a>. Pero si utilizamos Visual Code, ésta utiliza una extensión que nos permite realizar la transpilación de código sass a css de forma automática. La extensiones que tienes que instalar son las siguientes:</p>
+<ul>
+<li>Live Sass Compiler.</li>
+<li>Sass</li>
+</ul>
+<h2 id="comentarios">Comentarios</h2>
+<p>Sass también soporta los comentarios de una única línea que utilizan los delimitadores // además de los delimitadores <code>/* y /*</code> que pueden ocupar una o más líneas que estaban aceptados ya.</p>
+<p><strong>Comentarios sass</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Estos comentarios no</span>
+<span class="c1">// saldrán en los ficheros</span>
+<span class="c1">// css compilados</span>
+<span class="cm">/* este saldrá */</span>
+</code></pre></div>
+<p><strong>Comentarios css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c">/*este saldrá */</span>
+</code></pre></div>
+<h2 id="la-regla-import">La regla <code>@import</code></h2>
+<p>La regla css @import se ha mejorado previene la descarga paralela. Los archivos importados se buscan automáticamente en el directorio actual.</p>
+<ul>
+<li>La importación con .scss o .sass sucede durante la compilación en lugar de en
+  el lado del cliente.</li>
+<li>La extensión del archivo es opcional.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1">// Importa estilos encontrados en ‘boto.scss’</span>
+<span class="c1">// Cuando el compilador procese aplicación.scss</span>
+<span class="k">@import</span><span class="w"> </span><span class="err">“</span><span class="n">buttons</span><span class="err">”</span><span class="p">;</span>
+</code></pre></div>
+<p><img alt="ficheros" src="../img/ficheros.png" /></p>
+<h2 id="hojas-de-estilos-parciales">Hojas de estilos parciales</h2>
+<p>Si quieres importar un archivo SCSS o Sass pero no quieres que se compile como archivo CSS, utiliza un guión bajo como primer carácter del nombre del archivo. De esta manera, Sass no generará un archivo CSS para esa hoja de estilos, pero podrás utilizarla importándola dentro de otra hoja de estilos. Este tipo de archivos que no se compilan se denominan "hojas de estilos parciales" o simplemente "parciales" (en inglés, "partials").</p>
+<p><img alt="ficheros2" src="../img/ficheros2.png" /></p>
+<h2 id="anidando-selectores">Anidando selectores</h2>
+<p>Cuando escribimos código HTML podemos observar que tiene una clara disposición jerárquica de manera anidada, por otro lado CSS no lo hace.</p>
+<p>Sass permite anidar los selectores CSS de manera que sigue la misma jerárquica visual de HTML. Hay que tener en cuenta que las reglas demasiado anidadas resultan ser difícil de mantener y se considera una mala práctica. Vamos a ver un ejemplo:</p>
+<p><strong>Anidamiento sass</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nc">.content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">H2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">3em</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">margin</span><span class="nd">:</span><span class="w"> </span><span class="nt">20px</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">1</span><span class="nc">.5em</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">margin</span><span class="nd">:</span><span class="w"> </span><span class="nt">15px</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>¿Cual será la CSS del siguiente código?</p>
+<div class="highlight"><pre><span></span><code><span class="nt">nav</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">margin</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">list-style</span><span class="nd">:</span><span class="w"> </span><span class="nt">none</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">inline-</span><span class="w"> </span><span class="nt">block</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">block</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">6px</span><span class="w"> </span><span class="nt">12px</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">text-decoration</span><span class="nd">:</span><span class="w"> </span><span class="nt">none</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Además, podemos anidar ciertas propiedades con coincidencias en el nombre de la propiedad, de la siguiente manera. Veamos un ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nc">.btn</span>
+<span class="p">{</span>
+<span class="nt">text</span><span class="nd">:</span><span class="w"> </span><span class="p">{</span>
+<span class="nt">decoration</span><span class="nd">:</span><span class="w"> </span><span class="nt">underline</span><span class="o">;</span>
+<span class="nt">transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">lowercase</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">underline</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">lowercase</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="el-selector-padre">El selector padre &amp;</h2>
+<p>Cuando estemos anidando los elementos podemos utilizar el siguiente &amp; símbolo haciendo referencia al padre. Vemos el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nc">.content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+<span class="w">  </span><span class="nc">.callout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">border-color</span><span class="nd">:</span><span class="w"> </span><span class="nt">red</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">&amp;</span><span class="nc">.callout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Hacer referencia a .content</span>
+<span class="w">    </span><span class="nt">border-color</span><span class="nd">:</span><span class="w"> </span><span class="nt">green</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">.</span><span class="nc">callout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">content</span><span class="p">.</span><span class="nc">callout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Otro ejemplo muy utilizado es el siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#999</span><span class="o">;</span>
+<span class="w">  </span><span class="k">&amp;</span><span class="nd">:hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#777</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">&amp;</span><span class="nd">:active</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#888</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#999</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">a</span><span class="p">:</span><span class="nd">active</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#888</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Además, los selectores pueden ser añadidos antes del símbolo &amp;:</p>
+<div class="highlight"><pre><span></span><code><span class="nc">.sidebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">float</span><span class="nd">:</span><span class="w"> </span><span class="nt">right</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">300px</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.users</span><span class="w"> </span><span class="k">&amp;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nc">.users</span><span class="w"> </span><span class="nc">.sidebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">400px</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span>
+
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">users</span><span class="w"> </span><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El padre hace referencia según el contexto dónde esta incluido. Vamos a ver un ejemplo.</p>
+<div class="highlight"><pre><span></span><code><span class="nc">.sidebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">float</span><span class="nd">:</span><span class="w"> </span><span class="nt">right</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">300px</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#777</span><span class="o">;</span>
+<span class="w">    </span><span class="nc">.users</span><span class="w"> </span><span class="k">&amp;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#444</span><span class="o">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">float</span><span class="p">:</span><span class="w"> </span><span class="kc">right</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">users</span><span class="w"> </span><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El anidamiento como acabamos de observar es muy fácil. Pero como dijimos anteriormente es muy peligroso. Un anidamiento innecesario incrementa demasiado la especificidad de los selectores. Aquí tenemos un ejemplo.</p>
+<div class="highlight"><pre><span></span><code><span class="nc">.content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nc">.cell</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">&amp;</span><span class="nd">:hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">red</span><span class="o">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">.</span><span class="nc">cell</span><span class="w"> </span><span class="nt">h2</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Como podemos observar en el css, tenemos un cuarto nivel de especificidad. Esto puede ser muy difícil de anular posteriormente. Deberemos tratar de limitar su anidamiento a tres o cuatro niveles de profundidad. Si pasamos este limite, deberemos pensar en crear nuevas clases o refactorizar el nivel de profundidad.</p>
+<h2 id="variables">Variables</h2>
+<p>En esta sección veremos los tipos de variables, el ámbito de las variables y el concepto de interpolación.
+El soporte nativo de variables en CSS esta todavía en desarrollo pero Sass nos permite una manera de asignar valores <strong>reutilizables</strong>. Los nombres de las variables empiezan con <code>$</code>, como <code>$base</code>.</p>
+<p>Veamos un ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$base</span><span class="o">:</span><span class="w"> </span><span class="mh">#777777</span><span class="err">;</span>
+<span class="nc">.sidebar</span><span class="w"> </span><span class="err">{</span>
+<span class="na">border</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="no">solid</span>
+<span class="na">border</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="no">solid</span><span class="w"> </span><span class="nv">$base</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#777777</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#777777</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Las variables en su definición pueden opcionalmente tener el flag <code>!default</code>. De tal manera que cuando dos variables con el mismo nombre y distintos valores, aquella que tenga el flag será el valor por defecto. Vamos a ver un ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Mi blog&#39;</span><span class="err">;</span>
+<span class="nv">$title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Sobre mi&#39;</span><span class="w"> </span><span class="err">;</span>
+
+<span class="w"> </span><span class="nt">h2</span><span class="nd">:before</span><span class="w"> </span><span class="err">{</span>
+<span class="na">content</span><span class="o">:</span><span class="w"> </span><span class="nv">$title</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">h2</span><span class="p">:</span><span class="nd">before</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sobre mi&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Acabamos de observar en el ejemplo de arriba que el valor de la variable se sobre escribe. Sin embargo, si ponemos el flag o indicador <code>!default</code> a la segunda variable, este será el valor por defecto pero no sobrescribirá el valor de la anterior.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Mi blog&#39;</span><span class="err">;</span>
+<span class="nv">$title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Sobre mi&#39;</span><span class="w"> </span><span class="nv">!default</span><span class="w"> </span><span class="err">;</span>
+
+<span class="w"> </span><span class="nt">h2</span><span class="nd">:before</span><span class="w"> </span><span class="err">{</span>
+<span class="na">content</span><span class="o">:</span><span class="w"> </span><span class="nv">$title</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">h2</span><span class="p">:</span><span class="nd">before</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mi blog&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Que sucede cuando utilizamos este indicador en otros archivos scss importados. Una práctica bastante buena es utilizar lo valores por defecto en los archivos importados. Si después queremos definir un valor diferente al que tenemos en el archivo importado colocaremos el valor antes de la importación del archivo. Veamos un ejemplo.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//aplicacion.scss</span>
+<span class="nv">$rounded</span><span class="o">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="err">;</span>
+<span class="k">@import</span><span class="w"> </span><span class="s">&quot;buttons&quot;;</span>
+</code></pre></div>
+<p>Mientras buttons.scss será:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$rounded</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="nv">!default</span><span class="err">;</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="err">{</span>
+<span class="na">border-radius</span><span class="o">:</span><span class="w"> </span><span class="nv">$rounded</span><span class="err">;</span>
+<span class="na">color</span><span class="o">:</span><span class="w"> </span><span class="mh">#777</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.btn-b</span><span class="w"> </span><span class="err">{</span>
+<span class="na">border-radius</span><span class="o">:</span><span class="w"> </span><span class="nv">$rounded</span><span class="err">;</span>
+<span class="na">color</span><span class="o">:</span><span class="w"> </span><span class="mh">#222</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#222</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="tipos-de-variables">Tipos de variables</h3>
+<p>Hay diferentes tipos de variables como:</p>
+<h4 id="booleans">Booleans</h4>
+<div class="highlight"><pre><span></span><code><span class="nv">$rounded</span><span class="o">:</span><span class="w"> </span><span class="n n-Pseudo">false</span><span class="err">;</span>
+<span class="nv">$shadow</span><span class="o">:</span><span class="w"> </span><span class="n n-Pseudo">true</span><span class="err">;</span>
+</code></pre></div>
+<h4 id="numeros">Números.</h4>
+<p>Que puede estar definidos con sus unidades o no.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$rounded</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="err">;</span>
+<span class="na">$line-height</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="mf">.5</span><span class="err">;</span>
+<span class="na">$font-size</span><span class="o">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">rem</span><span class="err">;</span>
+</code></pre></div>
+<h4 id="colores">Colores</h4>
+<div class="highlight"><pre><span></span><code><span class="nv">$base</span><span class="o">:</span><span class="w"> </span><span class="ni">purple</span><span class="err">;</span>
+<span class="nv">$border</span><span class="o">:</span><span class="w"> </span><span class="nf">rgba</span><span class="p">(</span><span class="mi">0</span><span class="o">,</span><span class="w"> </span><span class="mi">255</span><span class="o">,</span><span class="w"> </span><span class="mi">0</span><span class="o">,</span><span class="w"> </span><span class="mi">0</span><span class="mf">.5</span><span class="p">)</span><span class="err">;</span>
+<span class="nv">$shadow</span><span class="o">:</span><span class="w"> </span><span class="mh">#333</span><span class="err">;</span>
+</code></pre></div>
+<h4 id="cadenas">Cadenas</h4>
+<p>Que pueden tener o no comillas</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$header</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Helvetica Neue&#39;</span><span class="err">;</span>
+<span class="nv">$callout</span><span class="o">:</span><span class="w"> </span><span class="n">Arial</span><span class="err">;</span>
+<span class="nv">$message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Loading...&quot;</span><span class="err">;</span>
+</code></pre></div>
+<h4 id="listas">Listas.</h4>
+<p>Los valores pueden estar separados con comas o con espacios.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$authors</span><span class="o">:</span><span class="w"> </span><span class="n">nick</span><span class="o">,</span><span class="w"> </span><span class="n">dan</span><span class="o">,</span><span class="w"> </span><span class="n">aimee</span><span class="o">,</span><span class="w"> </span><span class="n">drew</span><span class="err">;</span>
+<span class="nv">$margin</span><span class="o">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">100</span><span class="kt">px</span><span class="err">;</span>
+</code></pre></div>
+<h4 id="null">Null</h4>
+<div class="highlight"><pre><span></span><code><span class="nv">$shadow</span><span class="o">:</span><span class="w"> </span><span class="n">null</span><span class="err">;</span>
+</code></pre></div>
+<h3 id="ambito-scope-de-las-variables">Ámbito (scope) de las variables</h3>
+<p>El ámbito de las variables va ha depender del lugar donde las declaremos. Si declaramos una variable dentro del selector ese será su ámbito de utilización.
+Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="err">{</span>
+<span class="nv">$border</span><span class="o">:</span><span class="w"> </span><span class="mh">#ccc</span><span class="err">;</span>
+<span class="na">border-top</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="no">solid</span><span class="w"> </span><span class="nv">$border</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nt">h1</span><span class="w"> </span><span class="err">{</span>
+<span class="na">border-top</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="no">solid</span><span class="w"> </span><span class="nv">$border</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre></div>
+<p>Si compilamos el ejemplo anterior, nos proporcionará error de sintaxis. Dado que, la variable <code>$border</code> sólo está definida para <code>p</code>.
+Además, si definimos nuevos valores fuera de la declaración cambia el futuro valor.</p>
+<div class="highlight"><pre><span></span><code><span class="na">$color-base</span><span class="o">:</span><span class="w"> </span><span class="mh">#777777</span><span class="err">;</span>
+<span class="nc">.sidebar</span><span class="w"> </span><span class="err">{</span>
+<span class="w">    </span><span class="na">$color-base</span><span class="o">:</span><span class="w"> </span><span class="mh">#222222</span><span class="err">;</span>
+<span class="w">    </span><span class="na">background</span><span class="o">:</span><span class="w"> </span><span class="nv">$color-base</span><span class="err">;</span>
+<span class="w">    </span><span class="err">}</span>
+<span class="nt">p</span><span class="w"> </span><span class="err">{</span>
+<span class="w">    </span><span class="na">color</span><span class="o">:</span><span class="w"> </span><span class="nv">$color-base</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#222222</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#222222</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Hay que tener cuidado con el nombre de las variables. Por ejemplo, <code>$color-base</code> es más reutilizable que <code>$color-azul</code>.</p>
+<h3 id="interpolacion">Interpolación</h3>
+<p>Vamos a utilizar el esquema de variables que utiliza Ruby para <code>#{$variable}</code> con el fin de introducir las variables a los selectores, nombre de propiedades y cadenas. Veamos un ejemplo.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$side</span><span class="o">:</span><span class="w"> </span><span class="no">top</span><span class="err">;</span>
+<span class="nc">.sup</span><span class="w"> </span><span class="err">{</span>
+<span class="na">position</span><span class="o">:</span><span class="w"> </span><span class="no">relative</span><span class="err">;</span>
+<span class="na">top</span><span class="o">:</span><span class="w"> </span><span class="mi">-0</span><span class="mf">.5</span><span class="kt">em</span><span class="err">;</span>
+<span class="err">}</span>
+<span class="nc">.callout-</span><span class="si">#{</span><span class="nv">$side</span><span class="si">}</span><span class="w"> </span><span class="err">{</span>
+<span class="na">background</span><span class="o">:</span><span class="w"> </span><span class="mh">#777</span><span class="err">;</span>
+<span class="err">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">sup</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.5</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">callout-top</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="mixin">Mixin</h2>
+<p>Algunas cosas en CSS son un poco tediosas para escribir, especialmente con CSS3 y los prefijos de muchos proveedores que existen. Un mixin te permite crear grupos de declaraciones CSS que deseas reutilizar en todo tu sitio. Incluso puede pasar valores para que su mixin sea más flexible. Un buen uso de un mixin es para prefijos de proveedores.</p>
+<div class="highlight"><pre><span></span><code><span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#777</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">1em</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">text-transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">uppercase</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#ff0</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">1em</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">text-transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">uppercase</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Como podemos observar tenemos mucho código repetido con algunas propiedades diferentes.Podemos reutilizar este código de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> button</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">1em</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">text-transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">uppercase</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El código quedaría de la siguiente manera.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> button</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+<span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">1em</span><span class="o">;</span>
+<span class="nt">text-transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">uppercase</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="k">@include</span><span class="nd"> button</span><span class="p">;</span>
+<span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#777</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="k">@include</span><span class="nd"> button</span><span class="p">;</span>
+<span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#ff0</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El anterior bloque es ineficiente. Con css podemos generar un código más eficiente como el siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Hay que asegurarse que el bloque <code>@mixin</code> está antes del <code>@include</code>, especialmente cuando importamos ficheros que contienen @mixin. Recordar que @include es para incluir mixin y @import es para incluir archivos.</p>
+<p>Entonces, si esto es lo que pasa con mixin. Para qué son buenos?. Vamos a ver como añadirles argumentos.</p>
+<h3 id="anadiendo-argumentos">Añadiendo argumentos</h3>
+<p>Vamos a ver, a través del ejemplo siguiente, como podemos utilizar mixin, pasándola argumentos que potencialmente cambien la salida css.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> box-sizing</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">-webkit-box-sizing</span><span class="nd">:</span><span class="w"> </span><span class="nt">border-box</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">-moz-box-sizing</span><span class="nd">:</span><span class="w"> </span><span class="nt">border-box</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">box-sizing</span><span class="nd">:</span><span class="w"> </span><span class="nt">border-box</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="nc">.content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> box-sizing</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kp">-webkit-</span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">  </span><span class="kp">-moz-</span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Ahora podemos al mixin anterior pasarle un argumento. Con lo quedaría de la siguiente manera.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> box-sizing</span><span class="p">(</span><span class="nv">$x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">-webkit-box-sizing</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">x</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">-moz-box-sizing</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">x</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">box-sizing</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">x</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> box-sizing</span><span class="p">(</span><span class="no">border</span><span class="o">-</span><span class="n">box</span><span class="p">);</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="nc">.callout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> box-sizing</span><span class="p">(</span><span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kp">-webkit-</span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">  </span><span class="kp">-moz-</span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">callout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kp">-webkit-</span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">content-box</span><span class="p">;</span>
+<span class="w">  </span><span class="kp">-moz-</span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">content-box</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">content-box</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Opcionalmente, podemos incluir valores por defecto. De la siguiente manera.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> box-sizing</span><span class="p">(</span><span class="nv">$x</span><span class="o">:</span><span class="w"> </span><span class="no">border</span><span class="o">-</span><span class="n">box</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">-webkit-box-sizing</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">x</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">-moz-box-sizing</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">x</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">box-sizing</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">x</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> box-sizing</span><span class="p">;</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.callout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> box-sizing</span><span class="p">(</span><span class="no">content</span><span class="o">-</span><span class="n">box</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kp">-webkit-</span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">  </span><span class="kp">-moz-</span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">callout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kp">-webkit-</span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">content-box</span><span class="p">;</span>
+<span class="w">  </span><span class="kp">-moz-</span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">content-box</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">content-box</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>También podemos pasar múltiples argumentos. Pasados en orden y separados por coma.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> button</span><span class="p">(</span><span class="nv">$radius</span><span class="o">,</span><span class="w"> </span><span class="nv">$color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">radius</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="mi">4</span><span class="kt">px</span><span class="o">,</span><span class="w"> </span><span class="mh">#000</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#000</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Si nos olvidamos, por ejemplo, de uno de los argumentos, nos va a dar error de compilación mostrándonos el argumento que falta.
+Opcionalmente, si ponemos un valor por defecto podríamos poner solamente el valor que falta. Veamos un ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> button</span><span class="p">(</span><span class="nv">$radius</span><span class="o">,</span><span class="w"> </span><span class="nv">$color</span><span class="o">:</span><span class="w"> </span><span class="mh">#000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">radius</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="mi">4</span><span class="kt">px</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#000</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Si ponemos valores por defecto a los argumentos, como hemos visto, estos tienen que estar los primeros por la derecha. El siguiente ejemplo nos daría error de compilación.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> button</span><span class="p">(</span><span class="nv">$color</span><span class="o">:</span><span class="w"> </span><span class="mh">#000</span><span class="o">,</span><span class="w"> </span><span class="nv">$radius</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">radius</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="mi">4</span><span class="kt">px</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Además, podemos pasar el valor de cada uno de los argumentos, sin importar el orden, de la siguiente manera.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> button</span><span class="p">(</span><span class="nv">$radius</span><span class="o">,</span><span class="w"> </span><span class="nv">$color</span><span class="o">:</span><span class="w"> </span><span class="mh">#000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">radius</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="nv">$color</span><span class="o">:</span><span class="w"> </span><span class="mh">#777</span><span class="o">,</span><span class="w"> </span><span class="nv">$rapius</span><span class="o">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="no">px</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Qué pasa cuando las propiedades tengan un valor separado por una coma. Si intentamos pasarlo nos dará error de compilación. El compilador entiende que estamos pasando dos argumentos. El siguiente ejemplo nos proporciona error de compilación.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> transition</span><span class="p">(</span><span class="nv">$val</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">-webkit-transition</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">val</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">-moz-transition</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">val</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">transition</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">val</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> transition</span><span class="p">(</span><span class="no">color</span><span class="w"> </span><span class="mi">0</span><span class="mf">.3</span><span class="kt">s</span><span class="w"> </span><span class="n">ease-in</span><span class="o">,</span><span class="w"> </span><span class="no">background</span><span class="w"> </span><span class="mi">0</span><span class="mf">.5</span><span class="kt">s</span><span class="w"> </span><span class="n">ease-out</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Para arreglarlo deberemos introducir al argumento del mixin <code>...</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> transition</span><span class="p">(</span><span class="nv">$val</span><span class="o">...</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">-webkit-transition</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">val</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">-moz-transition</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">val</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">transition</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">val</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> transition</span><span class="p">(</span><span class="no">color</span><span class="w"> </span><span class="mi">0</span><span class="mf">.3</span><span class="kt">s</span><span class="w"> </span><span class="n">ease-in</span><span class="o">,</span><span class="w"> </span><span class="no">background</span><span class="w"> </span><span class="mi">0</span><span class="mf">.5</span><span class="kt">s</span><span class="w"> </span><span class="n">ease-out</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kp">-webkit-</span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="kc">color</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease-in</span><span class="p">,</span><span class="w"> </span><span class="k">background</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease-out</span><span class="p">;</span>
+<span class="w">  </span><span class="kp">-moz-</span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="kc">color</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease-in</span><span class="p">,</span><span class="w"> </span><span class="k">background</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease-out</span><span class="p">;</span>
+<span class="w">  </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="kc">color</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease-in</span><span class="p">,</span><span class="w"> </span><span class="k">background</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">s</span><span class="w"> </span><span class="kc">ease-out</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>También podríamos realizarlo al revés. Podríamos crear una lista y pasársela al mixin. Esta lista es dividida en argumentos por el mixin.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> button</span><span class="p">(</span><span class="nv">$radius</span><span class="o">,</span><span class="w"> </span><span class="nv">$color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">radius</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nv">$propiedades</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="o">,</span><span class="w"> </span><span class="mh">#000</span><span class="p">;</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="nv">$propiedades</span><span class="err">…</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#000</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="interpolacion-y-mixin">Interpolación y mixin</h3>
+<p>El objetivo es controlar el lado del borde y poder cambiar el color . Podemos crear el siguiente código como aproximación al objetivo.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> highlight-t</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border-top-color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="k">@mixin</span><span class="nf"> highlight-r</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border-right-color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="k">@mixin</span><span class="nf"> highlight-b</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border-bottom-color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="k">@mixin</span><span class="nf"> highlight-l</span><span class="p">(</span><span class="nv">$color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border-left-color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> highlight-r</span><span class="p">(</span><span class="mh">#ff0</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-right-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Pero como vemos, es una utilización horrible e ineficiente del mixin. La solución será la utilización de la interpolación.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> highlight</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span><span class="w"> </span><span class="nv">$side</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border-</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">side</span><span class="p">}</span><span class="nt">-color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> highlight</span><span class="p">(</span><span class="mh">#ff0</span><span class="o">,</span><span class="w"> </span><span class="no">right</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border-right-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="ampliaciones-extend">Ampliaciones ( Extend ).</h2>
+<p>Nos acordamos del anterior ejemplo cuando los mixin no producían un código efectivo y teníamos que utilizar código CSS puro.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> button</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+<span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">1em</span><span class="o">;</span>
+<span class="nt">text-transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">uppercase</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="k">@include</span><span class="nd"> button</span><span class="p">;</span>
+<span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#777</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="k">@include</span><span class="nd"> button</span><span class="p">;</span>
+<span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#ff0</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Sass incorpora las función @extend para ampliar las propiedades de cada uno de los elementos. El anterior código lo podemos realizar de la siguiente manera.</p>
+<div class="highlight"><pre><span></span><code><span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">1em</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">text-transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">uppercase</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#777</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@extend</span><span class="w"> </span><span class="nc">.btn-a</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#ff0</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>¿Qué es lo que hace?.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nc">.btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@extend</span><span class="w"> </span><span class="nc">.btn-a</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#ff0</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c">/* Añade una segunda declaración para los valores únicos */</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>¿Qué pasa cuando utilizamos anidamientos y la ampliación?. Vamos a ver un ejemplo.</p>
+<div class="highlight"><pre><span></span><code><span class="nc">.content</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">3em</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">margin</span><span class="nd">:</span><span class="w"> </span><span class="nt">20px</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="nc">.callout</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@extend</span><span class="w"> </span><span class="nc">.content</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#ddd</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">content</span><span class="o">,</span><span class="p">.</span><span class="nc">callout</span><span class="w"> </span><span class="p">{</span>
+<span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">content</span><span class="w"> </span><span class="nt">h2</span><span class="o">,</span><span class="p">.</span><span class="nc">callout</span><span class="w"> </span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">em</span><span class="p">;</span>
+<span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">callout</span><span class="w"> </span><span class="p">{</span>
+<span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="err">}</span>
+</code></pre></div>
+<p>Pero, hay que tener cuidado porque podemos generar estilos no deseados. En el siguiente ejemplo se han generado la clase de <code>.sidebar .btn-b</code> con las propiedades de <code>.sidebar .btn-a</code>. La del botón b no se quería incluir.</p>
+<div class="highlight"><pre><span></span><code><span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#777</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">1em</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">text-transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">uppercase</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@extend</span><span class="w"> </span><span class="nc">.btn-a</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#ff0</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.sidebar</span><span class="w"> </span><span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">text-transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">lowercase</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">.</span><span class="nc">btn-a</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">lowercase</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este efecto lo podemos contrarrestar con la utilización del selector de referencia (placeholder selector). Antes de utilizar este tipo de selector, una buena práctica es siempre comprobar el css que se ha generado.</p>
+<p>Los placeholder selector son identificados mediante con un <code>%</code>. Este, puede ser extendido pero nunca va a ser un selector propio.</p>
+<div class="highlight"><pre><span></span><code><span class="err">%</span><span class="nt">btn</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#777</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">border</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#ccc</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">1em</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">text-transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">uppercase</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@extend</span><span class="w"> </span><span class="err">%</span><span class="nt">btn</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#ff0</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.sidebar</span><span class="w"> </span><span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">text-transform</span><span class="nd">:</span><span class="w"> </span><span class="nt">lowercase</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-a</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#777</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#ff0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">lowercase</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Como vemos ya la clase .btn-b ya no esta en el ámbito. Además, es una buena práctica extender bloques comunes para evitar crear clases extras. Por ejemplo, la versiones anteriores a la 9 de IE tiene un limite de 4095 selectores por fichero CSS.</p>
+<h2 id="directivas">Directivas</h2>
+<p>En esta sección veremos las siguientes directivas:</p>
+<ul>
+<li>Functions</li>
+<li>If</li>
+<li>Each</li>
+<li>For + While</li>
+<li>Mixin' In</li>
+</ul>
+<h3 id="funciones">Funciones</h3>
+<p>Para ver esta las funciones, antes vamos a ver una formula que utilizaremos para un diseño adaptable. Por ejemplo, si queremos una caja de 350px con un padre de 1000px hay que poner target / context . Es decir, 350px / 1000px = 0.35 0.35 * 100 = 35%. Crearemos el siguiente código. Los argumentos siguen las mismas reglas que los mixin.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$theme</span><span class="o">:</span><span class="w"> </span><span class="n">dark</span><span class="p">;</span>
+<span class="nt">Header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@if</span><span class="w"> </span><span class="nv">$theme</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">dark</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#000</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#000</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="estructuras-de-condicion">Estructuras de condición.</h3>
+<p>Ahora, vamos a utilizar la directiva <code>@if</code> con la que podemos condicional la salida de nuestro código.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@function</span><span class="w"> </span><span class="nt">fluidize</span><span class="o">(</span><span class="err">$</span><span class="nt">target</span><span class="o">,</span><span class="w"> </span><span class="err">$</span><span class="nt">context</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@return</span><span class="w"> </span><span class="o">(</span><span class="err">$</span><span class="nt">target</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="err">$</span><span class="nt">context</span><span class="o">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.sidebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">fluidize</span><span class="o">(</span><span class="nt">350px</span><span class="o">,</span><span class="w"> </span><span class="nt">1000px</span><span class="o">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">35</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Las comparaciones posibles son:</p>
+<ul>
+<li>== igual a</li>
+<li>!= no igual a</li>
+<li>&gt; más grande que</li>
+<li>&gt; = más grande que o igual a</li>
+<li>\&lt; menor que</li>
+<li>\&lt;= menor que o igual a.</li>
+</ul>
+<p>En el siguiente ejemplo vamos a ver una estructura más compleja. En el que se utiliza, con <code>@if , @else if y @else</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$theme</span><span class="o">:</span><span class="w"> </span><span class="ni">pink</span><span class="p">;</span>
+<span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@if</span><span class="w"> </span><span class="nv">$theme</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">dark</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#000</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">@else</span><span class="w"> </span><span class="nt">if</span><span class="w"> </span><span class="err">$</span><span class="nt">theme</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nt">pink</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nt">pink</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">@else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#fff</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">pink</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="interaccionar-con-una-lista">Interaccionar con una lista</h3>
+<p>La directiva <code>@each</code> nos permite realizar un bucle a través de cada uno de los elementos de esa lista.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$authors</span><span class="o">:</span><span class="w"> </span><span class="n">nick</span><span class="w"> </span><span class="n">aimee</span><span class="w"> </span><span class="n">dan</span><span class="w"> </span><span class="n">drew</span><span class="p">;</span>
+<span class="k">@each</span><span class="w"> </span><span class="err">$</span><span class="nt">author</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="err">$</span><span class="nt">authors</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nc">.autor-</span><span class="si">#{</span><span class="nv">$author</span><span class="si">}</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="nt">author-</span><span class="nn">#</span><span class="p">{</span><span class="err">$</span><span class="nt">author</span><span class="p">}</span><span class="nc">.jpg</span><span class="o">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">author-nick</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">author-nick.jpg</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">author-aimee</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">author-aimee.jpg</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">author-dan</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">author-dan.jpg</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">author-drew</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">author-drew.jpg</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Otras directivas son <code>@for y @while</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nc">.item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">position</span><span class="nd">:</span><span class="w"> </span><span class="nt">absolute</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">right</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<span class="w">  </span><span class="o">@</span><span class="nt">for</span><span class="w"> </span><span class="err">$</span><span class="nt">i</span><span class="w"> </span><span class="nt">from</span><span class="w"> </span><span class="nt">1</span><span class="w"> </span><span class="nt">through</span><span class="w"> </span><span class="nt">3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">&amp;</span><span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">top</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">30px</span><span class="o">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item</span><span class="p">.</span><span class="nc">item-1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item</span><span class="p">.</span><span class="nc">item-2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item</span><span class="p">.</span><span class="nc">item-3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="nv">$i</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="nc">.item</span><span class="w"> </span><span class="p">{</span>
+<span class="nt">position</span><span class="nd">:</span><span class="w"> </span><span class="nt">absolute</span><span class="o">;</span>
+<span class="nt">right</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="k">@while</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+<span class="k">&amp;</span><span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="w"> </span><span class="p">{</span>
+<span class="nt">top</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">30px</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nv">$i</span><span class="o">:</span><span class="nv">$i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item</span><span class="p">.</span><span class="nc">item-1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item</span><span class="p">.</span><span class="nc">item-2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item</span><span class="p">.</span><span class="nc">item-3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Como vemos @for y @while necesita un contador en los dos ejemplos (<code>$i</code>). Estas dos directivas nos dan más control que <code>@each</code>. Y aun más <code>@while</code>, con el cual podemos controlar los saltos. Por ejemplo, en el anterior código podemos hacer saltos de dos en dos.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$i</span><span class="o">:</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="nt">pagebreak</span>
+<span class="nc">.item</span><span class="w"> </span><span class="p">{</span>
+<span class="nt">position</span><span class="nd">:</span><span class="w"> </span><span class="nt">absolute</span><span class="o">;</span>
+<span class="nt">right</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="k">@while</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+<span class="k">&amp;</span><span class="nc">.item-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="w"> </span><span class="p">{</span>
+<span class="nt">top</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">30px</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nv">$i</span><span class="o">:</span><span class="nv">$i</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">  </span><span class="k">right</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item</span><span class="p">.</span><span class="nc">item-2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item</span><span class="p">.</span><span class="nc">item-4</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">item</span><span class="p">.</span><span class="nc">item-6</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Vamos a hacer resumen de algunos conceptos:</p>
+<ul>
+<li><strong>Mixins:</strong> Se utiliza para asignar propiedades similares utilizadas muchas veces con muy pocas variaciones.</li>
+<li><strong>Extend:</strong> Asigna propiedades que son exactamente iguales.</li>
+<li><strong>Funtions:</strong> Comúnmente se utiliza para retornar valores calculados que la vamos a utilizar a lo largo del código.</li>
+</ul>
+<p>Podemos utilizar los Mixin con las directiva de condición. De la siguiente forma:</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> button</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span><span class="w"> </span><span class="nv">$rounded</span><span class="o">:</span><span class="w"> </span><span class="n n-Pseudo">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="w">  </span><span class="o">@</span><span class="nt">if</span><span class="w"> </span><span class="err">$</span><span class="nt">rounded</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nt">true</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">4px</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="mh">#000</span><span class="o">,</span><span class="w"> </span><span class="n n-Pseudo">false</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nc">.btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="mh">#333</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>También podemos recodificar el ejemplo anterior de la siguiente forma. Si <code>$rounded</code> es verdadero o null.</p>
+<div class="highlight"><pre><span></span><code><span class="k">@mixin</span><span class="nf"> button</span><span class="p">(</span><span class="nv">$color</span><span class="o">,</span><span class="w"> </span><span class="nv">$rounded</span><span class="o">:</span><span class="w"> </span><span class="n n-Pseudo">false</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color</span><span class="o">;</span>
+<span class="w">  </span><span class="o">@</span><span class="nt">if</span><span class="w"> </span><span class="err">$</span><span class="nt">rounded</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">4px</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nc">.btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="mh">#000</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nc">.btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">@include</span><span class="nd"> button</span><span class="p">(</span><span class="mh">#333</span><span class="o">,</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">btn-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">btn-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="operaciones-matematicas-y-color">Operaciones Matemáticas y color.</h2>
+<p>Las operaciones básicas que se pueden realizar son:</p>
+<ul>
+<li>Suma +</li>
+<li>Resta -</li>
+<li>Multiplicación *</li>
+<li>División /</li>
+<li>modulo %</li>
+</ul>
+<p>Hay tener en cuenta que Sass por defecto redondea por encima de 5.
+Con respecto a la división hay varias formulas que activan la division.</p>
+<ul>
+<li>Cuando hay una variable involucrada <code>$size/10</code></li>
+<li>Cuando lo ponemos entre paréntesis <code>(100px / 20)</code></li>
+<li>Otra tipo de operaciones como <code>20px\*5/7</code>.</li>
+</ul>
+<p>Pero cuando está involucrado en la propiedad font no realiza la división. La compilación del siguiente código se queda de la misma forma. Ya que, 2em se refiere al tamaño y 1.5 a la separación de linea.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">font</span><span class="nd">:</span><span class="w"> </span><span class="nt">normal</span><span class="w"> </span><span class="nt">2em</span><span class="o">/</span><span class="nt">1</span><span class="nc">.5</span><span class="w"> </span><span class="nt">Helvetica</span><span class="o">,</span><span class="w"> </span><span class="nt">sans-serif</span><span class="o">;</span>
+</code></pre></div>
+<p>Otro aspecto a considerar es cuando utilizamos + con dos string. No suma sino concatena dos strings. Por ejemplo.
+Si utilizamos diferentes unidades Sass trata de combinarlas.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$family</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Helvetica &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;Neue&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// &quot;Helvetica Neue&quot;</span>
+<span class="nv">$family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;sans-&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="no">serif</span><span class="w"> </span><span class="c1">// &#39;sans-serif&#39;</span>
+<span class="nv">$family</span><span class="o">:</span><span class="w"> </span><span class="n">sans-</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;serif&#39;</span><span class="w"> </span><span class="c1">// sans-serif</span>
+</code></pre></div>
+<p>Si utilizamos diferentes unidades Sass trata de combinarlas.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">10px</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">4pt</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">15.33333</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Pero, algunas unidades son incompatibles.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">10px</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">4em</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c">/* Incompatible units: &#39;em&#39;</span>
+<span class="c">and &#39;px&#39;. */</span>
+</code></pre></div>
+<p>Tenemos algunas utilidades como:</p>
+<ul>
+<li><code>round($number)</code> – Redondear al número entero más cercano</li>
+<li><code>ceil($number)</code> - Redondea al número superior.</li>
+<li><code>floor($number)</code> – Redondea al número inferior.</li>
+<li><code>abs($number)</code> – Valor absoluto del número.</li>
+<li><code>min($list)</code> – Devuelve el número mínimo de la lista.</li>
+<li><code>max($list)</code> - Devuelve el número mínimo de la lista.</li>
+<li><code>percentage($number)</code> – Convierte a formato porcentaje.</li>
+</ul>
+<p>Ejemplos de utilización de las anteriores funciones:</p>
+<h3 id="ejemplo-1">Ejemplo 1</h3>
+<div class="highlight"><pre><span></span><code><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">line-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">ceil</span><span class="o">(</span><span class="nt">1</span><span class="nc">.2</span><span class="o">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="ejemplo-2">Ejemplo 2</h3>
+<div class="highlight"><pre><span></span><code><span class="nc">.caja</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">percentage</span><span class="o">(</span><span class="nt">250px</span><span class="o">/</span><span class="nt">500px</span><span class="o">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">caja</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="ejemplo-3">Ejemplo 3</h3>
+<div class="highlight"><pre><span></span><code><span class="nv">$contexto</span><span class="o">:</span><span class="w"> </span><span class="mi">500</span><span class="kt">px</span><span class="w"> </span><span class="o">.</span><span class="n">caja</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">percentage</span><span class="o">(</span><span class="nt">250px</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="err">$</span><span class="nt">contexto</span><span class="o">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">caja</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="utilizacion-de-los-colores">Utilización de los colores.</h2>
+<p>Con Sass podemos utilizar los colores de una manera más efectiva. Vamos a poder modificarlos mediante funciones y los podemos almacenar en variables que nos facilitan su recuerdo. Además de utilizar atajos.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$color-base</span><span class="o">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="nc">.suma</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color-base</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nn">#112233</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.resta</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color-base</span><span class="w"> </span><span class="nt">-</span><span class="w"> </span><span class="nn">#112233</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.mul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color-base</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nt">2</span><span class="o">;</span>
+<span class="p">}</span>
+<span class="nc">.division</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="err">$</span><span class="nt">color-base</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nt">2</span><span class="o">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">suma</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#445566</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">resta</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#221100</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">mul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#666666</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">division</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#191919</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En el siguiente ejemplo vemos la utilización de una función.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$color-base</span><span class="o">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="nc">.aplha</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nt">rgba</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="nc">.8</span><span class="o">);</span>
+<span class="p">}</span>
+<span class="nc">.beta</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nt">rgba</span><span class="o">(</span><span class="nn">#000</span><span class="o">,</span><span class="w"> </span><span class="nt">0</span><span class="nc">.8</span><span class="o">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">beta</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">alpha</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">51</span><span class="p">,</span><span class="w"> </span><span class="mi">51</span><span class="p">,</span><span class="w"> </span><span class="mi">51</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Como vemos también podemos utilizar valores hexadecimales.</p>
+<p>Siempre que sea posible, utilice las funciones de utilidad de color en lugar de la aritmética del color: más fácil de predecir y mantener.</p>
+<p>Vamos a ver algunas funciones que nos van a interesar.</p>
+<p>Para hacer color más brillante o menos . Toma un color y un número entre 0% y 100%, y devuelve un color con el brillo aumentado o disminuido. en esa cantidad.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$color-base</span><span class="o">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="nc">.brillo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">lighten</span><span class="o">(</span><span class="err">$</span><span class="nt">color-base</span><span class="o">,</span><span class="w"> </span><span class="nt">20</span><span class="err">%</span><span class="o">);</span>
+<span class="p">}</span>
+<span class="nc">.oscuro</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">darken</span><span class="o">(</span><span class="err">$</span><span class="nt">color-base</span><span class="o">,</span><span class="w"> </span><span class="nt">20</span><span class="err">%</span><span class="o">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">brillo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#666666</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">oscuro</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Para saturar o desaturar un color.</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$color-base</span><span class="o">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+
+<span class="nc">.saturate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">saturate</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">,</span><span class="w"> </span><span class="nt">20</span><span class="err">%</span><span class="o">);</span>
+<span class="p">}</span>
+<span class="nc">.desaturate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">desaturate</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">,</span><span class="w"> </span><span class="nt">20</span><span class="err">%</span><span class="o">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">saturate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#82d54e</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">desaturate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#323130</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Para mezclar utilizaremos la función mix. Podemos pasar dos argumentos y creará la mezcla con la media y opcionalmente ponderado (.desaturate).</p>
+<p>El peso especifica la cantidad del primer color que debe incluirse en el color devuelto. El valor predeterminado, 50%, significa que se debe utilizar la mitad del primer color y la mitad del segundo color. 25% significa que se utilizará una cuarta parte del primer color y tres cuartos del segundo color.</p>
+<div class="highlight"><pre><span></span><code><span class="nc">.mix-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">mix</span><span class="o">(</span><span class="nn">#ffff00</span><span class="o">,</span><span class="w"> </span><span class="nn">#107fc9</span><span class="o">);</span>
+<span class="p">}</span>
+<span class="nc">.desaturate</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">mix</span><span class="o">(</span><span class="nn">#ffff00</span><span class="o">,</span><span class="w"> </span><span class="nn">#107fc9</span><span class="o">,</span><span class="w"> </span><span class="nt">30</span><span class="err">%</span><span class="o">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">mix-a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#87bf64</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">mix-b</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#57a58c</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Otras funciones sobre colores:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$color</span><span class="o">:</span><span class="w"> </span><span class="mh">#87bf64</span><span class="p">;</span>
+<span class="nc">.grayscale</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">grayscale</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">);</span>
+<span class="p">}</span>
+<span class="nc">.invert</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">invert</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">);</span>
+<span class="p">}</span>
+<span class="nc">.complement</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">complement</span><span class="o">(</span><span class="err">$</span><span class="nt">color</span><span class="o">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Resultado css</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">grayscale</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#929292</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">invert</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#78409b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">complement</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#9c64bf</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Pero hay muchas más funciones. Como podemos ver en el siguiente <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">link</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../metodologia/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Metodología">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Metodología
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Actividades/Actividad%201/Actividad%201/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Actividad 1">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Actividad 1
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

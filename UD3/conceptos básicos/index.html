@@ -1,0 +1,4222 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../UD2/Actividades/Actividad5/Actividad%205/">
+      
+      
+        <link rel="next" href="../conceptosAvanzados/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Conceptos básicos - DISEÑO DE INTERFACES WEB</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+  
+  
+    
+      
+      
+    
+  
+  
+  <style>:root{--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%202.75C0%201.784.784%201%201.75%201h12.5c.966%200%201.75.784%201.75%201.75v10.5A1.75%201.75%200%200%201%2014.25%2015H1.75A1.75%201.75%200%200%201%200%2013.25Zm1.75-.25a.25.25%200%200%200-.25.25v10.5c0%20.138.112.25.25.25h12.5a.25.25%200%200%200%20.25-.25V2.75a.25.25%200%200%200-.25-.25ZM7.25%208a.75.75%200%200%201-.22.53l-2.25%202.25a.749.749%200%200%201-1.275-.326.75.75%200%200%201%20.215-.734L5.44%208%203.72%206.28a.749.749%200%200%201%20.326-1.275.75.75%200%200%201%20.734.215l2.25%202.25c.141.14.22.331.22.53m1.5%201.5h3a.75.75%200%200%201%200%201.5h-3a.75.75%200%200%201%200-1.5%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#css-basico" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="DISEÑO DE INTERFACES WEB" class="md-header__button md-logo" aria-label="DISEÑO DE INTERFACES WEB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DISEÑO DE INTERFACES WEB
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Conceptos básicos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="lime" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="DISEÑO DE INTERFACES WEB" class="md-nav__button md-logo" aria-label="DISEÑO DE INTERFACES WEB" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    DISEÑO DE INTERFACES WEB
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD1 Diseño de interfaces
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD1 Diseño de interfaces
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/elementosDise%C3%B1o/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elementos del diseño
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/colorTipograf%C3%ADaIconos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Otros Elementos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Componentes%20de%20un%20interfaz%20web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes De Interfaz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/planificaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planificación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/EmpezarFigma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prototipado
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Tutorial_Figma_DesignPro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorial de figma paso a paso
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Componentes_Figma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Componentes en Figma
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD1/Actividades/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividades
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD2 HTML y herramientas de desarrollo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD2 HTML y herramientas de desarrollo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/html5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Html
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/conceptosB%C3%A1sicos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptos básicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    layout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/seoVerificaci%C3%B3n/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Actividades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VSCODE/ManejoVisualcode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manejo de VisualCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad1/EstructuraFloatTables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad2/Flex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad3/Actividad%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad4/Actividad%204/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD2/Actividades/Actividad5/Actividad%205/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD3 CSS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD3 CSS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptos básicos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptos básicos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#caracteristicas-del-css3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Características del CSS3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Características del CSS3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#los-modulos-css3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Los módulos CSS3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#los-prefijos-de-los-navegadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Los prefijos de los navegadores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-sitio-can-i-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El sitio Can I use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herencia.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selectores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Selectores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selector-de-tipo-o-etiqueta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selector de tipo o etiqueta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-descendente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selector descendente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-de-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selector de clase
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-universal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selector universal*
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-de-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selector de ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-de-hijos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selector de hijos>
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-adyacente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selector adyacente'+'
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selector-de-atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selector de atributos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudo-clases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pseudo-clases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pseudo-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pseudo-elementos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prioridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prioridad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidades-de-medida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unidades de medida
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Unidades de medida">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unidades-absolutas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unidades absolutas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidades-relativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unidades relativas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidades-flexibles-viewport" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unidades flexibles (viewport)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelo-de-caja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelo de caja
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modelo de caja">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-propiedad-box-sizing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La propiedad box-sizing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-propiedad-overflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        la propiedad overflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#margenes-margin-y-rellenospadding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Márgenes (Margin) y Rellenos(Padding)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bordes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bordes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bordes-redondeados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bordes redondeados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reseteos-de-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reseteos de CSS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coloresfondos-e-imagenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Colores,fondos e imágenes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Colores,fondos e imágenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opacidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opacidad
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fondos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fondos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fondos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background-repeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        background-repeat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-attachment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        background-attachment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        background-position
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-clip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        background-clip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#background-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        background-size,
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fondos-multiples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fondos múltiples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atajo-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atajo Background
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imagenes-y-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Imágenes y objetos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Imágenes y objetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-propiedad-object-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La propiedad object-fit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-propiedad-object-position" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La propiedad object-position
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-propiedad-aspect-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La propiedad aspect-ratio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La fuentes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La fuentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-basicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propiedades básicas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#textos-y-alineaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Textos y alineaciones
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Textos y alineaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alineaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alineaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variaciones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representacion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Representación de datos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Representación de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#listas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contadores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacion-de-contadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creación de contadores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de contadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-propiedad-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La propiedad system
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sombras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sombras
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sombras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sombras-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sombras de texto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sombras-en-elementos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sombras en elementos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sombras-identicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sombras idénticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conceptosAvanzados/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conceptos Avanzados
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Actividades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Actividades/Actividad%201/Actividad%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Actividades/Actividad%202/Actividad2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Actividades/Actividad%203/Actividad%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD4 CSS Avanzado
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD4 CSS Avanzado
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4/metodologia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Metodología
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4/sass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SASS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividades
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Actividades
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4/Actividades/Actividad%201/Actividad%201/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4/Actividades/Actividad%202/Actividad%202/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD4/Actividades/Actividad%203/Actividad%203/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Actividad 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UD5 Frameworks CSS
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UD5 Frameworks CSS
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UD5/tailwind/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tailwind
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navegación" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    UD3 CSS
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="css-basico">CSS Básico</h1>
+<h2 id="caracteristicas-del-css3">Características del CSS3</h2>
+<h3 id="los-modulos-css3">Los módulos CSS3</h3>
+<p>Las CSS tienen como objetivo separar la estructura de la página (con su contenido,creado con HTML) del diseño y el formato de la propia página.</p>
+<p>Hubo distintas recomendaciones a lo largo de su creación <strong>(1, 2 y 2.1)</strong> que implicó un enorme trabajo, desde los <strong>borradores (Working Draft)</strong> hasta el documento finalizado (Recommendation). La recomendación final es un documento único con un número impresionante de páginas. Por lo que en su versión 3 se decidió de cambiar su modo de trabajo. De tal forma que las propiedades se han reagrupado en módulos funcionales
+independientes que evolucionan a su propio ritmo. De este modo, los navegadores han podido probar e implementar las nuevas propiedades de forma progresiva, módulo a módulo. Y además, lo único que hacen las CSS3 es añadir nuevas propiedades y redefinir algunas de las que ya existían desde las CSS 2.1.</p>
+<p><img alt="modulos" src="../img/conceptosBasicos/modulosCss3.png" /></p>
+<p>Cada módulo pasa por una serie de etapas perfectamente estandarizadas por el W3C.</p>
+<ol>
+<li>borrador de trabajo, el Working Draft (WD) (propuestas).</li>
+<li>En la etapa Last Call (LC) anuncia la fecha de finalización de las pruebas y toma en cuenta los comentarios de los grupos de trabajo.</li>
+<li>La Candidate Recommendation (CR). El W3C ha revisado prolongadamente su copia.</li>
+<li>La última etapa es la de Recommendation (REC).</li>
+</ol>
+<h3 id="los-prefijos-de-los-navegadores">Los prefijos de los navegadores</h3>
+<p>La concepción de las CSS3 en módulos independientes supone para los navegadores un trabajo considerable de implementación de las nuevas propiedades en los motores de renderizado. Y, además, mientras los módulos no pertenezcan a la categoría Candidate Recommendation, las propiedades pueden cambiar, lo que complica
+todavía más el trabajo de los navegadores.</p>
+<p>He aquí estos prefijos (designación según proveedor):
+- -moz-: para el motor de renderizado Gecko que utiliza Mozilla Firefox.
+- -webkit-: para el motor de renderizado WebKit que utilizan Apple Safari y Google Chrome, con sus bifurcaciones.
+- -o-: para el motor de renderizado de Opera.
+- -ms-: para el motor de renderizado de Microsoft Internet Explorer.
+- -khtml-: para el motor de renderizado KHTML que usan varios navegadores bajo Linux.</p>
+<p>He aquí la sintaxis que se debe utilizar para que la reconozcan todos los navegadores:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kp">-moz-</span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="kp">-webkit-</span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="kp">-o-</span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="kp">-ms-</span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="kp">-khtml-</span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>El orden de las líneas es importante. Al ubicar la propiedad «estándar» en la última posición, se asegura de que esta se impone a las líneas precedentes.</strong></p>
+<h3 id="el-sitio-can-i-use">El sitio Can I use</h3>
+<p>La página <a href="http://caniuse.com">Can I Use</a>, es una web colaborativa mediante la cuál se puede saber el estado actual, previo e incluso futuro de las propiedades CSS, elementos HTML, o características Javascript disponibles en cada navegador.</p>
+<p>Se introduzca la propiedad CSS3 o el elemento HTML5 que desee utilizar. En este ejemplo, hemos probado con la propiedad hyphens.
+<img alt="caniuse" src="../img/conceptosBasicos/canIuse.png" />
+Aquí dispone de la tabla de compatibilidad entre la propiedad introducida y las principales versiones de los navegadores actuales. La tabla emplea cuatro colores:</p>
+<ul>
+<li>Verde: Supported.</li>
+<li>Rojo: Not supported.</li>
+<li>Verde flojo: Partial support.</li>
+<li>Gris: Support unknown.</li>
+</ul>
+<p>A continuación, dispone de cuatro pestañas que son también muy importantes para obtener toda la información técnica útil: <strong>Notes, Known issues, Resources y Feedback</strong>.</p>
+<p>Finalmente, se indica, para cada navegador, si es necesario el uso de prefijos.</p>
+<p>En este ejemplo (propiedad hyphens), el uso de prefijos es necesario para los navegadores que reconocen esta propiedad. Si pasa el puntero del ratón por la casilla, se le indicará el prefijo de estos navegadores.</p>
+<h3 id="herencia">Herencia.</h3>
+<p>Para entender como funcionan los selectores y la herencia CSS es necesario entender qué es el árbol del documento. Si disponemos del siguiente ejemplo.</p>
+<p><img alt="arbol" src="../img/conceptosBasicos/arbol.png" /></p>
+<p>El antecesor es un elemento conectado pero más arriba en la estructura del documento:
+<img alt="antecesor" src="../img/conceptosBasicos/antecesor.png" /></p>
+<p>Hijo es el elemento conectado y directamente debajo de un elemento en la estructura del documento.
+<img alt="hijo" src="../img/conceptosBasicos/hijo.png" /></p>
+<p>Hijo es el elemento conectado y directamente debajo de un elemento en la estructura del documento.
+<img alt="hermanos" src="../img/conceptosBasicos/hermanos.png" /></p>
+<p>Si definimos un estilo en el body, todos los elementos situados debajo en el árbol del documento, heredan esa propiedad.</p>
+<p><img alt="heredar" src="../img/conceptosBasicos/heredar.png" /></p>
+<h3 id="selectores">Selectores</h3>
+<h4 id="selector-de-tipo-o-etiqueta">Selector de tipo o etiqueta</h4>
+<p>El selector de etiquete aplica a todos los elementos HTML de la página con esa etiqueta (p).</p>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f00</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El selector múltiple de CSS, incluye varios selectores separados por coma (,), aplicando el estilo a cualquier elemento con alguna de las marcas incluidas.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="o">,</span>
+<span class="nt">h2</span><span class="o">,</span>
+<span class="nt">h3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f00</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="selector-descendente">Selector descendente</h4>
+<p>El selector puede incluir etiquetas separadas solo por espacios. El selector aplicará solo a elementos con la última marca (ul), con los anteriores como ancestros, es decir header deberá ser ancestro de nav y nav deberá ser ancestro de ul.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">header</span><span class="w"> </span><span class="nt">nav</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="selector-de-clase">Selector de clase</h4>
+<p>Una de las soluciones más sencillas para aplicar estilos a un solo elemento de la página, consiste en utilizar el atributo class de HTML sobre ese elemento para indicar directamente la regla CSS que se le debe aplicar.</p>
+<p><code>&lt;p class="destacado"&gt;Lorem ipsum dolor sit amet...&lt;/p&gt;</code></p>
+<p>A continuación, se crea en el archivo CSS una nueva regla llamada destacado con todos los estilos que se van a aplicar al elemento. Para que el navegador no confunda este selector con los otros tipos de selectores, se prefija el valor del atributo class con un punto (.), tal y como muestra el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">destacado</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En ocasiones, es necesario restringir el alcance del selector de clase.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;destacado&quot;</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>sed lacus et <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;destacado&quot;</span><span class="p">&gt;</span>est adipiscing<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> accumsan<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>¿Cómo es posible aplicar estilos solamente al párrafo cuyo atributo class sea igual a destacado? Combinando el selector de tipo y el selector de clase, se obtiene un selector mucho más específico:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="p">.</span><span class="nc">destacado</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El selector p.destacado se interpreta como "aquellos elementos de tipo <code>&lt;p&gt;</code> que dispongan de un atributo class con valor destacado". Es posible aplicar los estilos de varias clases CSS sobre un mismo elemento. La sintaxis es similar, pero los diferentes valores del atributo class se separan con espacios en blanco. En el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;especial destacado error&quot;</span><span class="p">&gt;</span>Párrafo de texto...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Al párrafo anterior se le aplican los estilos definidos en las reglas .especial , .destacado y .error.</p>
+<h4 id="selector-universal">Selector universal*</h4>
+<div class="highlight"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Afecta a todos los elementos. Podemos utilizarlo de la siguiente forma. Para la mayoría de los elementos, necesitamos personalizar los márgenes o, simplemente,mantenerlos al mínimo. Algunos elementos, por efecto, tienen márgenes que son diferentes de cero y, en la mayoría de los casos, demasiado amplios. A medida que
+avanzamos en la creación de nuestro diseño, encontraremos que la mayoría de los elementos utilizados deben tener un margen de 0 píxeles. Para evitar tener que repetir estilos constantemente, podemos utilizar el selector universal.</p>
+<p>Con la regla indicada anteriormente, nos aseguramos de que todo elemento tendrá un margen interno y externo de 0 píxeles. De ahora en adelante, sólo necesitaremos modificar los márgenes de los elementos que queremos que sean mayores que cero.</p>
+<h4 id="selector-de-id">Selector de ID</h4>
+<p>Para aplicar estilos CSS a un único elemento de la página. El selector de ID permite seleccionar un elemento de la página a través del valor de su atributo id . Este tipo de selectores sólo seleccionan un elemento de la página, ya que el valor del atributo id no se puede repetir en dos elementos diferentes de una misma página.</p>
+<div class="highlight"><pre><span></span><code>#destacado { color: red; }
+
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Primer párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;destacado&quot;</span><span class="p">&gt;</span>Segundo párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Tercer párrafo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>En el ejemplo anterior, el selector #destacado, solamente selecciona el segundo párrafo (cuyo atributo id es igual a destacado ).</p>
+<h4 id="selector-de-hijos">Selector de hijos&gt;</h4>
+<p>Se trata de un selector similar al selector descendente, pero muy diferente en su funcionamiento. Se utiliza para seleccionar un elemento que es hijo directo de otro elemento y se indica mediante el "signo de mayor que" (&gt;):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nt">span</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;&lt;</span><span class="nt">span</span><span class="o">&gt;</span><span class="nt">Texto1</span><span class="o">&lt;/</span><span class="nt">span</span><span class="o">&gt;&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nt">p</span><span class="o">&gt;&lt;</span><span class="nt">a</span><span class="w"> </span><span class="nt">href</span><span class="o">=</span><span class="s2">&quot;#&quot;</span><span class="o">&gt;&lt;</span><span class="nt">span</span><span class="o">&gt;</span><span class="nt">Texto2</span><span class="o">&lt;/</span><span class="nt">span</span><span class="o">&gt;&lt;/</span><span class="nt">a</span><span class="o">&gt;&lt;/</span><span class="nt">p</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>En el ejemplo anterior, el selector <code>p &gt; span</code> se interpreta como "cualquier elemento <code>&lt;span&gt;</code> que sea hijo directo de un elemento <code>&lt;p&gt;</code>, por lo que el primer elemento <code>&lt;span&gt;</code> cumple la condición del selector. Sin embargo, el segundo elemento <code>&lt;span&gt;</code> no la cumple porque es descendiente, pero no es hijo directo de un elemento <code>&lt;p&gt;</code> .</p>
+<h4 id="selector-adyacente">Selector adyacente'+'</h4>
+<p>El selector adyacente utiliza el signo + y su sintaxis es:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">elemento1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">elemento2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="err">...</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>La explicación del comportamiento de este selector no es sencilla, ya que selecciona todos los elementos de tipo elemento2 que cumplan las dos siguientes condiciones:</p>
+<ol>
+<li>elemento1 y elemento2 deben ser hermanos, por lo que su elemento padre debe
+   ser el mismo.</li>
+<li>Elemento2 debe aparecer inmediatamente después de elemento1 en el código
+   HTML de la página.</li>
+</ol>
+<p>En el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">h1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="w"> </span><span class="p">}</span>
+
+<span class="o">&lt;</span><span class="nt">body</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nt">h1</span><span class="o">&gt;</span><span class="nt">Titulo1</span><span class="o">&lt;/</span><span class="nt">h1</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nt">h2</span><span class="o">&gt;</span><span class="nt">Subtítulo</span><span class="o">&lt;/</span><span class="nt">h2</span><span class="o">&gt;</span>
+<span class="o">...</span>
+<span class="o">&lt;</span><span class="nt">h2</span><span class="o">&gt;</span><span class="nt">Otro</span><span class="w"> </span><span class="nt">subtítulo</span><span class="o">&lt;/</span><span class="nt">h2</span><span class="o">&gt;</span>
+<span class="o">...</span>
+<span class="o">&lt;/</span><span class="nt">body</span><span class="o">&gt;</span>
+</code></pre></div>
+<p>Los estilos del selector <code>h1 + h2</code> se aplican al primer elemento <code>&lt;h2&gt;</code> de la página, pero no al segundo <code>&lt;h2&gt;</code> , ya que: El elemento padre de <code>&lt;h1&gt;</code> es <code>&lt;body&gt;</code> , el mismo padre que el de los dos elementos <code>&lt;h2&gt;</code>.
+Así, los dos elementos <code>&lt;h2&gt;</code> cumplen la primera condición del selector adyacente. El primer elemento <code>&lt;h2&gt;</code> aparece en el código HTML justo después del elemento <code>&lt;h1&gt;</code> , por lo que, este elemento <code>&lt;h2&gt;</code> también cumple la segunda condición del selector adyacente.
+Por el contrario, el segundo elemento <code>&lt;h2&gt;</code> no aparece justo después del elemento <code>&lt;h1&gt;</code> , por lo que no cumple la segunda condición del selector adyacente y, por tanto, no se le aplican los estilos de <code>h1 + h2</code> .</p>
+<h4 id="selector-de-atributos">Selector de atributos</h4>
+<p>Los selectores de atributos permiten seleccionar elementos HTML en función de sus atributos y/o valores de esos atributos.
+Los cuatro tipos de selectores de atributos son:</p>
+<ul>
+<li><code>[nombre_atributo]</code> , selecciona los elementos que tienen establecido el atributo llamado nombre_atributo independientemente de su valor.</li>
+<li><code>[nombre_atributo=valor]</code> , selecciona los elementos que tienen establecido un atributo llamado nombre_atributo con un valor igual a valor .</li>
+<li><code>[nombre_atributo~=valor]</code> , selecciona los elementos que tienen establecido un atributo llamado nombre_atributo y al menos uno de los valores del atributo es valor .</li>
+<li><code>[nombre_atributo|=valor]</code> , selecciona los elementos que tienen establecido un atributo llamado nombre_atributo, cuyo valor es una serie de palabras separadas con guiones, pero que comienza con valor .Este tipo de selector sólo es útil para los atributos de tipo lang que indican el idioma del contenido del
+  elemento.</li>
+</ul>
+<p>A continuación, se muestran algunos ejemplos de estos tipos de selectores:</p>
+<div class="highlight"><pre><span></span><code><span class="c">/* Se muestran de color azul todos los enlaces que tengan un atributo &quot;class&quot;,independientemente de su valor */</span><span class="w"> </span><span class="nt">a</span><span class="o">[</span><span class="nt">class</span><span class="o">]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/*</span>
+<span class="c">  Se muestran de color azul todos los enlaces que tengan un atributo &quot;class&quot; con el valor &quot;externo&quot;</span>
+<span class="c">  \*/</span>
+<span class="w">  </span><span class="nt">a</span><span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="s2">&quot;externo&quot;</span><span class="o">]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* Se muestran de color azul todos los enlaces que apunten al sitio &quot;http://www.ejemplo.com&quot; */</span>
+<span class="nt">a</span><span class="o">[</span><span class="nt">href</span><span class="o">=</span><span class="s2">&quot;http://www.ejemplo.com</span>
+<span class="s2">{</span>
+<span class="s2">  color: blue;</span>
+<span class="s2">}</span>
+<span class="s2">/*</span>
+<span class="s2">  Se muestran de color azul todos los enlaces que tengan un atributo &quot;</span><span class="nt">class</span><span class="s2">&quot; en el que al menos uno de sus valores sea &quot;</span><span class="nt">externo</span><span class="s2">&quot; */</span>
+<span class="s2">  a[class~=&quot;</span><span class="nt">externo</span><span class="s2">&quot;] {</span>
+<span class="s2">  color: blue;</span>
+<span class="s2">}</span>
+<span class="s2">/*  Selecciona todos los elementos de la página cuyo atributo &quot;</span><span class="nt">lang</span><span class="s2">&quot; sea igual a &quot;</span><span class="nt">en</span><span class="s2">&quot;, es decir, todos los elementos en inglés  */</span>
+
+<span class="s2">*[lang=&quot;</span><span class="nt">en</span><span class="s2">&quot;] {</span>
+<span class="s2">  ...;</span>
+<span class="s2">}</span>
+<span class="s2">/* Selecciona todos los elementos de la página cuyo atributo &quot;</span><span class="nt">lang</span><span class="s2">&quot; empiece por &quot;</span><span class="nt">es</span><span class="s2">&quot;, es decir, &quot;</span><span class="nt">es</span><span class="s2">&quot;, &quot;</span><span class="nt">es-ES</span><span class="s2">&quot;, &quot;</span><span class="nt">es-AR</span><span class="s2">&quot;, etc. */</span>
+
+<span class="s2">*[lang|=&quot;</span><span class="nt">es</span><span class="err">&quot;</span><span class="o">]</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="pseudo-clases">Pseudo-clases</h4>
+<p>El concepto pseudo-clase se introdujo para permitir la selección de elementos sobre la base de la información que se encuentra fuera de la estructura del documento, o que no se puede expresar con los otros selectores simples.</p>
+<p>Una pseudo-clase se compone siempre de "dos puntos" (:) seguido del nombre de la pseudo-clase y, opcionalmente, por un valor entre paréntesis.</p>
+<p>Las pseudo-clases pueden ser dinámicas, es decir, un elemento puede adquirir o perder una pseudo-clase, mientras que un usuario interactúa con el documento. Ya en CSS2 se definieron una serie de pseudo-clases dinámicas que nos permitían cambiar los estilos de los enlaces en función de su estado o de cómo interactuara el usuario con ellos:</p>
+<ul>
+<li><strong>:link</strong> permite aplicar estilos para los enlaces que aún no han sido visitados.</li>
+<li><strong>:visited</strong> aplica estilos a los enlaces que han sido visitados anteriormente.</li>
+<li><strong>:focus</strong> estilos que se aplican al enlace cuando este tiene el foco (acepta eventos de ratón o de teclado</li>
+<li><strong>:hover</strong> estilos que muestra el enlace cuando el usuario posiciona el puntero del ratón sobre el enlace.</li>
+<li><strong>:active</strong> estilos que se aplican al enlace cuando el usuario está pinchando sobre el enlace (el tiempo durante el que se aplica este estilo es muy breve).</li>
+</ul>
+<p>Las pseudo-clases :link y :visited solamente están definidas para los enlaces, pero las pseudo-clases :hover y :active se definen para todos los elementos HTML.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este ejemplo se elimina el subrayado del enlace cuando se sitúa el ratón sobre él.</p>
+<h4 id="pseudo-elementos">Pseudo-elementos</h4>
+<p>Por último, CSS define unos elementos especiales llamados "pseudo-elementos" que permiten aplicar estilos a ciertas partes de un texto. En concreto, CSS permite definir estilos especiales
+la primera frase de un texto y a la primera letra de un texto:</p>
+<ul>
+<li>El pseudo-elemento <strong><code>:first-line</code></strong> permite aplicar estilos a la primera línea de un texto.</li>
+<li>El pseudo-elemento *_<code>:first-letter_</code>* permite aplicar estilos a la primera letra del texto</li>
+<li>pseudo-elementos <strong><code>:before y :after</code></strong> que nos permiten insertar contenidos antes o después de un elemento determinado.</li>
+<li><strong><code>::marker</code></strong> Aplica estilos a los elementos de cada ítem de una lista.</li>
+<li><strong><code>::backdrop</code></strong> Aplica estilos al fondo exterior de un elemento (sin que afecte a este).</li>
+<li><strong><code>::placeholder</code></strong> Aplica estilos a los textos de sugerencia de los campos <code>&lt;input&gt;</code>.</li>
+<li><strong><code>::selection</code></strong> Aplica estilos al fragmento de texto seleccionado por el usuario.</li>
+</ul>
+<p>Ejemplo:</p>
+<p>Para ello utilizaremos la propiedad CSS content , en la que indicaremos los contenidos que serán insertados.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">a</span><span class="p">:</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; (&quot;</span><span class="w"> </span><span class="nb">attr</span><span class="p">(</span><span class="n">href</span><span class="p">)</span><span class="w"> </span><span class="s2">&quot;) &quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El código CSS anterior añade <strong>después</strong> de cada enlace de la página un texto formado por la dirección a la que apunta el enlace mostrada entre paréntesis. Si se quiere añadir las direcciones <strong>antes</strong> de cada enlace, se puede utilizar el pseudo-elemento :before :</p>
+<div class="highlight"><pre><span></span><code><span class="nt">a</span><span class="p">:</span><span class="nd">before</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot; (&quot;</span><span class="w"> </span><span class="nb">attr</span><span class="p">(</span><span class="n">href</span><span class="p">)</span><span class="w"> </span><span class="s2">&quot;) &quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>La propiedad content admite parámetros de diverso tipo, incluso concatenando información mediante espacios. Podemos utilizar tres tipos de contenido:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"..."</td>
+<td>Añade el contenido de texto indicado. content:</td>
+<td>"Contenido:";</td>
+</tr>
+<tr>
+<td>attr(atributo)</td>
+<td>Añade el valor del atributo HTML indicado.</td>
+<td>content: attr(href);</td>
+</tr>
+<tr>
+<td>url(...)</td>
+<td>Añade la imagen indicada en la URL.</td>
+<td>content: url(icon.png);</td>
+</tr>
+<tr>
+<td>Gradient</td>
+<td>Añade un gradiente del tamaño indicado.</td>
+<td>content: linear-gradient(red, blue);</td>
+</tr>
+<tr>
+<td>counter</td>
+<td>Define un contador CSS para mostrar.</td>
+<td>content: counter(item);</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="n">Verdana</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">p</span><span class="p">::</span><span class="nd">first-letter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Times New Roman&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">serif</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="prioridad">Prioridad</h3>
+<p>Cuando dos declaraciones afectan a un mismo elemento ¿ Cuál de ellas se interpreta en el navegador como más importante? Hay que calcular la tupla (A,B,C,D) ganadora de todas las reglas que compiten. Siendo A la que tiene mayor peso y D el mínimo. Si hay empate en A, se mira B y así sucesivamente.</p>
+<ul>
+<li>A = estilo en línea.</li>
+<li>B = número de Ids</li>
+<li>C= número de Clases</li>
+<li>D = número de marcas HTML</li>
+</ul>
+<p><img alt="prioridad" src="../img/conceptosBasicos/prioridad.png" /></p>
+<p>La ganadora es , #caja. Cabecera h1 =0,1,1,1.</p>
+<p><strong>Cuando dos declaraciones tienen el mismo valor, será la última especificada.</strong></p>
+<p>Hay reglas adicionales de prioridad de las declaraciones CSS ordenadas de <strong>menor a mayor</strong>:</p>
+<ul>
+<li>CSS por,defecto,del,Navegador (navegador)</li>
+<li>CSS en preferencias,de,usuario,del,navegador (usuario)</li>
+<li>CSS en página,HTML,o,script,CSS (diseñador),</li>
+<li>CSS en página,HTML,o,script,CSS con !important (diseñador), p. e. <code>body,{color:blue,!important;}</code></li>
+<li>CSS en preferencias,de,usuario,del,navegador con !important (usuario), p. e.
+  <code>body,{color:blue,!important;},</code></li>
+</ul>
+<p><img alt="niveles" src="img/conceptosBasicos/nivelesPrioridad.png" /></p>
+<h3 id="unidades-de-medida">Unidades de medida</h3>
+<p>Existen varios tipos de unidades, vamos a desglosarlas en grupos y explicar cada una de ellas. Más delante veremos las propiedades de CSS que pueden utilizarlas.</p>
+<h4 id="unidades-absolutas">Unidades absolutas</h4>
+<p>Las unidades absolutas son un tipo de medida fija que no cambia, que no depende de ningún otro factor. Son ideales en contextos donde las medidas no varían como pueden ser en medios impresos (documentos, impresiones, etc...), pero son unidades poco adecuadas para la web, ya que no tienen la capacidad de adaptarse a diferentes resoluciones o pantallas.</p>
+<p>A continuación, podemos ver las diferentes unidades absolutas que pueden utilizarse en CSS son las siguientes (de mayor a menor tamaño):</p>
+<table>
+<thead>
+<tr>
+<th>Unidad</th>
+<th>Significado</th>
+<th>Medida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>in</td>
+<td>Pulgadas</td>
+<td>1in = 25.4mm</td>
+</tr>
+<tr>
+<td>cm</td>
+<td>Centímetros</td>
+<td>1cm = 10mm</td>
+</tr>
+<tr>
+<td>pc</td>
+<td>Picas</td>
+<td>1pc = 4.23mm</td>
+</tr>
+<tr>
+<td>mm</td>
+<td>Milímetros</td>
+<td>1mm = 1mm</td>
+</tr>
+<tr>
+<td>pt*</td>
+<td>Puntos</td>
+<td>1pt = 0.35mm</td>
+</tr>
+<tr>
+<td>px**</td>
+<td>Píxels</td>
+<td>1px = 0.26mm (</td>
+</tr>
+</tbody>
+</table>
+<p>*El punto (pt) podría ser una medida ideal para documentos CSS en los que se fija el tamaño de las fuentes en medios impresos)
+**Esta se puede considerar también relativa desde la salida de la pantalla retina de Appel) |</p>
+<h4 id="unidades-relativas">Unidades relativas</h4>
+<p>Al contrario que las unidades absolutas, las unidades relativas dependen de algún otro factor (resolución, tamaño de letra, etc...). son ideales para trabajar en dispositivos con diferentes tamaños.</p>
+<p>Las unidades relativas más conocidas son las siguientes:</p>
+<table>
+<thead>
+<tr>
+<th>Unidad</th>
+<th>Significado</th>
+<th>Medida aproximada</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>em</td>
+<td>«M»</td>
+<td>Multiplicador del tamaño font-size en ese elemento (o heredado)</td>
+<td>1.5em * 16px = 24px</td>
+</tr>
+<tr>
+<td>ex</td>
+<td>«x»</td>
+<td>Multiplicador de la mitad del tamaño font-size (altura de la x minúscula)</td>
+<td>1ex ~ 0.5em</td>
+</tr>
+<tr>
+<td>ch</td>
+<td>«zero width»</td>
+<td>Multiplicador del tamaño de ancho del carácter cero ( 0 )</td>
+<td>1ch ~ 1 carácter</td>
+</tr>
+<tr>
+<td>re</td>
+<td>m «root M»</td>
+<td>Multiplicador del tamaño font-size del elemento raíz (<html> o similar)</td>
+<td></td>
+</tr>
+<tr>
+<td>%</td>
+<td>Porcentaje</td>
+<td>Relativa a herencia (concretamente, al elemento padre)</td>
+<td>50% = mitad del padre</td>
+</tr>
+</tbody>
+</table>
+<p>La unidad<strong> em</strong> se utiliza para hacer referencia al <strong>tamaño actual de la fuente</strong> (body) en ese elemento HTML. Generalmente es de tamaño 16px (salvo que se modifique por el usuario).</p>
+<p>La unidad <strong>rem (root em)</strong> es muy parecida a em, pero permitiendo establecer <strong>un tamaño base</strong> personalizado (estableciéndolo en la etiqueta <code>html</code> o la pseudoclase <code>:root</code>). De esta forma, podemos trabajar con múltiplos del tamaño base:</p>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Tamaño base */</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="c">/* El doble del tamaño base: 44px */</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El elemento <code>h1</code> tendrá el valor de 44px.
+De esta forma cambiando el tamaño de la fuente en la pseudoclase <code>:root</code> se modificarán todos los tamaños.</p>
+<h4 id="unidades-flexibles-viewport">Unidades flexibles (viewport)</h4>
+<p>Estas unidades dependen del viewport (<strong>región visible de la página web en el navegador)</strong>. Con estas unidades podemos hacer referencia a un porcentaje concreto del tamaño específico que tengamos en la ventana del navegador, independientemente de si es redimensionado o no.</p>
+<p>Estas unidades son las siguientes:</p>
+<table>
+<thead>
+<tr>
+<th>Unidad</th>
+<th>Significado</th>
+<th>Medida aproximada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vw</td>
+<td>viewport</td>
+<td>width 1vw = 1% ancho de navegador</td>
+</tr>
+<tr>
+<td>vh</td>
+<td>viewport</td>
+<td>height 1vh = 1% alto de navegador</td>
+</tr>
+<tr>
+<td>vmin</td>
+<td>viewport minimum</td>
+<td>1vmin = 1% de alto o ancho (el mínimo)</td>
+</tr>
+<tr>
+<td>vmax</td>
+<td>viewport maximum</td>
+<td>1vmax = 1% de alto o ancho (el máximo)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modelo-de-caja">Modelo de caja</h3>
+<p>Hemos visto en la anterior unidad el modelo de caja y de los elementos que componenen una caja o element html. Para dar tamaños específicos necesitaremos asignarles valores a las propiedades <code>width</code> (ancho) y <code>height</code> (alto).</p>
+<p>En el caso de indicar el valor <strong>auto</strong> a dichas propiedades, el navegador se encargará de darle el tamaño apropiado, dependiendo de su contenido. Ten en cuenta que este valor es el que tienen por defecto estas propiedades.</p>
+<p>Otra forma de dar valores ancho y alto es mediante las propiedades de <code>width</code>: por un lado, <strong><code>min-width y max-width</code></strong> y por otro, sus equivalentes de heigh<code>t:</code><strong>min-height y max-height.</strong>`</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>max-width</td>
+<td>none</td>
+<td>Ancho máximo que puede ocupar un elemento.</td>
+</tr>
+<tr>
+<td>min-width</td>
+<td>0</td>
+<td>Ancho mínimo que puede ocupar un elemento.</td>
+</tr>
+<tr>
+<td>max-height</td>
+<td>none</td>
+<td>Alto máximo que puede ocupar un elemento.</td>
+</tr>
+<tr>
+<td>min-height</td>
+<td>0</td>
+<td>Alto mínimo que puede ocupar un elemento.</td>
+</tr>
+</tbody>
+</table>
+<p>Con estas propiedades, en lugar de establecer un tamaño fijo, establecemos unos rangos máximos y mínimos, donde el ancho o alto podría variar entre esos valores:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">  </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>En este caso, por ejemplo, a pesar de estar indicando un tamaño de 800px, le aplicamos un max-width de 500px, por lo que estamos limitando el elemento a un tamaño de ancho de 500 píxeles como máximo y nunca superará ese tamaño.</p>
+<h4 id="la-propiedad-box-sizing">La propiedad box-sizing</h4>
+<p>En CSS, existe una propiedad denominada <code>box-sizing</code> que permite alterar esta versión del <strong>modelo de caja</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content-box</td>
+<td>Las propiedades width y height no incluyen borde, relleno y/o margen. Valor por defecto.</td>
+</tr>
+<tr>
+<td>border-box</td>
+<td>Las propiedades width y height incluyen borde y relleno.</td>
+</tr>
+</tbody>
+</table>
+<p>Veamos un ejemplo donde utilizaremos:</p>
+<ul>
+<li>Tamaño <code>width y height</code> de 200px.</li>
+<li>Borde de 15px por cada lado.</li>
+<li>Relleno de 20px por cada lado.</li>
+</ul>
+<p>Si usamos <code>box-sizing: content-box (modelo por defecto)</code>, los tamaños de borde y de relleno se suman al dado por anchos y altos, por lo que el tamaño total del elemento será de 270px.</p>
+<p>Sin embargo, en el caso de utilizar <code>box-sizing: border-box</code>, los tamaños de borde y de relleno se restan al tamaño dado por anchos y altos, por lo que el tamaño total del elemento será de 200px, sin embargo, el tamaño disponible para el contenido es de 130px (200px - 15px - 15px - 20px - 20px).</p>
+<h4 id="la-propiedad-overflow">la propiedad overflow</h4>
+<p>Sin indicar valores de ancho y alto para una caja, el elemento generalmente toma el tamaño que debe respecto a su contenido, mientras que si indicamos un ancho y alto concretos, estamos obligando mediante CSS a tener un aspecto concreto y podemos obtener resultados similares al siguiente
+si su contenido es más grande que el tamaño que hemos obligado a tener:</p>
+<p><img alt="overlfow" src="../img/conceptosBasicos/overflow.png" /></p>
+<p>Su contenido de texto es tan grande que no cabe dentro de ese elemento.</p>
+<p>Podemos modificar ese comportamiento con la propiedad de CSS <code>overflow</code>, o con alguna de sus propiedades específicas <code>overflow-x o overflow-y</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>¿Qué ocurre si se desborda el contenedor?</th>
+<th>¿Desbordamiento?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>visible</td>
+<td>Se muestra el contenido que sobresale (comportamiento por defecto)</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>Se oculta el contenido que sobresale.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>scroll</td>
+<td>Se colocan barras de desplazamiento (horizontales y verticales).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>Se colocan barras de desplazamiento (sólo las necesarias).</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<p>CSS3 añade las propiedades overflow-x y overflow-y para cada eje individual, que antiguamente solo era posible hacerlo con overflow para ambos ejes. Estas propiedades son útiles cuando no quieres mostrar alguna barra de desplazamiento, habitualmente, la barra de desplazamiento horizontal.</p>
+<h4 id="margenes-margin-y-rellenospadding">Márgenes (Margin) y Rellenos(Padding)</h4>
+<p>Los <strong>márgenes (margin)</strong> son los espacios exteriores de un elemento. Es decir, el espacio que hay entre el borde de un elemento y su exterior.</p>
+<p>Los margins tienen varias propiedades para indicar el relleno de cada zona:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>margin-top</code></td>
+<td>auto</td>
+<td>Establece un tamaño de margen superior.</td>
+</tr>
+<tr>
+<td><code>margin-left</code></td>
+<td>auto</td>
+<td>Establece un tamaño de margen a la izquierda.</td>
+</tr>
+<tr>
+<td><code>margin-right</code></td>
+<td>auto</td>
+<td>Establece un tamaño de margen a la derecha.</td>
+</tr>
+<tr>
+<td><code>margin-bottom</code></td>
+<td>auto</td>
+<td>Establece un tamaño de margen inferior.</td>
+</tr>
+</tbody>
+</table>
+<p>Podemos aplicar diferentes márgenes a cada zona de un elemento utilizando cada una de estas propiedades, o dejando al navegador que lo haga de forma automática indicando el valor <strong>auto</strong>.</p>
+<p>Para centrar horizontalmente un elemento en pantalla. Basta con aplicar un ancho fijo al contenedor: width: 500px (por ejemplo) y luego aplicar un margin: auto. De esta forma, el navegador, al conocer el tamaño del elemento (y por omisión, el resto del tamaño de la ventana) se encarga de repartirlo equitativamente entre el margen izquierdo y el margen derecho, quedando centrado el elemento.</p>
+<p>Los <strong>rellenos (padding)</strong> son los espacios que hay entre los bordes del elemento en cuestión y el contenido del elemento (por la parte interior).</p>
+<p>Los padding tienen varias propiedades para indicar el relleno de cada zona:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>padding-top</code></td>
+<td>0</td>
+<td>Aplica un relleno interior en el espacio superior de un elemento.</td>
+</tr>
+<tr>
+<td><code>padding-left</code></td>
+<td>0</td>
+<td>Aplica un relleno interior en el espacio izquierdo de un elemento.</td>
+</tr>
+<tr>
+<td><code>padding-right</code></td>
+<td>0</td>
+<td>Aplica un relleno interior en el espacio derecho de un elemento.</td>
+</tr>
+<tr>
+<td><code>padding-bottom</code></td>
+<td>0</td>
+<td>Aplica un relleno interior en el espacio inferior de un elemento.</td>
+</tr>
+</tbody>
+</table>
+<p>Además disponemos de dos propiedades que se denominan <strong>atajos <code>margin y padding</code></strong>, generalmente suelen estar presentes en todas la propiedades.</p>
+<p>Con estas propiedades evitamos tener que escribir los valores de cada parte (izquierda, derecha, arriba, abajo...), especialmente importante si es el mismo valor en las cuatro. Pero tenemos que acordarnos el significado del número de parámetros que asignamos.</p>
+<p><strong>Todas las propiedades que se puedan asignar parámetros a cada una de las posiciones tienen el mismo sentido.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valores</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>margin o padding</td>
+<td>1 parámetro.</td>
+<td>Aplica el mismo margen a todos los lados.</td>
+</tr>
+<tr>
+<td></td>
+<td>2 parámetros.</td>
+<td>Aplica margen top/bottom y left/right.</td>
+</tr>
+<tr>
+<td></td>
+<td>3 parámetros.</td>
+<td>Aplica margen top, left/right y bottom.</td>
+</tr>
+<tr>
+<td></td>
+<td>4 parámetros.</td>
+<td>Aplica margen top, right, bottom e left.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bordes">Bordes</h4>
+<p>Las propiedades básicas de los bordes en CSS son las siguientes:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>border-color</code></td>
+<td>black</td>
+<td>Especifica el color que se utilizará en el borde.</td>
+</tr>
+<tr>
+<td><code>border-width</code></td>
+<td>thin , medium ,thick</td>
+<td>Especifica un tamaño predefinido para el grosor del borde.</td>
+</tr>
+<tr>
+<td><code>border-style</code></td>
+<td>none</td>
+<td>Define el estilo para el borde a utilizar (ver más adelante).</td>
+</tr>
+</tbody>
+</table>
+<p>Con <code>border-width</code> podemos establecer la anchura o grosor del borde utilizando tanto palabras clave predefinidas como un tamaño concreto con cualquier tipo de las unidades ya vistas. Tanto para esta propiedad como para la propiedad <code>border-color</code> ,<strong>si disponemos más de un valor tendrá el mismo sentido que los atajos de margin y padding.</strong></p>
+<p>La propiedad <code>border-style</code> podemos aplicar un estilo determinado al borde de un elemento. En estilo de borde podemos elegir cualquiera de las siguientes opciones:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hidden</td>
+<td>Oculto. Idéntico a none, salvo para conflictos con tablas.</td>
+</tr>
+<tr>
+<td>dotted</td>
+<td>Establece un borde basado en puntos.</td>
+</tr>
+<tr>
+<td>dashed</td>
+<td>Establece un borde basado en rayas (línea discontínua).</td>
+</tr>
+<tr>
+<td>solid</td>
+<td>Establece un borde sólido (línea contínua).</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Establece un borde doble (dos líneas contínuas).</td>
+</tr>
+<tr>
+<td>groove</td>
+<td>Establece un borde biselado con luz desde arriba.</td>
+</tr>
+<tr>
+<td>ridge</td>
+<td>Establece un borde biselado con luz desde abajo. Opuesto a groove.</td>
+</tr>
+<tr>
+<td>inset</td>
+<td>Establece un borde con profundidad «hacia dentro».</td>
+</tr>
+<tr>
+<td>outset</td>
+<td>Establece un borde con profundidad «hacia fuera». Opuesto a inset.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="border-styles" src="../img/conceptosBasicos/border-styles.png" /></p>
+<p>De la misma forma, podemos hacer exactamente lo mismo con las propiedades <code>border-width</code> cuando tenemos diferentes valores para cada borde, lo podemos tener para <code>border-style y border-color</code></p>
+<p>La propiedad de atajo es <code>border</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border</td>
+<td>tamaño,estilo, color</td>
+<td>Propiedad de atajo para simplificar valores.</td>
+</tr>
+</tbody>
+</table>
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">div</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#000000</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Así pues, estamos aplicando un borde de 1 píxel de grosor, estilo sólido y color negro a todos los bordes del elemento,<strong>ahorrando mucho espacio y escribiéndolo todo en una sola propiedad</strong>.</p>
+<p>He aquí un ejemplo sencillo de cajas con bordes: la primera caja posee un borde idéntico para todos los lados, mientras que la segunda incluye bordes diferentes.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Los bordes de las cajas<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">.</span><span class="nc">caja-1</span><span class="w"> </span><span class="p">{</span>
+<span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="kc">double</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">caja-2</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="k">border-top</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="kc">dotted</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="k">border-right</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="k">border-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="kc">dashed</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="k">border-left</span><span class="p">:</span><span class="w"> </span><span class="kc">medium</span><span class="w"> </span><span class="kc">outset</span><span class="w"> </span><span class="kc">purple</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;caja-1&quot;</span><span class="p">&gt;</span>Praesent commodo...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span><span class="ni">&amp;nbsp;</span><span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;caja-2&quot;</span><span class="p">&gt;</span>Aenean lacinia bibendum...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="bordes-redondeados">Bordes redondeados</h4>
+<p>Se especifica un radio para el borde de las esquinas de la caja. Por defecto, este borde es de tamaño 0, por lo que no hay borde redondeado. A medida que se aumenta este valor, el borde se redondea más.</p>
+<p>Para indicar este radio, utilizaremos la propiedad <code>border-radius</code>. Hay varias formas de utilizarla:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>border-radius</code></td>
+<td>1 parámetro.</td>
+<td>Aplica el radio a todas y cada una de las esquinas.</td>
+</tr>
+<tr>
+<td></td>
+<td>2 parámetros:</td>
+<td>top-left + bottom-right y a top-right + bottom-left.</td>
+</tr>
+<tr>
+<td></td>
+<td>3 parámetros:</td>
+<td>top-left, a top-right y bottom-left y a bottom-right.</td>
+</tr>
+<tr>
+<td></td>
+<td>4 parámetros.</td>
+<td>Orden de las agujas del reloj, empezando por top-left.</td>
+</tr>
+</tbody>
+</table>
+<p>Veamos el siguiente ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">esquinas-iguales</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">esquinas-diferentes</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>También es posible aplicar elipses en vez de círculos a las esquinas de las cajas. Basta con indicar valores separados por una barra: /. El primer valor corresponde al radio horizontal (x), y el segundo, al radio vertical (y).</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">elipse</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#333</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="o">/</span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="reseteos-de-css">Reseteos de CSS</h3>
+<p>Para la eliminación de las particularidades CSS de todos los navegadores y que sea más fácil de escribir CSS, muchos programadores deciden utilizar <strong>reseteos</strong>.</p>
+<p>Tradicionalmente, han habido muchos sistemas de reset en CSS, pero sólo algunos se han quedado hasta estos días. Los más conocidos y relevantes:</p>
+<table>
+<thead>
+<tr>
+<th>Sistema de reseteo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://meyerweb.com/eric/tools/css/reset/">Reset CSS</a></td>
+<td>El reset de Eric Meyer, históricamente, quizás el primero.</td>
+</tr>
+<tr>
+<td><a href="https://necolas.github.io/normalize.css/">Normalize.css</a></td>
+<td>Uno de los reset más tradicionales y populares.</td>
+</tr>
+<tr>
+<td><a href="https://piccalil.li/blog/a-modern-css-reset/">A Modern CSS Reset</a></td>
+<td>El reseteo CSS de Andy Bell.</td>
+</tr>
+<tr>
+<td><a href="https://www.joshwcomeau.com/css/custom-css-reset/">Josh W. Comeau </a></td>
+<td>Un reset moderno, explicado paso a paso.</td>
+</tr>
+</tbody>
+</table>
+<p>Utilizar un sistema de reset CSS es decisión del desarrollador y no es algo obligatorio. En algunos casos, quizás pueda ayudar a que el desarrollador realice pasos en sus diseños de forma mucho más intuitiva.</p>
+<h3 id="coloresfondos-e-imagenes">Colores,fondos e imágenes</h3>
+<p>Las propiedades CSS que podemos utilizar para cambiar el color de texto y el color de fondo de un elemento HTML:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>color</code></td>
+<td>color</td>
+<td>Cambia el color del texto que está en el interior de un elemento.</td>
+</tr>
+<tr>
+<td><code>background-color</code></td>
+<td>color</td>
+<td>Cambia el color de fondo de un elemento.</td>
+</tr>
+</tbody>
+</table>
+<p>Hay varias formas de indicar el color:</p>
+<p>| Esquema   | Nombre                                | Descripción                                                       |
+| --------- | ------------------------------------- | ----------------------------------------------------------------- | -------- |
+| red       | Palabra clave predefinida             | Establece un color mediante una palabra clave predefinida.        |
+| <code>rgb()</code>   | Función RGB                           | Utiliza una función rgb() (rojo, verde, azul).                    |
+| <code>rgba()</code>  | Función RGB con canal alfa            | Función rgb() o rgba() con un canal alfa (transparencia) añadido. |
+| <code>#rgb</code>    | Código RGB hexadecimal                | Notación RGB abreviada en hexadecimal.                            |
+| <code>#rrggbb</code> | Código RGB hexadecimal con canal alfa | Notación RGB abreviada en hexadecimal con un canal alfa           | añadido. |
+| <code>hsl()</code>   | Función HSL                           | Función hsl() (matiz de color, saturación y brillo).              |
+| <code>hsla()</code>  | Función HSL con canal alfa            | Función hsl() o hsla() con un canal alfa añadido.                 |</p>
+<p>Si utilizas la función RGB. se deben indicar los valores r, g y b. Significan rojo, verde y azul, respectivamente, y hacen referencia a la cantidad de color que poseen estos canales para generar otro color. Para especificarlo se puede hacer de dos formas:</p>
+<ul>
+<li>Como números, desde el 0 al 255, siendo el primero el más oscuro y el segundo el más claro.</li>
+<li>Como porcentajes, desde el 0% al 100%, siendo el primero el más oscuro y el segundo el más claro.</li>
+</ul>
+<p>Si utilizamos una cantidad <code>rgb(0, 0, 0)</code> de cada canal, obtenemos el color negro (todos los canales están en su valor más oscuro). En cambio, si utilizamos una cantidad <code>rgb(255, 0, 0)</code>, obtendremos el color rojo (solo el canal rojo está en el más oscuro)</p>
+<p>Pero por otra parte el sistema Hexadecimal es el más utilizado, de tal forma que para el ejemplo <code>rgb(255, 0, 0)</code>. Si queremos pasarlo al formato RGB abreviado, debemos convertir cada valor a hexadecimal, quedando FF (255), 00 (0) y 00 (0). Es decir, en hexadecimal: #FF0000. El formato abrevido de este sería especificando sólo las primeras tres cifras de cada par. Por ejemplo,#F00.</p>
+<p>Aunque la función hsl() sonr mucho más intuitivos para la mayoría de los desarrolladores que otros como hexadecimal o RGB.</p>
+<p>En algunos casos, es muy posible que deseemos indicar un color que tenga cierto grado de transparencia, y de esta forma, refleje el contenido, color o imágenes que se encuentren detrás parcial o completamente. Como vemos en la tabla podemos indicar un grado de transparencia.</p>
+<p>Veamos algunos ejemplos de cada caso:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">element</span><span class="w"> </span><span class="p">{</span>
+<span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgb</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span><span class="w"> </span><span class="err">/_</span><span class="w"> </span><span class="err">Notación</span><span class="w"> </span><span class="err">clásica</span><span class="w"> </span><span class="err">_/</span>
+<span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgb</span><span class="p">(</span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">);</span><span class="w"> </span><span class="err">/_</span><span class="w"> </span><span class="err">Notación</span><span class="w"> </span><span class="err">moderna</span><span class="w"> </span><span class="err">_/</span>
+<span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">hsl</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mf">0.75</span><span class="p">);</span><span class="w"> </span><span class="err">/_</span><span class="w"> </span><span class="err">Notación</span><span class="w"> </span><span class="err">clásica</span><span class="w"> </span><span class="err">_/</span>
+<span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">hsl</span><span class="p">(</span><span class="mi">180</span><span class="kt">deg</span><span class="w"> </span><span class="mi">50</span><span class="kt">%</span><span class="w"> </span><span class="mi">25</span><span class="kt">%</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">75</span><span class="kt">%</span><span class="p">);</span><span class="w"> </span><span class="err">/_</span><span class="w"> </span><span class="err">Notación</span><span class="w"> </span><span class="err">moderna</span><span class="w"> </span><span class="err">_/</span>
+<span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#aa44bb</span><span class="mi">77</span><span class="p">;</span>
+<span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#a4b7</span><span class="p">;</span><span class="w"> </span><span class="err">/_</span><span class="w"> </span><span class="err">Notación</span><span class="w"> </span><span class="err">abreviada</span><span class="w"> </span><span class="err">_/</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="opacidad">Opacidad</h4>
+<p>Para indicar la opacidad podemos indicar tanto valores numéricos entre 0 (completamente transparente) y 1 (completamente visible), pasando por valores como 0.25 o 0.75. Si lo preferimos, podemos usar valores porcentuales entre 0% (completamente transparente) y 100% (completamente visible).</p>
+<p>Recuerda que la propiedad <code>opacity</code><strong>afecta al elemento indicado y a todos sus hijos</strong>. En algún caso podemos hacer un elemento semitranparente con la modificación del canal alfa del color pero esto no afectará al los elementos hijos, como el texto que haya dentro.</p>
+<h4 id="fondos">Fondos</h4>
+<p>La propiedad <code>background-image</code> nos permite indicar imágenes de fondo o, como veremos más adelante, incluso gradientes o degradados de varios colores.</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>background-image</code></td>
+<td>none</td>
+<td>No utiliza ninguna imagen de fondo ugar se mostrará el color establecido con background-color</td>
+</tr>
+<tr>
+<td><code>background-image</code></td>
+<td>url("imagen.jpg")</td>
+<td>Usa la imagen indicada como fondo. Las comillas no son obligatorias.</td>
+</tr>
+<tr>
+<td><code>background-image</code></td>
+<td>gradient</td>
+<td>Utiliza un gradiente de tipo lineal, radial o cónico. (Ver más adelante)</td>
+</tr>
+</tbody>
+</table>
+<p>Una vez establecida una imagen de fondo con <code>background-image</code>, se puede personalizar la forma en la que se mostrará dicha imagen mediante propiedades como <code>background-repeat</code>,<code>background-attachment</code> o <code>background-position</code>, entre otras:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>background-repeat</code></td>
+<td>Establece el modo en el que se repite la imagen de fondo de ser muy pequeña.</td>
+</tr>
+<tr>
+<td><code>background-attachment</code></td>
+<td>Indica si la imagen de fondo permanece fija o se desplaza al hacer scroll.</td>
+</tr>
+<tr>
+<td><code>background-position</code></td>
+<td>Establece una posición para la imagen de fondo, de modo que podemos moverla de sitio.</td>
+</tr>
+<tr>
+<td><code>background-clip</code></td>
+<td>Modo de relleno de la imagen de fondo.</td>
+</tr>
+<tr>
+<td><code>background-origin</code></td>
+<td>Origen de la imagen de fondo si se utiliza</td>
+</tr>
+</tbody>
+</table>
+<p>| <code>background-size</code> | Establece un tamaño diferente a la imagen de fondo. |</p>
+<h5 id="background-repeat">background-repeat</h5>
+<p>La propiedad <code>background-repeat</code> especifica si la imagen se repetirá horizontalmente (repeat-x), si se repetirá verticalmente (repeat-y), si lo hará en ambas direcciones (repeat) o en ninguna (no-repeat). Por defecto, si no se indica nada, esta propiedad está ajustada en repeat.</p>
+<p>Existen también dos valores interesantes, space y round, los cuales asumen implícitamente que se repite el fondo. En el caso de que tengamos una imagen de fondo que se repita varias veces en mosaico, space evita que se corte la imagen, introduciendo un espacio entre las repeticiones individuales.</p>
+<p>Por su parte, round lo que hace es ajustar la imagen individual, de modo que la expande o contrae para ajustarla al espacio disponible. En ambos casos la repetición de los fondos nunca se mostrará cortada.</p>
+<p>Podemos ver un ejemplo en el siguiente <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-repeat">link</a>.</p>
+<h5 id="background-attachment">background-attachment</h5>
+<p>La propiedad <code>background-attachment</code> especificará si la imagen de fondo seguirá el desplazamiento del usuario al hacer scroll por la página, es decir, si el usuario al hacer scroll y bajar para ver el contenido de la página, la imagen de fondo de desplazará hacia arriba siguiendo el flujo normal de una página. Este comportamiento se consigue con la opción scroll, que es la que viene establecida por defecto.</p>
+<p>Por el contrario, si indicamos el valor fixed, la imagen de fondo se quedará fijada y no se moverá mientras el usuario se desplaza por la página, algo que puede ser útil en muchos escenarios.</p>
+<h5 id="background-position">background-position</h5>
+<p>La propiedad <code>background-position</code> permite desplazar la imagen en la zona especificada por y por . Por defecto, esos valores son 0% 0%, y pueden especificarse tanto con unidades (porcentajes, píxels, etc...) como mediante palabras clave que representan zonas predefinidas (top, left, right, bottom y center).</p>
+<p>Si sólo se especifica un valor, se tomará para el eje x, mientras que el valor del eje Y será automáticamente establecido a center (o 50%).</p>
+<h5 id="background-clip">background-clip</h5>
+<p>La propiedad <code>background-clip</code> indica como cubrirá la imagen de fondo al elemento seleccionado para darle estilo.</p>
+<p>Estas propiedades son las siguientes:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background-clip</td>
+<td>border-box, padding-box , content-box</td>
+<td>Modo de relleno de la imagen de fondo</td>
+</tr>
+<tr>
+<td>background-origin</td>
+<td>border-box, padding-box , content-box</td>
+<td>Origen del modo de relleno del fondo</td>
+</tr>
+</tbody>
+</table>
+<p>La propiedad background-clip establece la forma en la que el color o la imagen de fondo cubrirá el elemento, mientras que la propiedad background-origin intenta posicionar el comienzo de la imagen de fondo, útil con imágenes. La primera utiliza border-box como valor por defecto, mientras que la segunda utiliza padding-box.</p>
+<p>Podemos ver un ejemplo en el siguiente <a href="https://www.w3schools.com/cssref/tryit.php?filename=trycss3_background-clip">link</a></p>
+<p>Ambas propiedades pueden tomar uno de los siguientes valores:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>padding-box</code></td>
+<td>La imagen o color de fondo cubrirá la zona del espaciado y contenido.</td>
+</tr>
+<tr>
+<td><code>border-box</code></td>
+<td>La imagen o color de fondo cubrirá la zona del borde, espaciado y contenido.</td>
+</tr>
+<tr>
+<td><code>content-box</code></td>
+<td>La imagen o color de fondo cubrirá sólo la zona del contenido.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="background-size">background-size,</h5>
+<p>Permite dar un tamaño a la imagen de fondo. Podemos ajustar tanto el tamaño de ancho como el de alto, e incluso tenemos algunas palabras clave predefinidas para obtener un resultado específico.
+Veamos la sintaxis:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tamaño</td>
+<td>1 parámetro. Aplica un de (ancho × auto) a la imagen de fondo. Mantiene la proporción.</td>
+</tr>
+<tr>
+<td>tamaño tamaño</td>
+<td>2 parámetros. Aplica un de (ancho × alto) a la imagen de fondo. Hay que vigilar la proporción.</td>
+</tr>
+</tbody>
+</table>
+<p>Por defecto, una imagen de fondo toma automáticamente el tamaño de la imagen (que podría ser demasiado grande, por ejemplo).</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">element</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">https://manz.dev/manz-logo.png</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c">/* La imagen es de 320x320 píxels, la cambiamos a 48x48 */</span>
+<span class="w">  </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="mi">48</span><span class="kt">px</span><span class="w"> </span><span class="mi">48</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>con background-size puedes utilizar los siguientes valores:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>No escala la imagen. Utiliza el tamaño original. Es el valor por defecto.</td>
+</tr>
+<tr>
+<td>unidad</td>
+<td>Indicamos el tamaño específico que queremos usar (píxels o porcentaje, por ej.).</td>
+</tr>
+<tr>
+<td>cover</td>
+<td>Escala el ancho de la imagen de fondo al ancho del elemento.</td>
+</tr>
+<tr>
+<td>contain</td>
+<td>Escala el alto de la imagen de fondo al alto del elemento.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="fondos-multiples">Fondos múltiples</h5>
+<p>CSS permite establecer múltiples fondos separando por comas:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>background-image:url(imagen1), url(imagen2), ...</code></td>
+<td>Establece varias imágenes de fondo en un elemento.</td>
+</tr>
+</tbody>
+</table>
+<p>Hay que tener en cuenta que la primera imagen establecida es la que permanecerá al frente, la siguiente imagen añadida aparecerá detrás de la primera y así con todas las imágenes que se vayan indicando. Esto podemos utilizarlo a nuestro favor si colocamos una imagen en formato .png o .webp, las cuales soportan transparencias:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">element</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">image.png</span><span class="p">),</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">image.webp</span><span class="p">),</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">fondo.jpg</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-repeat</span><span class="p">:</span><span class="w"> </span><span class="kc">no-repeat</span><span class="p">,</span><span class="w"> </span><span class="kc">repeat-x</span><span class="p">,</span><span class="w"> </span><span class="kc">repeat-x</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Las propiedades derivadas de background-* pasan a ser múltiples también, ya que cada valor se aplica en orden a su respectiva imagen de fondo. En el caso de dejar sólo un valor, se aplicará a todas las imágenes de fondo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">element</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">image.png</span><span class="p">),</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">image.webp</span><span class="p">),</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">fondo.jpg</span><span class="p">);</span>
+<span class="w">  </span><span class="k">background-repeat</span><span class="p">:</span><span class="w"> </span><span class="kc">no-repeat</span><span class="p">;</span><span class="w">   </span><span class="c">/* En este caso, las 3 imágenes no se repiten */</span>
+</code></pre></div>
+<h5 id="atajo-background">Atajo Background</h5>
+<p>La propiedad background y sigue la siguiente estructura:</p>
+<table>
+<thead>
+<tr>
+<th>Atajo</th>
+<th>Orden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background</td>
+<td>color imagen position/size repeat attachment origin clip</td>
+</tr>
+</tbody>
+</table>
+<p>El parámetro / es opcional. Si lo indicas el carácter /, la propiedad background se esperará el valor background-size a continuación. Veamos varios ejemplos del uso de la propiedad background:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">element</span><span class="w"> </span><span class="p">{</span>
+<span class="err">/_</span><span class="w"> </span><span class="err">Atajo</span><span class="w"> </span><span class="err">simple</span><span class="w"> </span><span class="err">_/</span>
+<span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">imagen.jpg</span><span class="p">)</span><span class="w"> </span><span class="kc">top</span><span class="w"> </span><span class="kc">center</span><span class="w"> </span><span class="kc">repeat-x</span><span class="p">;</span>
+
+<span class="err">/_</span><span class="w"> </span><span class="err">Atajo</span><span class="w"> </span><span class="err">completo</span><span class="w"> </span><span class="err">_/</span>
+<span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">deeppink</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">imagen.jpg</span><span class="p">)</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="w"> </span><span class="kc">space</span><span class="w"> </span><span class="kc">scroll</span><span class="w"> </span><span class="kc">padding-box</span><span class="w"> </span><span class="kc">padding-box</span><span class="p">;</span>
+
+<span class="err">/_</span><span class="w"> </span><span class="err">Atajo</span><span class="w"> </span><span class="err">múltiple</span><span class="w"> </span><span class="err">_/</span>
+<span class="k">background</span><span class="p">:</span>
+<span class="nb">url</span><span class="p">(</span><span class="sx">primer-plano.jpg</span><span class="p">)</span><span class="w"> </span><span class="kc">center</span><span class="w"> </span><span class="kc">center</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="kc">cover</span><span class="p">,</span>
+<span class="kc">deeppink</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">imagen.jpg</span><span class="p">)</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">150</span><span class="kt">px</span><span class="w"> </span><span class="kc">space</span><span class="w"> </span><span class="kc">scroll</span><span class="w"> </span><span class="kc">padding-box</span><span class="w"> </span><span class="kc">padding-box</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Recuerda que si alguno de los valores no los necesitamos, podemos simplemente omitirlo.</strong></p>
+<h4 id="imagenes-y-objetos">Imágenes y objetos</h4>
+<p>Algunos objetos como imágenes a través de la etiqueta <code>&lt;img&gt;</code>, elementos multimedia a través de <code>&lt;video&gt;</code> u otros como <code>&lt;textarea&gt; o &lt;input&gt;</code>, dichos elementos tienen su propia forma de mostrarse en pantalla ya que tienen características ajenas a CSS. Por dicha razón, muchas veces tienen un tamaño inicial que no encaja con el uso que queremos darle, no se adapta a las cajas o contenedores que usamos o no funciona como tenemos previsto que lo haga.</p>
+<p>Algunas propiedades en CSS que nos permiten modificar ciertos aspectos de estos elementos:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valores</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>object-fit</code></td>
+<td>fill ,contain , cover ,none , scale-down</td>
+<td>Modo de relleno del elemento.</td>
+</tr>
+<tr>
+<td><code>object-position</code></td>
+<td>porcentje porcentaje</td>
+<td>Posición (x,y) del elemento.</td>
+</tr>
+<tr>
+<td><code>image-rendering</code></td>
+<td>auto , smooth , high-quality , crisp-edges , pixelated</td>
+<td>Algoritmo de escalado a utilizar.</td>
+</tr>
+<tr>
+<td><code>image-orientation1</code></td>
+<td>from-image , none , ángulo [flip]</td>
+<td>Orientación de la imagen.</td>
+</tr>
+<tr>
+<td><code>aspect-ratio</code></td>
+<td>auto , number/number</td>
+<td>Define la proporción de aspecto.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="la-propiedad-object-fit">La propiedad object-fit</h5>
+<p>En el siguiente <a href="https://developer.mozilla.org/es/docs/Web/CSS/object-fit">link</a> tenéis un ejemplo de <code>object-fit</code>.</p>
+<h5 id="la-propiedad-object-position">La propiedad object-position</h5>
+<p>Además, tenemos la propiedad <code>object-position</code> que nos sirve para utilizar junto a la propiedad object-fit y cambiar la posición donde aparece la imagen, especialmente cuando está recortada y sólo aparece un fragmento o parte de la imagen.</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50% 50%</td>
+<td>Por defecto, la imagen está centrada tanto en X como en Y.</td>
+</tr>
+</tbody>
+</table>
+<p>También se pueden indicar palabras clave como top, left, right, bottom o center para indicar en que zona quieres centrar la imagen, incluso, añadiendo un porcentaje tras ellos para ajustar más concretamente:</p>
+<p>En el siguiente <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-position">link</a> tenéis un ejemplo de <code>object-position</code>.</p>
+<h5 id="la-propiedad-aspect-ratio">La propiedad aspect-ratio</h5>
+<p>La propiedad aspect-ratio permite cambiar la proporción de aspecto entre los valores width y height de una imagen u objeto desde CSS. De esta forma, podemos asegurarnos de que las imágenes no se deformarán o tendrán una relación de aspecto no adecuada en nuestras páginas, sin necesidad de darle un tamaño concreto de ancho y alto al elemento.</p>
+<p>En el siguiente <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">link</a> de <code>aspect-ratio</code></p>
+<h3 id="la-fuentes">La fuentes</h3>
+<h4 id="propiedades-basicas">Propiedades básicas</h4>
+<p>Las propiedades CSS más básicas para aplicar a cualquier tipo de tipografía:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>font-family</code></td>
+<td>font o fontlist</td>
+<td>Indica el nombre de la fuente (o una lista de ellas).</td>
+</tr>
+<tr>
+<td><code>font-size</code></td>
+<td>size</td>
+<td>Indica el tamaño de la fuente.</td>
+</tr>
+<tr>
+<td><code>font-style</code></td>
+<td>normal , italic , oblique</td>
+<td>Indica el estilo de la fuente.</td>
+</tr>
+<tr>
+<td><code>font-weight</code></td>
+<td>peso</td>
+<td>Indica el peso (grosor) de la fuente (100-800).</td>
+</tr>
+</tbody>
+</table>
+<p>Esta es la forma más básica de indicar una tipografía. Sin embargo, hay que tener en cuenta un detalle muy importante: estas fuentes sólo se visualizarán si el usuario las tiene instaladas en su sistema o dispositivo. En caso contrario, se observarán los textos con otra tipografía «suplente» que esté disponible en el sistema, pero que puede ser visualmente muy diferente.</p>
+<p>Dentro del tamaño de la fuente podemos establecer varios tipos de valores:</p>
+<ul>
+<li><strong>Medidas predefinidos</strong>: Palabras clave como medium que representan un tamaño medio (por defecto), small: tamaño pequeño, x-small: tamaño muy pequeño, etc...</li>
+<li><strong>Medidas relativas</strong>: Palabras clave como smaller que representan un tamaño un poco más pequeño que el actual, o larger que representa un tamaño un poco más grande que el actual.</li>
+<li><strong>Medida específica</strong>: Simplemente, indicar píxeles, porcentajes u otra unidad para especificar el tamaño concreto de la tipografía. Para tipografías se recomienda empezar por píxeles (más fácil) o utilizar estrategias con unidades rem (mejor, pero más avanzado).</li>
+</ul>
+<p>Y del estilo podemos establecer:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>normal</code></td>
+<td>Estilo normal, por defecto. Sin cambios aparentes.</td>
+</tr>
+<tr>
+<td><code>italic</code></td>
+<td>Cursiva. Estilo caracterizado por una ligera inclinación de las letras hacia la derecha.</td>
+</tr>
+<tr>
+<td><code>oblique</code></td>
+<td>Oblícua. Idem al anterior, salvo que esta inclinación se realiza de forma artificial.</td>
+</tr>
+</tbody>
+</table>
+<p>Con respecto al peso:
+<img alt="peso" src="img/conceptosBasicos/pesoFuentes.png" /></p>
+<ul>
+<li><strong>Valores predefinidos</strong>: Palabras claves para indicar el peso de la fuente: normal y bold. Normal es el valor por defecto.</li>
+<li><strong>Valores relativos</strong>: Bolder (más gruesa) o Ligther (más delgada).</li>
+<li><strong>Valor numérico</strong>: Un número del 100 (menos gruesa) al 900 (mas gruesa). Generalmente, se incrementan en valores de 100 en 100.</li>
+</ul>
+<h4 id="textos-y-alineaciones">Textos y alineaciones</h4>
+<p>centrándose más en objetivos de alineación o tratamiento de espaciados.Veamos algunas de estas propiedades:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>letter-spacing</code></td>
+<td>normal,size</td>
+<td>Espacio entre letras (tracking)</td>
+</tr>
+<tr>
+<td><code>word-spacing</code></td>
+<td>normal,size</td>
+<td>Espacio entre palabras</td>
+</tr>
+<tr>
+<td><code>line-height</code></td>
+<td>normal,size</td>
+<td>Altura de una línea (interlineado)</td>
+</tr>
+<tr>
+<td><code>text-indent</code></td>
+<td></td>
+<td>Indentación de texto (sangría)</td>
+</tr>
+<tr>
+<td><code>white-space</code></td>
+<td>normal , nowrap , pre , pre-line , pre-wrap</td>
+<td>Comportamiento de los espacios</td>
+</tr>
+<tr>
+<td><code>tab-size</code></td>
+<td>number,size</td>
+<td>Ancho de las tabulaciones (espacio o tamaño)</td>
+</tr>
+<tr>
+<td>direction 1 ltr , rtl Dirección del texto</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>La propiedad <code>line-height</code> especifica la altura que tendrá cada línea de texto, una característica que puede facilitar muchísimo la lectura, puesto que un interlineado excesivo puede desorientar al lector, mientras que uno insuficiente puede hacer perder al visitante el foco en el texto.</p>
+<p>La propiedad <code>word-spacing</code> permite establecer el espacio que hay entre una palabra y otra en un texto determinado, lo que puede facilitar la legibilidad de los textos de una página web y da flexibilidad y control sobre ciertas tipografías.</p>
+<p>La propiedad <code>text-indent</code> establece un tamaño de indentación (por defecto, 0), o lo que es lo mismo, hace un sangrado, desplazando el texto la longitud especificada hacia la derecha (o izquierda en cantidades negativas).</p>
+<p>Al utilizar <code>white-space</code> podemos indicar el comportamiento que tendrán los espacios en blanco en una página web. Por defecto, el valor es <strong>normal</strong> (transforma múltiples espacios en blanco en un solo espacio consecutivo)pero tiene otras opciones posibles:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>Espacios en blanco consecutivos</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>normal</td>
+<td>Los espacios se transforman en uno solo.</td>
+<td>Se ajusta al contenedor.</td>
+</tr>
+<tr>
+<td>nowrap</td>
+<td>Los espacios se transforman en uno solo.</td>
+<td>Ignora saltos de línea.</td>
+</tr>
+<tr>
+<td>pre</td>
+<td>Respeta literalmente los espacios.</td>
+<td>Ignora saltos de línea.</td>
+</tr>
+<tr>
+<td>pre-wrap</td>
+<td>Respeta literalmente los espacios.</td>
+<td>Se ajusta al contenedor.</td>
+</tr>
+<tr>
+<td>pre-line</td>
+<td>Respeta literalmente los espacios y suprime los espacios del final.</td>
+<td>Se ajusta al contenedor.</td>
+</tr>
+</tbody>
+</table>
+<p>En el siguiente <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space">link</a></p>
+<h5 id="alineaciones">Alineaciones</h5>
+<p>Existen varias propiedades CSS que permiten modificar las diferentes alineaciones de los textos:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text-align</td>
+<td>left , center , right , justify</td>
+<td>Justificación del texto.</td>
+</tr>
+<tr>
+<td>text-justify</td>
+<td>auto ,inter-word,inter-character , none</td>
+<td>Método de justificación de textos Todavía muy poco soportada.</td>
+</tr>
+<tr>
+<td>text-overflow</td>
+<td>clip ,ellipsis , texto</td>
+<td>Comportamiento cuando el texto no cabe «[...]»</td>
+</tr>
+</tbody>
+</table>
+<p>En el siguiente <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow">link</a></p>
+<p>También existe la propiedad vertical-align , que se encarga de la alineación vertical de un elemento,pudiendo establecer como valor las siguientes opciones:</p>
+<table>
+<thead>
+<tr>
+<th>Valor</th>
+<th>¿Cómo hace la alineación?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>baseline</code></td>
+<td>La base del elemento con la base del elemento padre.</td>
+</tr>
+<tr>
+<td><code>sub</code></td>
+<td>El elemento como un subíndice.</td>
+</tr>
+<tr>
+<td><code>super</code></td>
+<td>El elemento como un superíndice.</td>
+</tr>
+<tr>
+<td><code>top</code></td>
+<td>La parte superior del elemento con la parte superior del elemento más alto de la línea.</td>
+</tr>
+<tr>
+<td><code>middle</code></td>
+<td>El elemento en la mitad del elemento padre.</td>
+</tr>
+<tr>
+<td><code>bottom</code></td>
+<td>La parte inferior del elemento con la parte inferior del elemento más bajo de esa línea.</td>
+</tr>
+<tr>
+<td><code>text-top</code></td>
+<td>La parte superior del elemento con la parte superior del texto padre.</td>
+</tr>
+<tr>
+<td><code>text-bottom</code></td>
+<td>La parte inferior del elemento con la parte inferior del texto padre.</td>
+</tr>
+<tr>
+<td><code>tamaño</code></td>
+<td>Sube o baja un elemento el tamaño o porcentaje especificado.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="variaciones">Variaciones</h5>
+<p>Por último, existen varias propiedades aplicables a los textos para variar su naturaleza. Echemos un vistazo:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text-decoration</code></td>
+<td>none , underline ,overline , line-through</td>
+<td>Indica el tipo de subrayado (decoración)</td>
+</tr>
+<tr>
+<td><code>text-transform</code></td>
+<td>none , capitalize , uppercase , lowercase</td>
+<td>Transforma a mayús/minús o texto capitalizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="representacion-de-datos">Representación de datos</h3>
+<h4 id="listas">Listas</h4>
+<p>Las propiedades principales de las listas:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>list-style-image</code></td>
+<td>none , url(image.png)</td>
+<td>Indica una imagen para usar como viñeta de ítem.</td>
+</tr>
+<tr>
+<td><code>list-style-position</code></td>
+<td>inside , outside Establece o elimina indentación de ítems sobre la lista.</td>
+<td></td>
+</tr>
+<tr>
+<td>list-style-type</td>
+<td>disc , decimal , type , none</td>
+<td>Establece el tipo de viñeta que se va a utilizar.</td>
+</tr>
+</tbody>
+</table>
+<p>En el siguiente <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image">link</a> tenemos un ejemplo de <code>list-style-image</code></p>
+<p>En el siguiente [link] (https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position) tenemos un ejemplo de <code>list-style-position</code>.</p>
+<p>La propiedadd shorhand que nos permite asignar los valores es la siguiente:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c">/* list-style: &lt;type&gt; &lt;position&gt; &lt;image&gt; */</span>
+<span class="w">  </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">circle</span><span class="w"> </span><span class="kc">inside</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>El orden es el siguiente: list-style-type, list-style-position, list-style-image.</p>
+<h4 id="contadores">Contadores</h4>
+<p>Para crear un contador CSs, lo único que tenemos que hacer es asignarle <strong>un id o nombre</strong>, que nos permitirá hacer referencia a él posteriormente. Veamos que propiedades podemos utilizar para esto:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedades</th>
+<th>Valores</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>counter-reset</code></td>
+<td>id valor inicial , none</td>
+<td>Resetea el contador id al valor inicial (0 por defecto).</td>
+</tr>
+<tr>
+<td><code>counter-increment</code></td>
+<td></td>
+<td>Incrementa un contador, indicándole su id de referencia.</td>
+</tr>
+<tr>
+<td>counter-set</td>
+<td>id valor inicial ,none</td>
+<td>Similar a <code>counter-reset</code>, pero no realiza incremento si existe.</td>
+</tr>
+</tbody>
+</table>
+<p>En primer lugar, tenemos las propiedades <code>counter-reset</code> y <code>counter-increment</code> que no hacen otra cosa más que resetear a cero o incrementar un contador CSS, indicándole el nombre o id del mismo.
+La función counter()</p>
+<p>Sin embargo, necesitamos mostrarlo de alguna forma o sería inútil. Para ello, podemos utilizar la <strong>función CSS counter()</strong>, que se suele utilizar junto a la propiedad content en pseudoelementos <code>::before , ::after o ::marker</code> como vemos en el siguiente ejemplo.</p>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>counter(id,type)</td>
+<td>Usa el contador con id aplicando un estilo type.</td>
+</tr>
+</tbody>
+</table>
+<p>Aquí tenemos un ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nt">style</span><span class="o">&gt;</span>
+<span class="p">.</span><span class="nc">double-list</span><span class="w"> </span><span class="nt">li</span><span class="p">::</span><span class="nd">marker</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="nb">counter</span><span class="p">(</span><span class="n">count</span><span class="p">,</span><span class="w"> </span><span class="kc">decimal</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;) &#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">double-list</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">counter-increment</span><span class="p">:</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">double-list</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">counter-reset</span><span class="p">:</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">&lt;/</span><span class="nt">style</span><span class="o">&gt;</span>
+
+<span class="o">&lt;</span><span class="nt">ol</span><span class="w"> </span><span class="nt">class</span><span class="o">=</span><span class="s2">&quot;double-list&quot;</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nt">li</span><span class="o">&gt;</span><span class="nt">manzanas</span><span class="o">&lt;/</span><span class="nt">li</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nt">li</span><span class="o">&gt;</span><span class="nt">peras</span><span class="o">&lt;/</span><span class="nt">li</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nt">li</span><span class="o">&gt;</span><span class="nt">caramelos</span><span class="o">&lt;/</span><span class="nt">li</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nt">li</span><span class="o">&gt;</span><span class="nt">patatas</span><span class="o">&lt;/</span><span class="nt">li</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nt">li</span><span class="o">&gt;</span><span class="nt">pan</span><span class="o">&lt;/</span><span class="nt">li</span><span class="o">&gt;</span>
+<span class="o">&lt;/</span><span class="nt">ol</span><span class="o">&gt;</span>
+</code></pre></div>
+<h5 id="creacion-de-contadores">Creación de contadores</h5>
+<p>Si necesitamos algún tipo de contador personalizado y no nos bastan con los que incorpora CSS, es posible crearlo y customizarlo a nuestro gusto, mediante la regla @counter-style. Básicamente, te permite crear un tipo de contador, y decirle los símbolos que vamos a utilizar.
+Aquí tenemos un ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">counter-style</span><span class="w"> </span><span class="nt">thumbs</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">system</span><span class="o">:</span><span class="w"> </span><span class="nt">cyclic</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">symbols</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;\1F44D&quot;</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">suffix</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="n">thumbs</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h6 id="la-propiedad-system">La propiedad system</h6>
+<p>Un sistema de numeración puede comportarse de varias formas. Tenemos una propiedad denominada system que permite indicar uno de los siguientes valores y determinar su comportamiento:</p>
+<table>
+<thead>
+<tr>
+<th><code>Valor</code></th>
+<th>Descripción</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cyclic</code></td>
+<td>Establece un comportamiento cíclico</td>
+<td>. A B C -&gt; A, B, C, A, B, C, A...</td>
+</tr>
+<tr>
+<td><code>fixed</code></td>
+<td>Establece una numeración de un número finito de elementos.</td>
+<td>A B C -&gt; A, B, C, 4, 5, 6...</td>
+</tr>
+<tr>
+<td><code>symbolic</code></td>
+<td>Estable un patrón repetible y acumulable.</td>
+<td>A B C -&gt; A, B, C, AA, BB, CC, AAA...</td>
+</tr>
+<tr>
+<td><code>alphabetic</code></td>
+<td>Estable un patrón alfabético repetible y acumulable.</td>
+<td>A B C -&gt; A, B, C, AA, AB, AC, BA, BB, BC, CA...</td>
+</tr>
+<tr>
+<td><code>numeric</code></td>
+<td>Establece un patrón numérico repetible con cero.</td>
+<td>A B C -&gt; B, C, BA, BB, BC, CA, CB, CC, BAA, BAB...</td>
+</tr>
+<tr>
+<td><code>additive</code></td>
+<td>Establece un patrón añadiendo símbolos asociados y acumulables.</td>
+<td>⚀, ⚁, ⚂, ⚃, ⚄, ⚅, ⚅⚀, ⚅⚁, ⚅⚂, ⚅⚃, ⚅⚄, ...</td>
+</tr>
+<tr>
+<td><code>extends</code></td>
+<td>Simplemente extiende un sistema con un sufijo o prefijo. ") " -&gt; 1), 2), 3), 4), 5), 6), ...</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>A continuación, observa la combinación de un system: additive junto a la propiedad additive-symbols para crear combinaciones de símbolos, ya que es ligeramente diferente a las anteriores:</p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">counter-style</span><span class="w"> </span><span class="nt">upper-roman</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">system</span><span class="o">:</span><span class="w"> </span><span class="nt">additive</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">range</span><span class="o">:</span><span class="w"> </span><span class="nt">1</span><span class="w"> </span><span class="nt">3999</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">additive-symbols</span><span class="o">:</span><span class="w"> </span><span class="nt">1000</span><span class="w"> </span><span class="nt">M</span><span class="o">,</span><span class="w"> </span><span class="nt">900</span><span class="w"> </span><span class="nt">CM</span><span class="o">,</span><span class="w"> </span><span class="nt">500</span><span class="w"> </span><span class="nt">D</span><span class="o">,</span><span class="w"> </span><span class="nt">400</span><span class="w"> </span><span class="nt">CD</span><span class="o">,</span><span class="w"> </span><span class="nt">100</span><span class="w"> </span><span class="nt">C</span><span class="o">,</span><span class="w"> </span><span class="nt">90</span><span class="w"> </span><span class="nt">XC</span><span class="o">,</span><span class="w"> </span><span class="nt">50</span><span class="w"> </span><span class="nt">L</span><span class="o">,</span><span class="w"> </span><span class="nt">40</span><span class="w"> </span><span class="nt">XL</span><span class="o">,</span>
+<span class="w">    </span><span class="nt">10</span><span class="w"> </span><span class="nt">X</span><span class="o">,</span><span class="w"> </span><span class="nt">9</span><span class="w"> </span><span class="nt">IX</span><span class="o">,</span><span class="w"> </span><span class="nt">5</span><span class="w"> </span><span class="nt">V</span><span class="o">,</span><span class="w"> </span><span class="nt">4</span><span class="w"> </span><span class="nt">IV</span><span class="o">,</span><span class="w"> </span><span class="nt">1</span><span class="w"> </span><span class="nt">I</span><span class="o">;</span>
+<span class="p">}</span>
+
+<span class="nt">ul</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">upper-roman</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Mediante la propiedad symbols, o la propiedad additive-symbols, podemos establecer una lista de símbolos para crear nuestro sistema de numeración. Además de establecer una lista de símbolos, también es posible añadir una lista de imágenes, mediante la función url(imagen.png), por ejemplo.</p>
+<h3 id="sombras">Sombras</h3>
+<p>Las sombras son un recurso muy importante en el mundo del desarrollo web.</p>
+<h4 id="sombras-de-texto">Sombras de texto</h4>
+<p>Para crear sombras en los textos utilizaremos la propiedad <code>text-shadow.</code> Esta propiedad permite los siguientes parámetros:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text-shadow</code></td>
+<td>none</td>
+<td>No aplica ninguna sombra en el texto (o la quita si existía previamente).</td>
+</tr>
+<tr>
+<td><code>text-shadow</code></td>
+<td>posX posY</td>
+<td>Aplica una sombra de color negro, desplazándola posX en horizontal y en vertical posY.</td>
+</tr>
+<tr>
+<td><code>text-shadow</code></td>
+<td>posX posY size</td>
+<td>Idem a la anterior, pero establece un desenfoque a la sombra (0 sin desenfoque).</td>
+</tr>
+<tr>
+<td><code>text-shadow</code></td>
+<td>posX posY size color</td>
+<td>Idem al anterior, pero indicando un personalizado para la sombra.</td>
+</tr>
+</tbody>
+</table>
+<p>veamos el siguiente ejemplo en el que se incluyen más de una sombra al texto disponiendola en una posición diferente.</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">text</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">  </span><span class="k">text-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="kt">px</span><span class="w"> </span><span class="mi">-1</span><span class="kt">px</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="mh">#999</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">darkred</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">red</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span>
+<span class="w">      </span><span class="mh">#555</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mh">#222</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="mh">#000</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="sombras-en-elementos">Sombras en elementos</h4>
+<p>se utiliza la propiedad <code>box-shadow</code>, que funciona de forma muy similar a la que vimos en las sombras de texto.</p>
+<p>Veamos un resumen de valores que podemos indicar a esta propiedad de sombras:</p>
+<table>
+<thead>
+<tr>
+<th>Propiedad</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>box-shadow</code></td>
+<td>none</td>
+<td>Elimina (o simplemente no establece) sombra sobre un elemento.</td>
+</tr>
+<tr>
+<td><code>box-shadow</code></td>
+<td>posX posY</td>
+<td>Crea una sombra color negro desplazándola ligeramente en horizontal y/o vertical.</td>
+</tr>
+<tr>
+<td><code>box-shadow</code></td>
+<td>posX posY size</td>
+<td>Idem a la anterior, pero desenfocando o difuminando la sombra.</td>
+</tr>
+<tr>
+<td><code>box-shadow</code></td>
+<td>posX posY size size</td>
+<td>Idem a la anterior, pero además aplicando un factor de crecimiento a la sombra.</td>
+</tr>
+<tr>
+<td><code>box-shadow</code></td>
+<td>posX posY size color</td>
+<td>Idem a la anterior, cambiando el color de la sombra.</td>
+</tr>
+<tr>
+<td><code>box-shadow</code></td>
+<td>posX posY size color inset</td>
+<td>inset Idem a la anterior, pero estableciendo una sombra interna en lugar de externa.</td>
+</tr>
+</tbody>
+</table>
+<p>.</p>
+<p>Veamos un ejemplo.</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">element</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="kc">black</span><span class="p">;</span>
+<span class="w">  </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">-5</span><span class="kt">px</span><span class="w"> </span><span class="mi">-5</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c">/* Sombra sin desenfoque  con valores negativos*/</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Sombra con ligero desenfoque */</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Sombra desenfocada */</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">40</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/* Sombra con un desenfoque casi disipado */</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span><span class="w"> </span><span class="c">/*justo detrás del elemento, tenga un nivel de desenfoque de 10px y, además, la hagamos crecer unos 5px por cada lado.*/</span>
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="kt">px</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="mh">#485299</span><span class="mi">44</span><span class="p">;</span><span class="w"> </span><span class="c">/* color de la transparencia con  el color #485299 con una transparencia en hexadecimal de 44, teniendo en cuenta que los valores de canal alfa en hexadecimal van desde 00 (totalmente transparente) hasta ff (totalmente opaco).*/</span>
+
+<span class="w">  </span><span class="k">box-shadow</span><span class="p">:</span><span class="w"> </span><span class="mi">-10</span><span class="kt">px</span><span class="w"> </span><span class="mi">-10</span><span class="kt">px</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="w"> </span><span class="kc">black</span><span class="w"> </span><span class="kc">inset</span><span class="p">;</span><span class="w"> </span><span class="c">/* Sombra interior que se desplaza hacia la zona inferior-derecha . Para ver este ejemplo, tienes que poner background:white */</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="sombras-identicas">sombras idénticas</h4>
+<p>Las sombras idénticas son muy similares a las sombras generadas con la propiedad box-shadow, en algunos casos, incluso puede que no observes la diferencia, porque las crea exactamente iguales.</p>
+<p>Se debe utilizar la función <code>drop-shadow()</code> que es una función que puede utilizarse en la propiedad <code>filter</code> (no es una propiedad independiente).</p>
+<table>
+<thead>
+<tr>
+<th>Función</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drop-shadow(posX posY )</td>
+<td>Crea una sombra idéntica utilizando la propiedad filter.</td>
+</tr>
+<tr>
+<td>drop-shadow(posX posY size )</td>
+<td>Idem a la anterior, con un desplazamiento y además un desenfoque.</td>
+</tr>
+<tr>
+<td>drop-shadow( posX posY size color)</td>
+<td>Idem a la anterior, pero indicando un color específico.</td>
+</tr>
+</tbody>
+</table>
+<p>La diferencia entre drop-shadow() y box-shadow es que, mientras la última realiza una sombra de la caja, la primera realizará una sombra idéntica «como una gota de agua» (drop).</p>
+<p>En el siguiente <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow">link</a> tienes ejemplos.</p>
+<p>Se ve claramente la diferencia entre una sombra y otra, si el elemento al que le vamos a aplicar la sombra es una imagen .png que contiene transparencias. Aunque, la imagen tenga transparencia si aplicamos la sombra con la propiedad <code>box-shadow</code> se le aplica a la caja entera.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../../UD2/Actividades/Actividad5/Actividad%205/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Actividad 5">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Actividad 5
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../conceptosAvanzados/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Conceptos Avanzados">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Conceptos Avanzados
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.path", "navigation.footer", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotate", "content.code.copy", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
